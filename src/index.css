@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #0B0F17;
+    color: #F1F5F9;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes gennasPageFlip {
+  0% {
+    transform: perspective(300px) rotateY(0deg);
+    opacity: 0.95;
+  }
+  50% {
+    transform: perspective(300px) rotateY(-145deg);
+    opacity: 0.85;
+  }
+  100% {
+    transform: perspective(300px) rotateY(-180deg);
+    opacity: 0.15;
+  }
+}
+
+@keyframes gennasIndeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.gennas-book-page-1 {
+  transform-origin: 60px 45px;
+  animation: gennasPageFlip 1.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+.gennas-book-page-2 {
+  transform-origin: 60px 45px;
+  animation: gennasPageFlip 1.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.9s infinite;
+}
+
+.gennas-indeterminate-bar {
+  width: 60%;
+  animation: gennasIndeterminate 1.6s ease-in-out infinite;
+}
+
+@keyframes gennasRpmIdleMid {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  18% {
+    transform: rotate(2.4deg);
+  }
+  36% {
+    transform: rotate(-1.6deg);
+  }
+  54% {
+    transform: rotate(4.8deg);
+  }
+  72% {
+    transform: rotate(1.1deg);
+  }
+  86% {
+    transform: rotate(-0.9deg);
+  }
+}
+
+@keyframes gennasRpmIdleLow {
+  0%, 100% {
+    transform: rotate(0.5deg);
+  }
+  22% {
+    transform: rotate(3.2deg);
+  }
+  45% {
+    transform: rotate(1.2deg);
+  }
+  68% {
+    transform: rotate(5.4deg);
+  }
+  85% {
+    transform: rotate(1.8deg);
+  }
+}
+
+@keyframes gennasRpmIdleHigh {
+  0%, 100% {
+    transform: rotate(-0.5deg);
+  }
+  22% {
+    transform: rotate(-3.2deg);
+  }
+  45% {
+    transform: rotate(-1.2deg);
+  }
+  68% {
+    transform: rotate(-5.2deg);
+  }
+  85% {
+    transform: rotate(-1.8deg);
+  }
+}
+
+@keyframes gennasArcPulse {
+  0%, 100% {
+    opacity: 0.92;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes gennasHubGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.8;
+  }
+}
+
+@keyframes gennasCarCruiseDrift {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  30% {
+    transform: translate3d(6px, 0px, 0px);
+  }
+  60% {
+    transform: translate3d(2px, 0px, 0px);
+  }
+  82% {
+    transform: translate3d(8px, 0px, 0px);
+  }
+}
+
+@keyframes gennasCarSuspension {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-1.1px);
+  }
+  55% {
+    transform: translateY(0.45px);
+  }
+  80% {
+    transform: translateY(-0.7px);
+  }
+}
+
+@keyframes gennasWheelSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gennasExhaustPuff {
+  0% {
+    transform: translate3d(0px, 0px, 0px) scale(0.55);
+    opacity: 0.55;
+  }
+  60% {
+    transform: translate3d(-14px, -2px, 0px) scale(1.15);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate3d(-26px, -4.5px, 0px) scale(1.55);
+    opacity: 0;
+  }
+}
+
+@keyframes gennasRoadScroll {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(-32px, 0px, 0px);
+  }
+}
+
+@keyframes gennasParallaxScroll {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(-48px, 0px, 0px);
+  }
+}
+
+@keyframes gennasSpeedLinePulse {
+  0%, 100% {
+    transform: scaleX(0.85);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scaleX(1.15);
+    opacity: 0.85;
+  }
+}
+
+.gennas-rpm-needle-idle {
+  animation: gennasRpmIdleMid 3.8s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  will-change: transform;
+}
+
+.gennas-rpm-needle-idle-low {
+  animation: gennasRpmIdleLow 3.8s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  will-change: transform;
+}
+
+.gennas-rpm-needle-idle-high {
+  animation: gennasRpmIdleHigh 3.8s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  will-change: transform;
+}
+
+.gennas-arc-pulse {
+  animation: gennasArcPulse 2.8s ease-in-out infinite;
+}
+
+.gennas-hub-glow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: gennasHubGlow 2.6s ease-in-out infinite;
+}
+
+.gennas-car-cruise-drift {
+  animation: gennasCarCruiseDrift 3.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform;
+}
+
+.gennas-car-suspension {
+  animation: gennasCarSuspension 1.35s ease-in-out infinite;
+  will-change: transform;
+}
+
+.gennas-wheel-spin {
+  animation: gennasWheelSpin 0.65s linear infinite;
+  will-change: transform;
+}
+
+.gennas-exhaust-puff-1 {
+  animation: gennasExhaustPuff 1.2s ease-out infinite;
+}
+
+.gennas-exhaust-puff-2 {
+  animation: gennasExhaustPuff 1.2s ease-out 0.3s infinite;
+}
+
+.gennas-exhaust-puff-3 {
+  animation: gennasExhaustPuff 1.2s ease-out 0.6s infinite;
+}
+
+.gennas-exhaust-puff-4 {
+  animation: gennasExhaustPuff 1.2s ease-out 0.9s infinite;
+}
+
+.gennas-road-dashes {
+  animation: gennasRoadScroll 1.1s linear infinite;
+  will-change: transform;
+}
+
+.gennas-track-parallax {
+  animation: gennasParallaxScroll 2.2s linear infinite;
+  will-change: transform;
+}
+
+.gennas-speed-line {
+  transform-origin: right center;
+  animation: gennasSpeedLinePulse 0.9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gennas-book-page-1,
+  .gennas-book-page-2,
+  .gennas-indeterminate-bar,
+  .gennas-rpm-needle-idle,
+  .gennas-rpm-needle-idle-low,
+  .gennas-rpm-needle-idle-high,
+  .gennas-arc-pulse,
+  .gennas-hub-glow,
+  .gennas-car-cruise-drift,
+  .gennas-car-suspension,
+  .gennas-wheel-spin,
+  .gennas-exhaust-puff-1,
+  .gennas-exhaust-puff-2,
+  .gennas-exhaust-puff-3,
+  .gennas-exhaust-puff-4,
+  .gennas-road-dashes,
+  .gennas-track-parallax,
+  .gennas-speed-line {
+    animation: none !important;
+    transform: none !important;
+  }
+}

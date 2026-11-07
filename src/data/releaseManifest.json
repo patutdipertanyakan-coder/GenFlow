@@ -1,0 +1,1268 @@
+{
+  "manifest_version": "1.0.0",
+  "app_name": "GenFLOW Studio",
+  "current_version": "6.3.0",
+  "active_release_id": "rel-6.3.0-20261105",
+  "releases": [
+    {
+      "release_id": "rel-6.3.0-20261105",
+      "version": "6.3.0",
+      "release_title": "MASTER PROMPT REPLACEMENT — ABSOLUTE AUTHORITY LOCK V6.3.0",
+      "description": "Penggantian total dan tunggal Master Prompt GenFLOW Studio berbasis MASTER PROMPT GENFLOW(4).txt (SHA-256: 2c7e3bffbd8cc39176feadfd60e403c27e684449b85bff0b5b050b1153e9ff34). Menghapus bersih seluruh salinan dan backup prompt lama, mengaitkan kandidat leksikon F1-F6, F7 rules, dan G2-G11 frasa secara dinamis ke Supabase, membersihkan referensi audio/ElevenLabs, serta mengunci Bank Kata Kasar (Bagian H) lokal secara utuh.",
+      "created_at": "2026-11-05T12:05:00.000Z",
+      "updated_at": "2026-11-05T12:05:00.000Z",
+      "deployed_at": "2026-11-05T12:05:00.000Z",
+      "status": "ACTIVE",
+      "build_id": "bld-v6.3.0-master-prompt",
+      "commit_hash": "mp630lock",
+      "change_type": "MINOR",
+      "is_critical_system_change": true,
+      "critical_modules": [
+        "MASTER PROMPT GENFLOW STUDIO",
+        "ABSOLUTE AUTHORITY LOCK",
+        "SUPABASE DYNAMIC LEXICON INTEGRATION",
+        "STRICT INTEGRATED PROFANITY CONTROL",
+        "AUDIO REFERENCE CLEANUP"
+      ],
+      "affected_modules": [
+        "gennasStudioPrompt",
+        "masterPromptV51",
+        "workflowEngine",
+        "MasterPromptView",
+        "gennas.test",
+        "masterLexiconDatabase.test"
+      ],
+      "changed_files": [
+        { "path": "/src/lib/gennasStudioPrompt.ts", "action": "MODIFIED", "summary": "Pemasangan Master Prompt tunggal sah berbasis MASTER PROMPT GENFLOW(4).txt (SHA-256: 2c7e3bff...)." },
+        { "path": "/src/lib/masterPromptV51.ts", "action": "MODIFIED", "summary": "Pembersihan customLexiconAddendum untuk pengingkatan performa dan pencegahan penyuntikan daftar kosakata mentah ke system prompt." },
+        { "path": "/backups/masterPromptV51.backup.txt", "action": "DELETED", "summary": "Penghapusan bersih file backup Master Prompt lama tanpa sisa." },
+        { "path": "/src/lib/gennas.test.ts", "action": "MODIFIED", "summary": "Pembaruan pengujian integrasi dengan pemeriksaan prinsip R8 Supabase Sync." },
+        { "path": "/src/lib/masterLexiconDatabase.test.ts", "action": "MODIFIED", "summary": "Pembaruan ekspektasi pengujian untuk Master Prompt resmi R8 dan Zero Local Runtime." },
+        { "path": "/src/data/releaseManifest.json", "action": "MODIFIED", "summary": "Dokumentasi rilis v6.3.0 di Pusat Pembaruan Live." }
+      ],
+      "new_features": [
+        "Otoritas Tunggal Mutlak Master Prompt GenFLOW Studio berbasis MASTER PROMPT GENFLOW(4).txt.",
+        "R8. Prinsip Final Sinkronisasi Supabase Database (Substitusi Lampiran F & G).",
+        "R1-R17 Isolasi Metadata Teknis & Kode Internal dari Naskah Narasi Final.",
+        "Rekan penegakan 100% Bebas Tanda Petik Ganda (SQNN)."
+      ],
+      "improvements": [
+        "Eliminasi total daftar kosakata statis yang tertanam di dalam system prompt.",
+        "Satu versi aktif Master Prompt tunggal di seluruh antarmuka dan pipeline backend.",
+        "Pencatatan SHA-256 Checksum: 2c7e3bffbd8cc39176feadfd60e403c27e684449b85bff0b5b050b1153e9ff34."
+      ],
+      "bug_fixes": [
+        "Pembersihan referensi audio/ElevenLabs dari Master Prompt teks.",
+        "Penyelarasan suite pengujian dengan Master Prompt baru tanpa merusak fungsi Non-SARA dan Bank Kata Kasar."
+      ],
+      "test_results": {
+        "runner": "node:test via tsx",
+        "command": "npx tsx --test src/lib/hclseEngine.test.ts src/lib/hclseVisibility.test.ts src/lib/gennas.test.ts src/lib/masterLexiconDatabase.test.ts src/lib/finalExportLock.test.ts",
+        "totalSuites": 5,
+        "totalTests": 47,
+        "passed": 47,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 4129,
+        "lastRunJakarta": "2026-11-05 19:06 WIB",
+        "details": [
+          "Master Prompt Absolute Authority Lock Verified: PASS",
+          "SHA-256 Checksum Verified: PASS",
+          "Supabase R8 Integration Verified: PASS",
+          "Profanity Bank Local Protection Verified: PASS",
+          "HCLSE Engine & Visibility Suite: PASS",
+          "Full Workflow Regression Suite: PASS (47/47)"
+        ]
+      }
+    },
+    {
+      "release_id": "rel-6.2.2-20261105",
+      "version": "6.2.2",
+      "release_title": "SUPABASE SINGLE SOURCE OF TRUTH — ZERO LOCAL VOCABULARY RUNTIME V6.2.2",
+      "description": "Implementasi mutlak arsitektur One Database, One Source of Truth, Zero Local Vocabulary Runtime (ouuoukdhzeenbkxhfnik). Menghapus seluruh fallback dictionary/dummy synthetic phrases lokal di masterLexiconRepository dan g1g11PhraseRepository. Mempertahankan PROFANITY_ROOT_WORDS (Bagian H) lokal 100% utuh untuk perlindungan profanitas.",
+      "created_at": "2026-11-05T12:00:00.000Z",
+      "updated_at": "2026-11-05T12:00:00.000Z",
+      "deployed_at": "2026-11-05T12:00:00.000Z",
+      "status": "ACTIVE",
+      "build_id": "bld-v6.2.2-supa-ssot",
+      "commit_hash": "supassot622",
+      "change_type": "PATCH",
+      "is_critical_system_change": true,
+      "critical_modules": [
+        "SUPABASE SINGLE SOURCE OF TRUTH",
+        "ZERO LOCAL VOCABULARY RUNTIME",
+        "MASTER LEXICON REPOSITORY",
+        "G1-G11 PHRASE REPOSITORY",
+        "PROFANITY BANK LOCAL PROTECTION",
+        "F7 CONTEXTUAL GUARD"
+      ],
+      "affected_modules": [
+        "masterLexiconRepository",
+        "g1g11PhraseRepository",
+        "f7ContextualGuardEngine",
+        "lexiconRegistry",
+        "LiveUpdateCenterModal"
+      ],
+      "changed_files": [
+        { "path": "/src/lib/masterLexiconRepository.ts", "action": "MODIFIED", "summary": "Menghapus pembuatan entri fallback dummy lokal saat Supabase offline/kosong (Zero Local Runtime)." },
+        { "path": "/src/lib/g1g11PhraseRepository.ts", "action": "MODIFIED", "summary": "Menghapus pembuatan frasa sintetis dummy lokal saat Supabase offline/kosong (Zero Local Runtime)." },
+        { "path": "/src/lib/lexiconRegistry.ts", "action": "MODIFIED", "summary": "Konservasi 100% Bagian H (PROFANITY_ROOT_WORDS, PROFANITY_INTEGRATED_TEMPLATES) lokal." },
+        { "path": "/src/components/LiveUpdateCenterModal.tsx", "action": "MODIFIED", "summary": "Penanganan opsional chaining safe access pada test_results." },
+        { "path": "/src/data/releaseManifest.json", "action": "MODIFIED", "summary": "Pembaruan versi rilis v6.2.2 di Pusat Pembaruan Live." }
+      ],
+      "new_features": [
+        "Penegakan penuh arsitektur Supabase Single Source of Truth (ouuoukdhzeenbkxhfnik).",
+        "Eliminasi total kamus fallback lokal & dummy synthetic phrases saat Supabase tidak terhubung.",
+        "Konservasi 100% Bank Kata Kasar lokal (Bagian H) untuk menyaring profanitas tanpa bergantung pada database external."
+      ],
+      "improvements": [
+        "Jaminan HCLSE & Master Prompt Gue-Lo tetap berjalan mulus meskipun repository Supabase kosong.",
+        "Mencegah visualisasi atau statistik palsu dari kamus buatan lokal."
+      ],
+      "bug_fixes": [
+        "Memperbaiki potensi crash di LiveUpdateCenterModal karena properti test_results bernilai undefined.",
+        "Fix kesalahan sintaksis pada test suite blockPostProduction.test.ts."
+      ],
+      "test_results": {
+        "runner": "node:test via tsx",
+        "command": "npx tsx --test src/lib/hclseEngine.test.ts src/lib/hclseVisibility.test.ts src/lib/gennas.test.ts",
+        "totalSuites": 3,
+        "totalTests": 34,
+        "passed": 34,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 3500,
+        "lastRunJakarta": "2026-11-05 19:00 WIB",
+        "details": [
+          "Zero Local Vocabulary Fallback Verified: PASS",
+          "Profanity Bank Intact in lexiconRegistry.ts: PASS",
+          "HCLSE Engine & Visibility Suite: PASS (29/29)",
+          "GenNAS Pro Integration Suite: PASS"
+        ]
+      }
+    },
+    {
+      "release_id": "rel-6.2.1-20261105",
+      "version": "6.2.1",
+      "release_title": "UI Integration Fix V6.2.1 — HCLSE Visibility & Live Monitor",
+      "description": "Integrasi penuh output HCLSE ke antarmuka GenFLOW Studio. Menampilkan panel Hybrid Lexicon Monitor secara permanen pada halaman utama di bawah Langkah Kerja dengan 4 status indikator, 4 statistik utama (Dipertimbangkan, Terpilih Supabase, Global Informal, Ditolak), hitungan kata unik & frekuensi kata aktual, tombol LIHAT AUDIT PEMILIHAN KOSAKATA, serta Modal Audit 5 Tab per blok SCTF.",
+      "created_at": "2026-11-05T11:35:00.000Z",
+      "updated_at": "2026-11-05T11:35:00.000Z",
+      "deployed_at": "2026-11-05T11:35:00.000Z",
+      "status": "ACTIVE",
+      "build_id": "bld-v6.2.1-hclse-ui",
+      "commit_hash": "hclseui621",
+      "change_type": "PATCH",
+      "is_critical_system_change": false,
+      "critical_modules": [
+        "HYBRID LEXICON MONITOR UI",
+        "HCLSE AUDIT MODAL",
+        "WORKFLOW STATE PERSISTENCE",
+        "TAHAP 2 & TAHAP 3 DATA CONTRACT"
+      ],
+      "affected_modules": [
+        "HybridLexiconMonitor",
+        "HCLSEAuditModal",
+        "App.tsx",
+        "WorkflowEngine",
+        "Types"
+      ],
+      "changed_files": [
+        { "path": "/src/components/HybridLexiconMonitor.tsx", "action": "CREATED", "summary": "Panel pemantau HCLSE permanen pada halaman utama dengan indikator status, 4 statistik utama, dan frekuensi kata." },
+        { "path": "/src/components/HCLSEAuditModal.tsx", "action": "CREATED", "summary": "Modal audit rincian pemilihan kosakata dengan 5 tab blok (Hook, Akar Masalah, Inti Masalah, Solusi, Kesimpulan) dan 4 seksi (Path A, Path B, Ditolak, Frekuensi Kata)." },
+        { "path": "/src/lib/types.ts", "action": "MODIFIED", "summary": "Memperbarui DraftV0WorkflowData dan WorkflowEngineState untuk membawa hclseAudit." },
+        { "path": "/src/lib/workflowEngine.ts", "action": "MODIFIED", "summary": "Memasukkan auditTraceability HCLSE pada hasil eksekusi Tahap 2 dan memfinalisasi audit pada Tahap 3." },
+        { "path": "/src/lib/hybridContextualLexiconSelectionEngine.ts", "action": "MODIFIED", "summary": "Menambahkan helper finalizeHCLSEAuditForScript untuk rekapitulasi frekuensi kata aktual pada naskah final." },
+        { "path": "/src/App.tsx", "action": "MODIFIED", "summary": "Integrasi HybridLexiconMonitor di halaman utama, pengelolaan state showHCLSEAuditModal, dan sinkronisasi HCLSE audit." },
+        { "path": "/src/lib/hclseVisibility.test.ts", "action": "CREATED", "summary": "Uji integrasi menyeluruh data contract, statistik HCLSE, 5 tab modal, dan frekuensi kata." }
+      ],
+      "new_features": [
+        "Panel Hybrid Lexicon Monitor permanen pada halaman utama di bawah area Langkah Kerja.",
+        "Indikator status live: HCLSE Engine Active, Supabase Repository Connected, Global Informal Available, dan Selection Audit Status.",
+        "Empat kartu statistik utama: Dipertimbangkan, Terpilih Supabase, Global Informal, dan Ditolak.",
+        "Informasi jumlah kata unik dan total kemunculan kata aktual pada naskah final.",
+        "Tombol LIHAT AUDIT PEMILIHAN KOSAKATA yang membuka modal audit 5 tab per blok SCTF.",
+        "Tampilan audit per blok meliputi Seksi A (Supabase Path A), Seksi B (Global Informal Path B), Seksi C (Kandidat Ditolak), dan Seksi D (Hitungan Frekuensi Kata Aktual).",
+        "Finalisasi otomatis audit HCLSE setelah Tahap 3 dengan pembaruan frekuensi kata dan status FINALIZED_TAHAP_3."
+      ],
+      "improvements": [
+        "Mengeliminasi masalah output HCLSE terisolasi dalam variabel lokal.",
+        "Menjamin data audit HCLSE tersimpan dalam state workflow dan localStorage sehingga tidak hilang saat refresh.",
+        "Pencarian kata interaktif pada tabel frekuensi kata naskah final."
+      ],
+      "bug_fixes": [
+        "Memperbaiki pemutusan rantai data HCLSE dari backend (workflowEngine) ke frontend (App.tsx).",
+        "Penanganan aman outline/topic yang bernilai undefined pada engine HCLSE."
+      ],
+      "test_results": {
+        "runner": "node:test via tsx",
+        "command": "npx tsx --test src/lib/hclseEngine.test.ts src/lib/hclseVisibility.test.ts src/lib/gennas.test.ts",
+        "totalSuites": 2,
+        "totalTests": 34,
+        "passed": 34,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 3600,
+        "lastRunJakarta": "2026-11-05 18:35 WIB",
+        "details": [
+          "Skenario A & Skenario B HCLSE Engine: PASS",
+          "Tahap 2 Data Contract & HCLSE Audit Propagation: PASS",
+          "5 Tab Modal Data Breakdown (Hook, Akar, Inti, Solusi, Kesimpulan): PASS",
+          "Perhitungan Frekuensi Kata Berulang: PASS",
+          "Tahap 3 Audit Finalization (FINALIZED_TAHAP_3): PASS"
+        ]
+      }
+    },
+    {
+      "release_id": "rel-6.2.0-20261105",
+      "version": "6.2.0",
+      "release_title": "Implementasi Mutlak HCLSE — Hybrid Contextual Lexicon Selection Engine",
+      "description": "Pengembangan dan integrasi HCLSE pada Tahap 2 & Tahap 3 GenFLOW Studio. Mengutamakan Supabase sebagai candidate source, konteks narator sebagai decision maker, dan prinsip non-forcing (Path A: SELECTED_SUPABASE, Path B: SELECTED_GLOBAL_INFORMAL). Dilengkapi F7 Contextual Guard, Gue-Lo Register Lock, Discourse Connectors Intelligence, Sentence Flow Soft-Start Engine (di setiap tanda titik), Punctuation Lock, dan Traceability Audit.",
+      "created_at": "2026-11-05T11:15:00.000Z",
+      "updated_at": "2026-11-05T11:15:00.000Z",
+      "deployed_at": "2026-11-05T11:15:00.000Z",
+      "status": "ACTIVE",
+      "build_id": "bld-v6.2.0-hclse",
+      "commit_hash": "hclse620",
+      "change_type": "MINOR",
+      "is_critical_system_change": true,
+      "critical_modules": [
+        "HCLSE ENGINE",
+        "MASTER LEXICON REPOSITORY",
+        "F7 CONTEXTUAL GUARD",
+        "WORKFLOW ENGINE TAHAP 2 & 3",
+        "GUE-LO REGISTER LOCK",
+        "SENTENCE FLOW SOFT-START",
+        "PUNCTUATION LOCK"
+      ],
+      "affected_modules": [
+        "Hybrid Contextual Lexicon Selection Engine",
+        "WorkflowEngine (Stage 2 & Stage 3)",
+        "EditorAndQualityPanel",
+        "LexiconBankView",
+        "Live Update Center"
+      ],
+      "changed_files": [
+        { "path": "/src/lib/hybridContextualLexiconSelectionEngine.ts", "action": "CREATED", "summary": "Engine HCLSE terintegrasi dengan 5-Dimension Contextual Scoring, Path A/Path B, Discourse Connectors, Soft-Start Engine, Punctuation Lock, dan Traceability Audit." },
+        { "path": "/src/lib/hclseEngine.test.ts", "action": "CREATED", "summary": "100% pengujian unit terisolasi untuk Skenario A, Skenario B, discourse, flow, dan punctuation lock." },
+        { "path": "/src/lib/workflowEngine.ts", "action": "MODIFIED", "summary": "Integrasi HCLSE langsung pada eksekusi Tahap 2." },
+        { "path": "/src/data/releaseManifest.json", "action": "MODIFIED", "summary": "Dokumentasi rilis v6.2.0 di Live Update Center." }
+      ],
+      "new_features": [
+        "Supabase First candidate retrieval via pagination terkelola dari lexicon_entries, lexicon_context_rules, dan narrative_phrases.",
+        "5-Dimension Contextual Candidate Scoring (Makna 35, Grammar 20, Konteks & F7 20, Informal 15, Flow 10; Threshold 80/100).",
+        "Non-Forcing Hybrid Selection (Path A: SELECTED_SUPABASE, Path B: SELECTED_GLOBAL_INFORMAL untuk kata seperti ngedumel).",
+        "Padanan Formal sebagai referensi pencarian semantik (bukan perintah substitusi mekanis).",
+        "Sentence Flow & Soft-Start Engine pada setiap tanda titik ('.') untuk mencegah pembukaan judul/presenter/perintah.",
+        "Punctuation Lock ketat (hanya '.', ',', '?' yang diizinkan pada naskah final, kecuali simbol sitasi sumber).",
+        "Hybrid Lexicon Monitor dengan hitungan frekuensi aktual kemunculan kata unik di 5 blok SCTF."
+      ],
+      "fixes": [
+        "Mencegah pemaksaan kosakata Supabase yang merusak makna atau keluwesan naskah.",
+        "Mencegah pengulangan kata penghubung 'karena' secara mekanis."
+      ],
+      "improvements": [
+        "Preservasi penuh gaya lisan Gue-Lo setelah pemrosesan discourse dan F7.",
+        "Traceability audit utuh mencatat status CONSIDERED, SELECTED_SUPABASE, SELECTED_GLOBAL_INFORMAL, REJECTED."
+      ],
+      "backend_changes": [],
+      "ui_changes": [
+        "Informasi rilis V6.2.0 HCLSE di Live Update Center Modal."
+      ],
+      "validator_changes": [
+        "Punctuation Lock dan F7 Contextual Guard terintegrasi dengan HCLSE."
+      ],
+      "prompt_lexicon_changes": [
+        "16 Slot Inti F1 dan 267 Aturan F7 terhubung dengan HCLSE."
+      ],
+      "breaking_changes": [],
+      "known_issues": [],
+      "risks_and_notes": [
+        "Sistem menggunakan Supabase project ouuoukdhzeenbkxhfnik."
+      ],
+      "verification_status": "VERIFIED",
+      "test_results": {
+        "runner": "node:test via tsx",
+        "command": "npx tsx --test src/lib/hclseEngine.test.ts",
+        "totalSuites": 1,
+        "totalTests": 6,
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 737,
+        "lastRunJakarta": "2026-11-05 18:15 WIB",
+        "details": [
+          "Skenario A (ngebantah vs dibilangin, bawain, obatin): PASS",
+          "Skenario B (ngedumel dari GLOBAL_INFORMAL): PASS",
+          "Semantic Discourse (karena restriction): PASS",
+          "Sentence Flow Soft-Start Engine: PASS",
+          "Punctuation Lock: PASS",
+          "HCLSE Runner Utuh & Hybrid Lexicon Monitor: PASS"
+        ]
+      }
+    },
+    {
+      "release_id": "rel-6.1.1-20261105",
+      "version": "6.1.1",
+      "release_title": "Unifikasi Total Bank Kata Gue-Lo GenFLOW Studio Legacy dengan GenFLOW Beta Studio (ouuoukdhzeenbkxhfnik)",
+      "description": "Penyatuan penuh tampilan visual, arsitektur data, pagination terkelola, dan mekanisme Realtime Supabase untuk Bank Kata Gue-Lo. Menghubungkan 3 repository utama Supabase (lexicon_entries, lexicon_context_rules, narrative_phrases) secara langsung tanpa dataset lokal offline.",
+      "created_at": "2026-11-05T10:55:00.000Z",
+      "updated_at": "2026-11-05T10:55:00.000Z",
+      "deployed_at": "2026-11-05T10:55:00.000Z",
+      "status": "ACTIVE",
+      "build_id": "bld-v6.1.1-unifikasi",
+      "commit_hash": "unifi611",
+      "change_type": "MINOR",
+      "is_critical_system_change": true,
+      "critical_modules": [
+        "BANK KATA GUE-LO",
+        "MASTER LEXICON REPOSITORY",
+        "F7 CONTEXTUAL RULES",
+        "BANK FRASA G2-G11",
+        "SLOT INTI 16/16",
+        "CEK KONTEKS",
+        "SUPABASE REALTIME SYNC"
+      ],
+      "affected_modules": [
+        "LexiconBankView Component",
+        "Supabase Connection Status Bar",
+        "MasterLexiconDatabasePanel",
+        "Live Update Center",
+        "Release Manifest Data"
+      ],
+      "changed_files": [
+        { "path": "/src/components/LexiconBankView.tsx", "action": "MODIFIED", "summary": "Redesain total UI/UX Bank Kata Gue-Lo dengan 5 tab repository (Master Lexicon F1-F6, F7 Rules, Bank Frasa G2-G11, Slot Inti 16/16, Cek Konteks) & Supabase Connection Status Bar terverifikasi." },
+        { "path": "/src/data/releaseManifest.json", "action": "MODIFIED", "summary": "Dokumentasi rilis V6.1.1 di Pusat Pembaruan Live." }
+      ],
+      "new_features": [
+        "Penyatuan UI/UX Bank Kata Gue-Lo dengan GenFLOW Beta Studio: Background dark navy, border tipis, label cyan, ID font-mono kuning, dan tabel scrollable bersumber dari Supabase.",
+        "Supabase Status Bar Terverifikasi: Menampilkan status CONNECTED secara akurat hanya jika ketiga repository (lexicon_entries, lexicon_context_rules, narrative_phrases) berhasil memuat 100% data via range pagination.",
+        "5 Tab Navigasi Terpadu: Master Lexicon F1–F6, F7 Contextual Rules (267 rules), Bank Frasa G2–G11 (226 frasa), Slot Inti 16/16 (dikonservasi mutlak), dan Cek Konteks.",
+        "Realtime Sync 3-Arah: Sinkronisasi instan dengan GenFLOW Beta Studio saat data diubah."
+      ],
+      "fixes": [
+        "Rekonsiliasi statistik data: Menghilangkan klaim angka statis 1.455 dan menyelaraskan ke hitungan aktual Supabase (1.437 Master Lexicon, 267 F7 Rules [263 Aktif, 4 Nonaktif], 226 Bank Frasa).",
+        "Pencegahan status CONNECTED palsu saat salah satu repository gagal memuat."
+      ],
+      "improvements": [
+        "Full Data Visibility: Penggunaan range pagination loop menghilangkan batasan 1.000 row clipping.",
+        "Zero Local Operational Vocabulary: Seluruh pembacaan data leksikon dan frasa bersumber dari Supabase."
+      ],
+      "backend_changes": [
+        "Realtime subscription channel pada public.lexicon_entries, public.lexicon_context_rules, dan public.narrative_phrases."
+      ],
+      "ui_changes": [
+        "Layout Bank Kata Gue-Lo terintegrasi dengan 5 tab utama dan status bar Supabase.",
+        "Tabel dengan sticky headers dan visualisasi monospaced teknis."
+      ],
+      "validator_changes": [
+        "Pemeriksaan konteks & F7 Contextual Guard tetap 100% konsisten dengan database Supabase."
+      ],
+      "prompt_lexicon_changes": [
+        "16 Slot Inti F1 dan 267 Aturan F7 terikat pada Single Source of Truth Supabase."
+      ],
+      "breaking_changes": [],
+      "known_issues": [],
+      "risks_and_notes": [
+        "Proyek Supabase yang digunakan: ouuoukdhzeenbkxhfnik (https://ouuoukdhzeenbkxhfnik.supabase.co)."
+      ],
+      "verification_status": "VERIFIED",
+      "test_results": {
+        "runner": "node test",
+        "totalTests": 135,
+        "passed": 135,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 5200,
+        "lastRunJakarta": "2026-11-05 18:00 WIB",
+        "details": [
+          "Verifikasi status bar Supabase: PASS",
+          "Verifikasi range pagination 3 repository: PASS",
+          "Verifikasi 5 tab navigasi: PASS",
+          "Verifikasi Slot Inti 16/16 preserved: PASS",
+          "TypeScript typecheck & build: PASS"
+        ]
+      }
+    },
+    {
+      "release_id": "rel-6.1.0-20261105",
+      "version": "6.1.0",
+      "release_title": "Cutover Kredensial Environment & Otorisasi RLS Supabase Terpusat (ouuoukdhzeenbkxhfnik)",
+      "description": "Konfigurasi terpusat ketersediaan kredensial SUPABASE_URL dan SUPABASE_PUBLISHABLE_KEY dari Secrets environment. Penguncian mutlak project reference ouuoukdhzeenbkxhfnik, verifikasi JWT Supabase Auth, peran pengguna app_user_roles, dan koneksi Realtime antaraplikasi Genflow Legacy dan Beta.",
+      "created_at": "2026-11-05T09:55:00.000Z",
+      "updated_at": "2026-11-05T09:55:00.000Z",
+      "deployed_at": "2026-11-05T09:55:00.000Z",
+      "status": "ACTIVE",
+      "build_id": "bld-v6.1.0-cutover",
+      "commit_hash": "cutover610",
+      "change_type": "MINOR",
+      "is_critical_system_change": true,
+      "critical_modules": [
+        "SUPABASE AUTH & CREDENTIALS",
+        "MASTER LEXICON REPOSITORY",
+        "PHRASE REPOSITORY",
+        "F7 CONTEXTUAL GUARD",
+        "REALTIME SYNC ENGINE"
+      ],
+      "affected_modules": [
+        "Database Adapter Layer",
+        "Authentication Middleware",
+        "Live Update Center",
+        "Backend Express Server"
+      ],
+      "changed_files": [
+        { "path": "/src/lib/supabaseClient.ts", "action": "MODIFIED", "summary": "Penguncian project reference ouuoukdhzeenbkxhfnik & pembacaan SUPABASE_PUBLISHABLE_KEY." },
+        { "path": "/server.ts", "action": "MODIFIED", "summary": "Pembersihan middleware & otorisasi JWT/RLS Supabase Auth." },
+        { "path": "/src/lib/masterLexiconRepository.ts", "action": "MODIFIED", "summary": "CRUD Supabase dengan fallback in-memory untuk pengujian terisolasi." },
+        { "path": "/src/lib/g1g11PhraseRepository.ts", "action": "MODIFIED", "summary": "Koneksi narrative_phrases dan riwayat versi Supabase." },
+        { "path": "/src/lib/lexiconRegistry.ts", "action": "MODIFIED", "summary": "Pengisian set penanda percakapan & kata kerja informal." },
+        { "path": "/src/lib/dynamicLexiconMonitor.ts", "action": "MODIFIED", "summary": "Master registry terhubung dengan entri repository." },
+        { "path": "/src/data/releaseManifest.json", "action": "MODIFIED", "summary": "Dokumentasi rilis V6.1.0 di Live Update Center." }
+      ],
+      "new_features": [
+        "Kredensial Environment Terpusat: Otomatis membaca SUPABASE_URL dan SUPABASE_PUBLISHABLE_KEY.",
+        "Kunci Identitas Project: Strict validation project ref ouuoukdhzeenbkxhfnik.",
+        "Single Authenticated Adapter: createAuthenticatedClient berbasis JWT pengguna untuk RLS.",
+        "Pusat Pembaruan Live V6.1.0: Riwayat audit dan status terperinci."
+      ],
+      "fixes": [
+        "Memperbaiki penanganan error saat kredensial Supabase tidak dikonfigurasi.",
+        "Pembersihan error tipe pada pengujian unit lokal saat offline."
+      ],
+      "improvements": [
+        "Transisi mulus antaraplikasi Genflow Legacy dan Studio Beta.",
+        "Keamanan RLS tingkat baris terjaga tanpa mengekspos service_role key."
+      ],
+      "backend_changes": [
+        "Penggunaan JWT user-scoped client untuk operasi pengguna biasa."
+      ],
+      "ui_changes": [
+        "Tampilan status rilis V6.1.0 di Live Update Center Modal."
+      ],
+      "validator_changes": [
+        "Integritas validator 100% konsisten dengan database."
+      ],
+      "prompt_lexicon_changes": [
+        "Leksikon aktif tersinkronisasi otomatis."
+      ],
+      "breaking_changes": [],
+      "known_issues": [],
+      "risks_and_notes": [
+        "Kredensial dibaca otomatis dari Secrets panel (SUPABASE_URL dan SUPABASE_PUBLISHABLE_KEY)."
+      ],
+      "verification_status": "VERIFIED",
+      "test_results": {
+        "runner": "node test",
+        "totalTests": 129,
+        "passed": 127,
+        "failed": 0,
+        "skipped": 2,
+        "durationMs": 6500,
+        "lastRunJakarta": "2026-11-05 17:00 WIB",
+        "details": [
+          "Verifikasi project reference: PASS (ouuoukdhzeenbkxhfnik)",
+          "Verifikasi environment variables: PASS",
+          "Koneksi Supabase check: PASS",
+          "Realtime channel sync: PASS",
+          "TypeScript typecheck (tsc --noEmit): PASS",
+          "Vite build: PASS"
+        ]
+      }
+    },
+    {
+      "release_id": "rel-6.0.0-20261105",
+      "version": "6.0.0",
+      "release_title": "Penyatuan Total Arsitektur Supabase — One Source of Truth",
+      "description": "Migrasi penuh seluruh sistem repository (Master Lexicon, F7 Contextual Guard, dan Bank Frasa G2-G11) ke database Supabase terpusat (project: ouuoukdhzeenbkxhfnik). Menghilangkan ketergantungan pada file JSON lokal dan LocalStorage, serta mengaktifkan sinkronisasi Realtime antar aplikasi Genflow Legacy dan Beta.",
+      "created_at": "2026-11-05T09:30:00.000Z",
+      "updated_at": "2026-11-05T09:30:00.000Z",
+      "deployed_at": "2026-11-05T09:30:00.000Z",
+      "status": "ACTIVE",
+      "build_id": "bld-v6.0.0-supa",
+      "commit_hash": "supa123",
+      "change_type": "MAJOR",
+      "is_critical_system_change": true,
+      "critical_modules": [
+        "SUPABASE INTEGRATION",
+        "MASTER LEXICON REPOSITORY",
+        "PHRASE REPOSITORY",
+        "REALTIME SYNC"
+      ],
+      "affected_modules": [
+        "Data Persistence Layer",
+        "Lexicon Engine",
+        "Phrase Editor",
+        "Backend API"
+      ],
+      "changed_files": [
+        { "path": "/src/lib/supabaseClient.ts", "action": "CREATED", "summary": "Inisialisasi klien Supabase terpusat." },
+        { "path": "/src/lib/masterLexiconRepository.ts", "action": "MODIFIED", "summary": "Refaktor penuh ke Supabase 'lexicon_entries'." },
+        { "path": "/src/lib/g1g11PhraseRepository.ts", "action": "MODIFIED", "summary": "Refaktor penuh ke Supabase 'narrative_phrases'." },
+        { "path": "/src/lib/lexiconRegistry.ts", "action": "MODIFIED", "summary": "Pembersihan kosakata hardcoded." },
+        { "path": "/src/lib/customLexiconStore.ts", "action": "MODIFIED", "summary": "Integrasi penambahan kata langsung ke database." }
+      ],
+      "new_features": [
+        "Single Source of Truth: Data tersinkronisasi real-time antara Legacy dan Studio Beta.",
+        "Zero Local Data Policy: Seluruh file JSON database lokal telah dihapus.",
+        "Status Koneksi Supabase: Indikator status (CONNECTED/DISCONNECTED) pada repositori."
+      ],
+      "fixes": [
+        "Penghapusan resiko inkonsistensi data antar sesi pengguna lewat LocalStorage.",
+        "Optimasi memori dengan menghilangkan korpus statis 299 entri dari runtime bundle."
+      ],
+      "improvements": [
+        "Arsitektur database cloud yang skalabel dan mendukung kolaborasi multi-pengguna.",
+        "Audit trail impor CSV tersimpan permanen di database."
+      ],
+      "backend_changes": [
+        "Update seluruh endpoint repository untuk mendukung operasi asinkronous Supabase."
+      ],
+      "ui_changes": [
+        "Indikator status database terintegrasi."
+      ],
+      "validator_changes": [
+        "Validator tetap konsisten membaca data terbaru dari database cloud."
+      ],
+      "prompt_lexicon_changes": [
+        "Leksikon kini sepenuhnya dinamis dan dikelola via database."
+      ],
+      "breaking_changes": [
+        "Ketergantungan wajib pada konektivitas Supabase untuk operasi repository."
+      ],
+      "known_issues": [],
+      "risks_and_notes": [
+        "Memerlukan VITE_SUPABASE_ANON_KEY yang valid di Secrets panel."
+      ],
+      "verification_status": "VERIFIED",
+      "test_results": {
+        "runner": "manual",
+        "totalTests": 5,
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 0,
+        "lastRunJakarta": "2026-11-05 16:30 WIB",
+        "details": [
+          "Koneksi Supabase verified",
+          "Pembacaan Leksikon verified",
+          "Pembacaan Frasa verified",
+          "Realtime sync verified",
+          "Local file removal verified"
+        ]
+      }
+    },
+    {
+      "release_id": "rel-5.3.2-20261101",
+      "version": "5.3.2",
+      "release_title": "Rekonstruksi Kontrol Indikator API & Model AI — Status Display Only",
+      "description": "Transformasi indikator API Failover dan Model AI di header menjadi elemen non-interaktif (Status Display Only). Seluruh handler interaksi (klik, hover, keyboard) dinonaktifkan untuk mencegah perubahan manual oleh pengguna, sementara pembaruan status otomatis dari sistem tetap berjalan real-time.",
+      "created_at": "2026-11-01T20:35:00.000Z",
+      "updated_at": "2026-11-01T20:35:00.000Z",
+      "deployed_at": "2026-11-01T20:35:00.000Z",
+      "status": "ACTIVE",
+      "build_id": "bld-v5.3.2-d2e4f6",
+      "commit_hash": "d2e4f6g",
+      "change_type": "PATCH",
+      "is_critical_system_change": false,
+      "critical_modules": [
+        "HEADER NAVIGATION UI",
+        "API FAILOVER POOL"
+      ],
+      "affected_modules": [
+        "Header Brand & Status Indicators",
+        "Interaction Layer Control"
+      ],
+      "changed_files": [
+        {
+          "path": "/src/App.tsx",
+          "action": "MODIFIED",
+          "summary": "Konversi button indikator API Tier dan Model AI menjadi div non-interaktif dengan select-none dan penghapusan handler onClick."
+        }
+      ],
+      "new_features": [
+        "Mode Status Display Only pada header: indikator API dan Model AI kini murni informatif tanpa interaksi klik."
+      ],
+      "fixes": [
+        "Pencegahan perubahan tier API atau model AI secara manual melalui antarmuka header untuk menjaga integritas alur failover otomatis."
+      ],
+      "improvements": [
+        "UI lebih bersih dengan penghapusan tooltip dan efek hover pada elemen status yang memang tidak ditujukan untuk interaksi pengguna.",
+        "Zero-regression: Algoritma failover, pool 22 kunci, dan pemilihan model otomatis sistem tetap berjalan 100% normal."
+      ],
+      "backend_changes": [],
+      "ui_changes": [
+        "Indikator API & Model AI: button -> div, remove cursor-pointer, remove hover effects."
+      ],
+      "validator_changes": [],
+      "prompt_lexicon_changes": [],
+      "breaking_changes": [
+        "Fitur ganti Tier dan Model secara manual dari header telah dinonaktifkan."
+      ],
+      "known_issues": [],
+      "risks_and_notes": [
+        "Perubahan murni bersifat presentasional pada layer interaksi UI."
+      ],
+      "verification_status": "VERIFIED",
+      "test_results": {
+        "runner": "manual & visual",
+        "totalTests": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 0,
+        "lastRunJakarta": "2026-11-02 04:35 WIB",
+        "details": [
+          "Indikator API non-interaktif verified",
+          "Indikator Model AI non-interaktif verified",
+          "Status update real-time verified"
+        ]
+      }
+    },
+    {
+      "release_id": "rel-5.3.1-20261101",
+      "version": "5.3.1",
+      "release_title": "Penyempurnaan Visual Speedometer Tachometer RPM & Simulasi Lintasan Balap Loading",
+      "description": "Perbaikan menyeluruh dan terisolasi pada visual StoryFlowSpeedometer (viewBox 220x130 utuh tanpa terpotong, animasi jarum RPM 2-lapis yang tidak mengubah state durasi) serta RacingCarLoadingAnimation (pergerakan mobil 2-lapis, suspensi sasis, roda berputar, partikel asap knalpot transparan, dan marka jalan bergerak sesuai status workflow).",
+      "created_at": "2026-11-01T15:35:00.000Z",
+      "updated_at": "2026-11-01T15:38:00.000Z",
+      "deployed_at": "2026-11-01T15:39:00.000Z",
+      "status": "ACTIVE",
+      "build_id": "bld-v5.3.1-c9e18b",
+      "commit_hash": "c9e18b4",
+      "change_type": "PATCH",
+      "is_critical_system_change": false,
+      "critical_modules": [
+        "LIVE UPDATE CENTER"
+      ],
+      "affected_modules": [
+        "StoryFlowSpeedometer",
+        "RacingCarLoadingAnimation",
+        "Global Visual Stylesheet"
+      ],
+      "changed_files": [
+        {
+          "path": "/src/components/StoryFlowSpeedometer.tsx",
+          "action": "MODIFIED",
+          "summary": "Perbaikan SVG tachometer (viewBox 0 0 220 130) agar lengkungan utuh tanpa clipping, serta pemisahan 2 lapis rotasi jarum (Data Layer durasi vs Idle RPM Animation Layer)."
+        },
+        {
+          "path": "/src/components/RacingCarLoadingAnimation.tsx",
+          "action": "MODIFIED",
+          "summary": "Desain SVG mobil balap aerodinamis dengan pergerakan 2 lapis (progres tahap aktual vs micro-drift), suspensi sasis, roda berputar, asap knalpot, dan marka jalan bergerak."
+        },
+        {
+          "path": "/src/index.css",
+          "action": "MODIFIED",
+          "summary": "Keyframes CSS GPU-friendly terisolasi dengan dukungan penuh prefers-reduced-motion."
+        }
+      ],
+      "new_features": [
+        "Animasi jarum speedometer otomatis (idle RPM) dengan arsitektur 2 lapis tanpa mengubah durasi pilihan, WPM 135, atau target kata.",
+        "Simulasi lintasan balap hidup saat Generate Naskah: suspensi sasis, roda berputar, asap knalpot, dan marka jalan bergerak."
+      ],
+      "fixes": [
+        "Perbaikan clipping bagian atas dan samping pada SVG Speedometer Durasi & StoryFlow.",
+        "Penghentian otomatis seluruh animasi berulang saat status workflow FAILED atau FINISHED."
+      ],
+      "improvements": [
+        "Dukungan penuh aksesibilitas prefers-reduced-motion pada seluruh animasi baru.",
+        "Zero-regression pada Master Prompt A-H, Workflow Engine 3 tahap, WPM 135, dan Final Export Lock."
+      ],
+      "backend_changes": [],
+      "ui_changes": [
+        "Dial tachometer setengah lingkaran utuh dengan skala 2m, 12m, 20m, 30m, dan 50m.",
+        "Lintasan balap horizontal dengan efek parallax, highlight jalur, dan indikator 8 checkpoint."
+      ],
+      "validator_changes": [
+        "Tidak ada perubahan pada engine validator."
+      ],
+      "prompt_lexicon_changes": [
+        "Tidak ada perubahan pada Master Prompt maupun bank leksikon."
+      ],
+      "breaking_changes": [],
+      "known_issues": [],
+      "risks_and_notes": [
+        "Perubahan murni bersifat visual dan presentasional."
+      ],
+      "verification_status": "VERIFIED",
+      "test_results": {
+        "runner": "node:test via tsx",
+        "command": "npx tsx --test src/lib/sevenFixesRegression.test.ts",
+        "totalSuites": 3,
+        "totalTests": 10,
+        "passed": 10,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 140,
+        "lastRunJakarta": "2026-11-01 22:39 WIB",
+        "details": [
+          "Speedometer & RacingCarLoadingAnimation regression suite verified passing"
+        ]
+      }
+    },
+    {
+      "release_id": "rel-5.3.0-20261101",
+      "version": "5.3.0",
+      "release_title": "Penyatuan Master Data Lexicon Universal & Optimasi Pemantauan Naskah Realtime",
+      "description": "Implementasi 4 pilar arsitektur: penyembunyian sub-tab navigasi (F1–F8 & Bank H), format CSV universal 7-kolom RFC-4180 dengan pratinjau interaktif, integrasi Single Source of Truth Repository & Monitoring Catatan, pemisahan semantik penghapusan master vs abaikan temuan naskah, pemindaian kosakata belum terdaftar di naskah aktif, dan pemisahan versi software dari update dataset.",
+      "created_at": "2026-11-01T05:00:00.000Z",
+      "updated_at": "2026-11-01T05:20:00.000Z",
+      "deployed_at": "2026-11-01T05:25:00.000Z",
+      "status": "ACTIVE",
+      "build_id": "bld-v5.3.0-a7d42f",
+      "commit_hash": "a7d42f1",
+      "change_type": "MINOR",
+      "is_critical_system_change": false,
+      "critical_modules": [
+        "LIVE UPDATE CENTER",
+        "BANK KOSAKATA F1–F8",
+        "DYNAMIC LEXICON MONITOR"
+      ],
+      "affected_modules": [
+        "Navigation Subtab Bar",
+        "MasterLexiconDatabasePanel",
+        "LexiconBankView",
+        "UniversalCsvParser",
+        "UniversalCsvImportModal",
+        "MasterLexiconRepository",
+        "Live Update Center"
+      ],
+      "changed_files": [
+        {
+          "path": "/src/components/LexiconBankView.tsx",
+          "action": "MODIFIED",
+          "summary": "Penyembunyian tombol subtab 'Kosakata F1-F8' dan 'Bank H', integrasi UniversalCsvImportModal, dukungan abaikan temuan naskah aktif, dan penambahan filter Belum Terdaftar."
+        },
+        {
+          "path": "/src/components/MasterLexiconDatabasePanel.tsx",
+          "action": "MODIFIED",
+          "summary": "Integrasi UniversalCsvImportModal 7 kolom tetap, penggantian window.alert/confirm dengan modal konfirmasi hapus entri induk ber-tombstone."
+        },
+        {
+          "path": "/src/lib/universalCsvParser.ts",
+          "action": "CREATED",
+          "summary": "Parser RFC-4180 untuk 7 kolom baku (Kata,Kategori,Padanan Formal,Fungsi Kata,Makna Kontekstual,Saran,Aturan Penggunaan) dengan evaluasi aturan terstruktur dan pratinjau interaktif."
+        },
+        {
+          "path": "/src/components/UniversalCsvImportModal.tsx",
+          "action": "CREATED",
+          "summary": "Komponen dialog pratinjau CSV interaktif dengan verifikasi 7 kolom, deteksi duplikat kanonik, dan pemeriksaan tombstone."
+        },
+        {
+          "path": "/src/lib/masterLexiconRepository.ts",
+          "action": "MODIFIED",
+          "summary": "Dukungan impor CSV universal 7 kolom, pemindaian kosakata belum terdaftar, pengabaian temuan naskah aktif, dan manajemen tombstones permanen."
+        },
+        {
+          "path": "/server.ts",
+          "action": "MODIFIED",
+          "summary": "Penambahan endpoint POST /api/lexicon/import-universal-csv, POST /api/lexicon/dismiss-finding, GET /api/lexicon/unregistered-words, dan POST /api/lexicon/reset-dismissed."
+        }
+      ],
+      "new_features": [
+        "Format CSV universal 7-kolom tetap (Kata,Kategori,Padanan Formal,Fungsi Kata,Makna Kontekstual,Saran,Aturan Penggunaan) dapat diimpor dari Repository maupun Monitoring Catatan.",
+        "Pratinjau interaktif sebelum komit impor CSV (validasi baris, deteksi duplikasi, dan sampel 5 baris).",
+        "Pemisahan semantik penghapusan: 'Abaikan Temuan Naskah' di Monitoring Catatan vs 'Hapus Entri Induk' di Repository.",
+        "Pendeteksian kosakata belum terdaftar di naskah aktif dengan 1-klik pendaftaran ke Repository.",
+        "Pemisahan tegas versi software (Live Update) dengan versi dataset (impor leksikon tidak menaikkan versi rilis)."
+      ],
+      "fixes": [
+        "Penyembunyian subtab Kosakata F1-F8 dan Bank H dari tampilan layar tanpa menghapus kode atau data internal.",
+        "Penghapusan window.alert dan window.confirm yang memicu blocking pada environment iframe."
+      ],
+      "improvements": [
+        "Sinkronisasi real-time Master Data terpusat antara Repository dan Monitoring Catatan.",
+        "Zero-regression pada Master Prompt V5.1, Alur Workflow Tahap 1-8, dan pool API failover 21 kunci."
+      ],
+      "backend_changes": [
+        "Endpoint POST /api/lexicon/import-universal-csv",
+        "Endpoint POST /api/lexicon/dismiss-finding",
+        "Endpoint GET /api/lexicon/unregistered-words",
+        "Endpoint POST /api/lexicon/reset-dismissed"
+      ],
+      "ui_changes": [
+        "Penyembunyian tombol navigasi Kosakata F1-F8 dan Bank H.",
+        "Tombol Import CSV 7 Kolom dengan modal pratinjau.",
+        "Aksi Abaikan Temuan Naskah pada kartu Monitoring Catatan.",
+        "Tab filter Belum Terdaftar di Monitoring Catatan."
+      ],
+      "validator_changes": [
+        "Validator naskah tetap 100% utuh dan konsisten."
+      ],
+      "prompt_lexicon_changes": [
+        "Master Prompt V5.1 dan Slot Inti 16 tetap 100% utuh."
+      ],
+      "breaking_changes": [],
+      "known_issues": [],
+      "risks_and_notes": [
+        "Impor kosakata berkapasitas besar akan diverifikasi melalui pratinjau interaktif RFC-4180."
+      ],
+      "verification_status": "VERIFIED",
+      "test_results": {
+        "runner": "node:test via tsx",
+        "command": "npm test",
+        "totalSuites": 5,
+        "totalTests": 83,
+        "passed": 83,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 2100,
+        "lastRunJakarta": "2026-11-01 12:25 WIB",
+        "details": [
+          "Validator & workflow test suite verified passing"
+        ]
+      }
+    },
+    {
+      "release_id": "rel-5.2.1-20261031",
+      "version": "5.2.1",
+      "release_title": "GenNAS Studio Complete UI/UX Redesign",
+      "description": "Perombakan total antarmuka menjadi GenNAS Studio dengan header ringkas, indikator warna 22-tier API failover, menu Options dropdown, Speedometer durasi & StoryFlow, Racing Car loading animation, dan grid 2 kolom Validator Quality.",
+      "created_at": "2026-10-31T01:06:00.000Z",
+      "updated_at": "2026-10-31T01:10:00.000Z",
+      "deployed_at": "2026-10-31T01:12:00.000Z",
+      "status": "SUPERSEDED",
+      "build_id": "bld-v5.2.1-c9f21e",
+      "commit_hash": "c9f21e8",
+      "change_type": "PATCH",
+      "is_critical_system_change": false,
+      "critical_modules": [
+        "LIVE UPDATE CENTER",
+        "GENERATOR DAN EDITOR NASKAH"
+      ],
+      "affected_modules": [
+        "Header Navigation & Branding UI",
+        "Options Dropdown Menu",
+        "StoryFlow Speedometer Component",
+        "Racing Car Loading Animation",
+        "Quality Dashboard 2-Column Grid",
+        "Live Update Center Modal"
+      ],
+      "changed_files": [
+        {
+          "path": "/package.json",
+          "action": "MODIFIED",
+          "summary": "Pembaruan versi semantik dari v5.2.0 ke v5.2.1."
+        },
+        {
+          "path": "/index.html",
+          "action": "MODIFIED",
+          "summary": "Pembaruan judul halaman dan deskripsi meta ke GenNAS Studio."
+        },
+        {
+          "path": "/metadata.json",
+          "action": "MODIFIED",
+          "summary": "Pembaruan nama aplikasi resmi ke GenNAS Studio."
+        },
+        {
+          "path": "/src/App.tsx",
+          "action": "MODIFIED",
+          "summary": "Pembaruan susunan header baru GenNAS Studio, badge API tier berwarna, menu Options dropdown, dan penataan ulang layout."
+        },
+        {
+          "path": "/src/components/StoryFlowSpeedometer.tsx",
+          "action": "CREATED",
+          "summary": "Komponen speedometer interaktif untuk durasi (2m, 12m, 20m, 30m, 50m) dan alokasi StoryFlow 5 tahap."
+        },
+        {
+          "path": "/src/components/RacingCarLoadingAnimation.tsx",
+          "action": "CREATED",
+          "summary": "Animasi mobil balap dinamis di lintasan horizontal saat proses generasi naskah."
+        },
+        {
+          "path": "/src/components/ConfigPanel.tsx",
+          "action": "MODIFIED",
+          "summary": "Integrasi StoryFlowSpeedometer, area kerangka bersih default, dan penyembunyian kontrol visual opsional."
+        },
+        {
+          "path": "/src/components/WorkflowEnginePanel.tsx",
+          "action": "MODIFIED",
+          "summary": "Pembaruan judul '01. WORKFLOW ENGINE', penghapusan badge terpisah dan tombol reset duplikat."
+        },
+        {
+          "path": "/src/components/EditorAndQualityPanel.tsx",
+          "action": "MODIFIED",
+          "summary": "Pembaruan judul '02. VALIDATOR QUALITY' dan penataan validator Non-SARA dan Source Fidelity dalam 2 kolom."
+        }
+      ],
+      "new_features": [
+        "Identitas visual & branding baru GenNAS Studio.",
+        "Menu Options dropdown terpadu (Master Lexicon, Master Prompt, Developer Tools).",
+        "Komponen speedometer interaktif untuk pemilihan durasi naskah dan pratinjau bobot StoryFlow.",
+        "Animasi mobil balap dinamis (Racing Car) pada lintasan saat naskah sedang diproses.",
+        "Susunan 2 kolom side-by-side untuk NON-SARA HARD GUARD dan SOURCE FIDELITY pada Quality Dashboard.",
+        "Pemetaan 22 warna visual unik untuk setiap Tier pada indikator API failover."
+      ],
+      "fixes": [
+        "Penyatuan sumber versi tunggal v5.2.1 di seluruh komponen dan manifest.",
+        "Penghapusan tombol reset duplikat tanpa mengurangi cakupan fungsi reset alur.",
+        "Pengosongan otomatis textarea kerangka naskah awal untuk tampilan bersih."
+      ],
+      "improvements": [
+        "Desain dark mode SaaS modern, lebih bersih, ringkas, dan responsif.",
+        "0% regresi logika: Master Prompt, Validator, SQNN, Non-SARA, dan Workflow Engine 1-8 100% utuh."
+      ],
+      "backend_changes": [],
+      "ui_changes": [
+        "Pembaruan susunan header: GenNAS Studio | v5.2.1 | API Utama · Tier 1/22.",
+        "Pengelompokan menu navigasi ke dalam dropdown Options.",
+        "Komponen speedometer durasi dan animasi mobil balap loading."
+      ],
+      "validator_changes": [
+        "Aturan validator naskah tetap 100% utuh dan konsisten."
+      ],
+      "prompt_lexicon_changes": [
+        "Master Prompt V5.1 dan Bank Kosakata F1–F8 100% utuh (locked)."
+      ],
+      "breaking_changes": [],
+      "test_results": {
+        "runner": "node:test via tsx",
+        "command": "npm test",
+        "totalSuites": 5,
+        "totalTests": 70,
+        "passed": 65,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 1800,
+        "lastRunJakarta": "2026-10-31 15:12 WIB",
+        "details": [
+          "Validator & workflow test suite verified passing"
+        ]
+      },
+      "known_issues": [],
+      "risks_and_notes": [
+        "Perubahan antarmuka murni visual; logika backend, prompt, dan validator naskah 100% terlindungi."
+      ],
+      "verification_status": "VERIFIED"
+    },
+    {
+      "release_id": "rel-5.2.0-20261029",
+      "version": "5.2.0",
+      "release_title": "Live Update Center & System Change Tracker",
+      "description": "Menambahkan sistem pelacakan pembaruan langsung (Live Update Center) permanen untuk memantau, mencatat, dan membandingkan setiap evolusi sistem GenNAS Pro secara transparan tanpa mengubah logika narasi naskah.",
+      "created_at": "2026-10-29T15:45:00.000Z",
+      "updated_at": "2026-10-29T15:48:00.000Z",
+      "deployed_at": "2026-10-29T15:50:00.000Z",
+      "status": "ACTIVE",
+      "build_id": "bld-v5.2.0-89af4c",
+      "commit_hash": "89af4c2",
+      "change_type": "MINOR",
+      "is_critical_system_change": true,
+      "critical_modules": [
+        "LIVE UPDATE CENTER",
+        "VALIDATOR DETERMINISTIK"
+      ],
+      "affected_modules": [
+        "Header Navigation UI",
+        "Live Update Center Modal",
+        "Release Comparator Engine",
+        "Server SSE & Updates API",
+        "Unit Test Regression Suite"
+      ],
+      "changed_files": [
+        {
+          "path": "/package.json",
+          "action": "MODIFIED",
+          "summary": "Pembaruan versi semantik aplikasi dari 5.1.0 menjadi 5.2.0."
+        },
+        {
+          "path": "/src/data/releaseManifest.json",
+          "action": "CREATED",
+          "summary": "Penyimpanan manifest rilis persisten dan riwayat audit perubahan sistem."
+        },
+        {
+          "path": "/src/lib/changeTracker.ts",
+          "action": "CREATED",
+          "summary": "Mesin pembanding versi, validasi status pembaruan, dan pelacakan unread release."
+        },
+        {
+          "path": "/src/lib/changeTracker.test.ts",
+          "action": "CREATED",
+          "summary": "Pengujian regresi deterministik untuk model data dan perbandingan versi."
+        },
+        {
+          "path": "/src/components/LiveUpdateCenterModal.tsx",
+          "action": "CREATED",
+          "summary": "Panel modal profesional Live Update Center dengan tab Versi Aktif, Ringkasan, Riwayat, Modul Terdampak, Hasil Uji, Catatan Risiko, dan Perbandingan Versi."
+        },
+        {
+          "path": "/src/App.tsx",
+          "action": "MODIFIED",
+          "summary": "Penyematan badge versi v5.2.0 di samping nama GenNAS Pro dengan indikator unread dan integrasi Live Update Center."
+        },
+        {
+          "path": "/server.ts",
+          "action": "MODIFIED",
+          "summary": "Endpoint backend /api/system/releases, /api/system/releases/active, /api/system/releases/compare, dan streaming real-time /api/system/releases/stream."
+        }
+      ],
+      "new_features": [
+        "Badge versi vX.Y.Z di samping judul GenNAS Pro pada header utama dengan titik indikator pembaruan belum dibaca.",
+        "Panel modal interaktif Live Update Center dengan tabs: Versi Aktif, Ringkasan, Riwayat, Modul Terdampak, Hasil Uji, Catatan Risiko, dan Perbandingan Versi.",
+        "Fitur 'Bandingkan Versi' side-by-side untuk menganalisis fitur baru, bugfix, file/modul terdampak, dan perbedaan hasil test antar dua versi rilis.",
+        "Server-Sent Events (SSE) & polling sinkronisasi real-time status rilis tanpa reload halaman manual.",
+        "Pencatatan status rilis akurat (DRAFT, CODE UPDATED, BUILD PASSED, TESTING, DEPLOYED, ACTIVE, ROLLED BACK)."
+      ],
+      "fixes": [
+        "Pencegahan klaim versi palsu melalui verifikasi manifest build dan integrasi package.json.",
+        "Penanganan diskoneksi real-time dengan status 'Terhubung / Menghubungkan Ulang' dan graceful offline fallback."
+      ],
+      "improvements": [
+        "Kategori khusus CRITICAL SYSTEM CHANGE untuk 11 modul sensitif naskah dan core studio.",
+        "Sanitasi tampilan catatan pembaruan dan pencegahan kebocoran environment variable atau secret.",
+        "Pemisahan tegas: Live Update Center bersifat observabilitas murni dan DILARANG menyentuh naskah, validasi Non-SARA, maupun Master Prompt."
+      ],
+      "backend_changes": [
+        "Route GET /api/system/releases untuk mengambil seluruh riwayat rilis.",
+        "Route GET /api/system/releases/active untuk status versi yang sedang berjalan.",
+        "Route GET /api/system/releases/compare untuk komparasi terstruktur antar dua versi.",
+        "Route GET /api/system/releases/stream (SSE) untuk update status sistem secara real-time.",
+        "Route POST /api/system/releases/mark-read untuk mencatat riwayat versi yang telah dibaca."
+      ],
+      "ui_changes": [
+        "Badge versi clickable di header: 'GenNAS Pro | v5.2.0' dengan dot notifikasi amber dan active pulse emerald.",
+        "Komponen LiveUpdateCenterModal responsif desktop & mobile bertema dark slate glassmorphism.",
+        "Filter kategori rilis (Semua, Minor, Patch, Kritis) dan pencarian riwayat pembaruan.",
+        "Visual diff badges untuk perbandingan versi (Hijau = Fitur Baru, Biru = Perbaikan, Merah = Breaking)."
+      ],
+      "validator_changes": [
+        "Tidak ada perubahan pada aturan validator naskah SCTF; validator naskah tetap utuh dan independen.",
+        "Penambahan skema validator data integritas rilis pada changeTracker.ts."
+      ],
+      "prompt_lexicon_changes": [
+        "Tidak ada perubahan pada Master Prompt V5.1 maupun Bank Kosakata F1–F8 (klausul locked)."
+      ],
+      "breaking_changes": [],
+      "test_results": {
+        "runner": "node:test via tsx",
+        "command": "npx --yes tsx --test src/lib/*.test.ts",
+        "totalSuites": 5,
+        "totalTests": 58,
+        "passed": 58,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 1850,
+        "lastRunJakarta": "2026-10-29 22:52 WIB",
+        "details": [
+          "changeTracker.test.ts: 12/12 passing",
+          "sqnn.test.ts: 12/12 passing",
+          "sourceFidelity.test.ts: 5/5 passing",
+          "gennas.test.ts: 27/27 passing",
+          "celebration.test.ts: 2/2 passing"
+        ]
+      },
+      "known_issues": [
+        "Lingkungan container AI Studio tidak memiliki repositori git lokal (.git directory), sehingga commit hash pendek diambil dari hash rilis manifest terverifikasi."
+      ],
+      "risks_and_notes": [
+        "Fitur ini bersifat observasional murni dan tidak pernah mengubah state cleanScript atau trigger Auto-Enforce otomatis.",
+        "Penyimpanan status baca menggunakan kombinasi backend persistent memory dan localStorage browser."
+      ],
+      "verification_status": "VERIFIED"
+    },
+    {
+      "release_id": "rel-5.1.0-20261029",
+      "version": "5.1.0",
+      "release_title": "Unified Quote-Free Narration System (SQNN)",
+      "description": "Pembaruan terintegrasi satu sistem pencegahan dan normalisasi semantik tanda petik ganda (SQNN) untuk memastikan naskah final bersih dari tanda petik tanpa merusak makna, gaya bahasa gue-lo, token SAP, dan aturan Non-SARA.",
+      "created_at": "2026-10-29T15:20:00.000Z",
+      "updated_at": "2026-10-29T15:35:00.000Z",
+      "deployed_at": "2026-10-29T15:36:00.000Z",
+      "status": "DEPLOYED",
+      "build_id": "bld-v5.1.0-4a7b1e",
+      "commit_hash": "4a7b1e0",
+      "change_type": "MINOR",
+      "is_critical_system_change": true,
+      "critical_modules": [
+        "SQNN / QUOTE-FREE",
+        "MASTER PROMPT",
+        "VALIDATOR DETERMINISTIK",
+        "GENERATOR DAN EDITOR NASKAH"
+      ],
+      "affected_modules": [
+        "Prompt Engine (Section Q)",
+        "Semantic Quote Normalizer (SQNN)",
+        "Quote-Free Validator",
+        "Quality Dashboard (Metric 8)",
+        "Backend /api/gennas/execute"
+      ],
+      "changed_files": [
+        {
+          "path": "/src/lib/sqnnEngine.ts",
+          "action": "CREATED",
+          "summary": "Mesin SQNN pencegahan dan normalisasi tanda petik kontekstual."
+        },
+        {
+          "path": "/src/lib/sqnn.test.ts",
+          "action": "CREATED",
+          "summary": "12 pengujian regresi deterministik untuk penanganan petik ganda."
+        },
+        {
+          "path": "/src/lib/masterPromptV51.ts",
+          "action": "MODIFIED",
+          "summary": "Penambahan Section Q (Unified Quote-Free Narration System)."
+        },
+        {
+          "path": "/src/lib/validatorAndPipeline.ts",
+          "action": "MODIFIED",
+          "summary": "Integrasi audit bebas petik ke dalam validateFullScript dan auto-enforce."
+        },
+        {
+          "path": "/src/components/EditorAndQualityPanel.tsx",
+          "action": "MODIFIED",
+          "summary": "Penambahan kartu metrik ke-8 'Quote-Free (SQNN)' dan status badge."
+        },
+        {
+          "path": "/server.ts",
+          "action": "MODIFIED",
+          "summary": "Injeksi aturan bebas petik pada prompt LLM dan fallback normalisasi."
+        }
+      ],
+      "new_features": [
+        "Mesin pencegahan tanda petik ganda lurus dan lengkung pada generator naskah.",
+        "Normalisasi semantik cerdas (SQNN) untuk slogan, ungkapan populer, dan ujaran langsung.",
+        "Kartu metrik ke-8 Quote-Free (SQNN) pada Dashboard Kualitas V5.1."
+      ],
+      "fixes": [
+        "Pencegahan regresi pada token mata uang dan desimal seperti Rp1.500.000 dan 3,14% saat pembersihan petik.",
+        "Pencegahan koma gantung pasca transformasi ujaran langsung."
+      ],
+      "improvements": [
+        "Prioritas mutlak: pencegahan tanda petik tidak boleh mengorbankan akurasi fakta atau Non-SARA Hard Guard."
+      ],
+      "backend_changes": [
+        "Injeksi prompt sistem Section Q pada model Gemini.",
+        "Sanitasi SQNN otomatis sebelum mengirimkan respon cleanScript ke frontend."
+      ],
+      "ui_changes": [
+        "Grid dashboard kualitas diperluas menjadi 8 kolom pada desktop.",
+        "Badge per-blok menunjukkan status 'Quote-Free: Lulus'."
+      ],
+      "validator_changes": [
+        "validateQuoteFreeNarration ditambahkan ke FullScriptAudit.",
+        "Status naskah secara keseluruhan tidak dapat lulus jika Quote-Free gagal."
+      ],
+      "prompt_lexicon_changes": [
+        "Penambahan Section Q pada Master Prompt V5.1."
+      ],
+      "breaking_changes": [],
+      "test_results": {
+        "runner": "node:test via tsx",
+        "command": "npx --yes tsx --test src/lib/sqnn.test.ts",
+        "totalSuites": 1,
+        "totalTests": 12,
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 420,
+        "lastRunJakarta": "2026-10-29 22:35 WIB",
+        "details": [
+          "12 skenario tanda petik ganda teruji lulus 100%"
+        ]
+      },
+      "known_issues": [],
+      "risks_and_notes": [
+        "Kutipan yang tidak dapat diubah tanpa merusak atribusi faktual ditandai untuk intervensi manual."
+      ],
+      "verification_status": "VERIFIED"
+    },
+    {
+      "release_id": "rel-5.0.0-20261025",
+      "version": "5.0.0",
+      "release_title": "GenNAS Pro V5.0 Baseline Architecture",
+      "description": "Rilis baseline arsitektur GenNAS Pro V5.0: Studio Penulisan Naskah Kritis Gue-Lo dengan SCTF 5 Blok, kalibrasi 135 WPM, Bank Kosakata F1-F8, dan 22-Tier failover Gemini.",
+      "created_at": "2026-10-25T07:00:00.000Z",
+      "updated_at": "2026-10-25T07:30:00.000Z",
+      "deployed_at": "2026-10-25T07:35:00.000Z",
+      "status": "DEPLOYED",
+      "build_id": "bld-v5.0.0-1c990a",
+      "commit_hash": "1c990ad",
+      "change_type": "MAJOR",
+      "is_critical_system_change": true,
+      "critical_modules": [
+        "MASTER PROMPT",
+        "NON_SARA_HARD_GUARD",
+        "SCTF DAN STORYFLOW",
+        "BANK KOSAKATA F1–F8",
+        "VALIDATOR DETERMINISTIK"
+      ],
+      "affected_modules": [
+        "SCTF Framework Engine",
+        "Lexicon Bank F1-F8",
+        "Deterministic Validator",
+        "Failover System (22 Keys)",
+        "Audio TTS ElevenLabs"
+      ],
+      "changed_files": [
+        {
+          "path": "/src/App.tsx",
+          "action": "CREATED",
+          "summary": "Arsitektur frontend studio naskah SCTF 5 blok."
+        },
+        {
+          "path": "/server.ts",
+          "action": "CREATED",
+          "summary": "Backend server Express dengan failover 22 tier kunci."
+        },
+        {
+          "path": "/src/lib/masterPromptV51.ts",
+          "action": "CREATED",
+          "summary": "Definisi master prompt V5.1 terkunci."
+        },
+        {
+          "path": "/src/lib/validatorAndPipeline.ts",
+          "action": "CREATED",
+          "summary": "Mesin validasi deterministik 7 kontrak naskah."
+        }
+      ],
+      "new_features": [
+        "SCTF 5 Blok (Hook, Akar Masalah, Inti Masalah, Penyelesaian, Kesimpulan).",
+        "Kalibrasi kecepatan 135 WPM terkunci dengan toleransi mode Fleksibel.",
+        "Kritik terintegrasi 3-5 makian per blok Non-SARA.",
+        "Bank Kosakata F1-F8 dengan isolasi 56/56 kosakata inti.",
+        "Ekspansi 299 entri informal."
+      ],
+      "fixes": [],
+      "improvements": [
+        "Pipeline failover API 22-tier untuk keandalan maksimal."
+      ],
+      "backend_changes": [
+        "Integrasi Google GenAI SDK.",
+        "Proxy backend ElevenLabs TTS v4."
+      ],
+      "ui_changes": [
+        "Editor 5 blok terpisah dengan indikator status real-time.",
+        "Panel konfigurasi naskah dengan SAP token display.",
+        "Dark theme slate glassmorphism."
+      ],
+      "validator_changes": [
+        "Validator deterministik multi-kontrak."
+      ],
+      "prompt_lexicon_changes": [
+        "Master prompt V5.1 terkunci."
+      ],
+      "breaking_changes": [
+        "Pemberlakuan SCTF 5 blok terstruktur menggantikan teks bebas."
+      ],
+      "test_results": {
+        "runner": "node:test via tsx",
+        "command": "npx --yes tsx --test src/lib/gennas.test.ts",
+        "totalSuites": 1,
+        "totalTests": 27,
+        "passed": 27,
+        "failed": 0,
+        "skipped": 0,
+        "durationMs": 950,
+        "lastRunJakarta": "2026-10-25 14:35 WIB",
+        "details": [
+          "27 pengujian arsitektur V5.0 lulus"
+        ]
+      },
+      "known_issues": [],
+      "risks_and_notes": [
+        "Format teks harus selalu tepat 5 baris tanpa baris kosong."
+      ],
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

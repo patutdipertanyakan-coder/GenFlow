@@ -1,0 +1,339 @@
+{
+  "policy_id": "GENFLOW_UNIVERSAL_FRAMEWORK_POLICY",
+  "policy_name": "GENFLOW UNIVERSAL FRAMEWORK PROCESSING POLICY",
+  "schema_id": "GF-NARRATIVE-FRAMEWORK-1.0",
+  "version": "1.0.0",
+  "active_status": true,
+  "created_at": 1730476800000,
+  "updated_at": 1730476800000,
+  "source_filenames": [
+    "GENFLOW_FORMAT_KERANGKA_NASKAH_BAKU.txt",
+    "INSTRUKSI_OUTPUT_KERANGKA_GENFLOW.txt"
+  ],
+  "content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "change_history": [
+    {
+      "version": "1.0.0",
+      "timestamp": 1730476800000,
+      "summary": "Initial persistent integration of GENFLOW UNIVERSAL FRAMEWORK PROCESSING POLICY with canonical 23 components GF-01 to GF-23 and 5-block StoryFlow blueprint."
+    }
+  ],
+  "rules": [
+    "Pertahankan seluruh marker, nama field, nomor komponen GF-01 sampai GF-23, urutan A–G, dan struktur lima blok StoryFlow persis seperti template.",
+    "Jangan membuat desain, susunan, judul bagian, atau format baru. Jangan mengganti label dengan sinonim.",
+    "Jangan menambahkan halaman sampul, daftar isi, tabel, kolom ganda, text box, shape, diagram, header/footer, atau elemen mengambang.",
+    "Gunakan satu kolom teks biasa. Setiap marker dan setiap label field harus berada pada paragraf tersendiri.",
+    "TOPIC_TITLE hanya berisi judul topik. Jangan gabungkan dengan nama template, nama framework, slogan, status, atau keterangan lain.",
+    "Jangan meletakkan ringkasan, kesimpulan, atau metadata sebelum marker [GENFLOW_DOCUMENT_START] atau di luar marker dokumen.",
+    "Isi seluruh field yang relevan. Field yang tidak tersedia atau tidak relevan tetap dipertahankan dan diisi dengan BELUM TERSEDIA atau TIDAK RELEVAN — [alasan singkat]. Jangan menghapus field kosong.",
+    "Untuk daftar sumber, bukti, kontraargumen, dan bagian pembahasan yang jumlahnya banyak, ulangi blok bernomor yang sama dengan nomor berikutnya. Jangan menggabungkan beberapa klaim atau sumber berbeda ke satu blok.",
+    "Setiap klaim faktual harus ditautkan ke SOURCE_ID dan EVIDENCE_ID yang konsisten. Jika belum terverifikasi, beri status NEEDS_VERIFICATION. Jangan mengarang data, kutipan, angka, sumber, URL, atau hubungan sebab-akibat.",
+    "Pertahankan perbedaan antara fakta, interpretasi, opini, dugaan, dan hipotesis.",
+    "Kerangka harus berupa poin-poin perencanaan, bukan naskah narasi. Jangan menulis dialog, monolog, hook final, paragraf narasi, atau kalimat siap dibacakan.",
+    "Jangan mengubah substansi topik pengguna. Ikuti batas Wajib Dibahas, Boleh Disinggung, dan Di Luar Fokus.",
+    "Pertahankan lima blok StoryFlow pada GF-15 (HOOK, AKAR_MASALAH, INTI_MASALAH, PENYELESAIAN, KESIMPULAN). Isi tiap blok sesuai fungsi dan topik; jangan menghapus blok.",
+    "Jangan mengisi komponen audit dengan lulus/siap secara otomatis. Putuskan berdasarkan isi kerangka dan bukti yang benar-benar tersedia.",
+    "Simpan hasil sebagai dokumen yang dapat diedit dengan format penamaan standar KERANGKA_[TOPIK_RINGKAS]_GENFLOW."
+  ],
+  "groups": [
+    { "code": "A", "title": "INPUT UTAMA", "component_ids": [1, 2] },
+    { "code": "B", "title": "PENGUNCI SUBSTANSI", "component_ids": [3, 4, 5, 6, 7, 8, 9] },
+    { "code": "C", "title": "PENGUNCI FAKTA DAN ARGUMENTASI", "component_ids": [10, 11, 12, 13] },
+    { "code": "D", "title": "PERANCANGAN STRUKTUR NASKAH", "component_ids": [14, 15] },
+    { "code": "E", "title": "PERANCANGAN PEMBUKA, JUDUL, DAN PENUTUP", "component_ids": [16, 17, 18] },
+    { "code": "F", "title": "AUDIT KERANGKA SEBELUM PENULISAN NARASI", "component_ids": [19, 20, 21, 22, 23] },
+    { "code": "G", "title": "ATURAN WAJIB PENGERJAAN", "component_ids": [] }
+  ],
+  "components": [
+    {
+      "id": 1,
+      "marker": "GF-01",
+      "group_code": "A",
+      "canonical_title": "TOPIK UTAMA",
+      "fields": ["TOPIC_STATEMENT", "TOPIC_OBJECT", "TOPIC_QUESTION_IF_GIVEN"]
+    },
+    {
+      "id": 2,
+      "marker": "GF-02",
+      "group_code": "A",
+      "canonical_title": "BAHAN DAN SUMBER RUJUKAN",
+      "sub_block_marker": "GF-02-SOURCE-",
+      "fields": [
+        "SOURCE_ID",
+        "SOURCE_TITLE",
+        "SOURCE_AUTHOR_OR_ORGANIZATION",
+        "SOURCE_DATE_OR_YEAR",
+        "SOURCE_URL_OR_IDENTIFIER",
+        "SOURCE_RELEVANT_CONTENT",
+        "SOURCE_LIMITATION",
+        "SOURCE_STATUS"
+      ]
+    },
+    {
+      "id": 3,
+      "marker": "GF-03",
+      "group_code": "B",
+      "canonical_title": "KUNCI FOKUS BESAR — CENTRAL FOCUS",
+      "fields": ["CENTRAL_FOCUS", "FOCUS_RATIONALE", "FOCUS_EXCLUSIONS"]
+    },
+    {
+      "id": 4,
+      "marker": "GF-04",
+      "group_code": "B",
+      "canonical_title": "KUNCI BATAS PEMBAHASAN — SCOPE BOUNDARY",
+      "fields": ["MUST_COVER", "MAY_MENTION", "OUT_OF_SCOPE"]
+    },
+    {
+      "id": 5,
+      "marker": "GF-05",
+      "group_code": "B",
+      "canonical_title": "KUNCI PERTANYAAN INTI — CORE QUESTION",
+      "fields": ["CORE_QUESTION", "ANSWER_REQUIREMENTS"]
+    },
+    {
+      "id": 6,
+      "marker": "GF-06",
+      "group_code": "B",
+      "canonical_title": "KUNCI KERANGKA MASALAH — PROBLEM FRAMEWORK",
+      "fields": [
+        "MAIN_PROBLEM",
+        "BACKGROUND_AND_CONTEXT",
+        "CAUSES_OR_EXPLANATORY_FACTORS",
+        "MECHANISM",
+        "INVOLVED_PARTIES_OR_ELEMENTS",
+        "IMPACTS_AND_CONSEQUENCES",
+        "CORE_CONTRADICTION_OR_GAP"
+      ]
+    },
+    {
+      "id": 7,
+      "marker": "GF-07",
+      "group_code": "B",
+      "canonical_title": "KUNCI TESIS UTAMA — CENTRAL THESIS",
+      "fields": ["CENTRAL_THESIS", "THESIS_SUPPORT_NEEDED", "THESIS_LIMITATION"]
+    },
+    {
+      "id": 8,
+      "marker": "GF-08",
+      "group_code": "B",
+      "canonical_title": "KUNCI LOGIC PUNCH",
+      "fields": ["LOGIC_PUNCH", "LOGIC_PUNCH_BASIS"]
+    },
+    {
+      "id": 9,
+      "marker": "GF-09",
+      "group_code": "B",
+      "canonical_title": "KUNCI TUJUAN PERUBAHAN PERSPEKTIF",
+      "fields": [
+        "AUDIENCE_BEFORE",
+        "AUDIENCE_AFTER",
+        "ASSUMPTIONS_TO_TEST",
+        "RESPONSIBLE_NEW_PERSPECTIVE"
+      ]
+    },
+    {
+      "id": 10,
+      "marker": "GF-10",
+      "group_code": "C",
+      "canonical_title": "PEMETAAN LANDASAN FAKTA — EVIDENCE MAPPING",
+      "sub_block_marker": "GF-10-EVIDENCE-",
+      "fields": [
+        "EVIDENCE_ID",
+        "CLAIM_ID",
+        "CLAIM_TO_CHECK",
+        "EVIDENCE_OR_DATA",
+        "SOURCE_ID",
+        "DATE_OR_PERIOD",
+        "EVIDENCE_STATUS",
+        "RELEVANCE_TO_THESIS",
+        "LIMITATION_OR_CAVEAT"
+      ]
+    },
+    {
+      "id": 11,
+      "marker": "GF-11",
+      "group_code": "C",
+      "canonical_title": "PEMETAAN RANTAI LOGIKA — ARGUMENT CHAIN",
+      "fields": [
+        "CHAIN_STEP_01_INITIAL_CONDITION",
+        "CHAIN_STEP_02_PROBLEM",
+        "CHAIN_STEP_03_CAUSE_OR_EXPLANATORY_FACTOR",
+        "CHAIN_STEP_04_MECHANISM",
+        "CHAIN_STEP_05_EVIDENCE",
+        "CHAIN_STEP_06_IMPACT",
+        "CHAIN_STEP_07_IMPLICATION",
+        "CHAIN_STEP_08_INTERMEDIATE_OR_FINAL_CONCLUSION",
+        "LOGIC_GAPS"
+      ]
+    },
+    {
+      "id": 12,
+      "marker": "GF-12",
+      "group_code": "C",
+      "canonical_title": "PEMETAAN KONTRAARGUMEN DAN ALTERNATIF PENJELASAN",
+      "sub_block_marker": "GF-12-COUNTERARGUMENT-",
+      "fields": [
+        "COUNTERARGUMENT",
+        "ALTERNATIVE_EXPLANATION",
+        "SUPPORTING_EVIDENCE_OR_SOURCE_ID",
+        "HOW_TO_HANDLE",
+        "LIMITATION"
+      ]
+    },
+    {
+      "id": 13,
+      "marker": "GF-13",
+      "group_code": "C",
+      "canonical_title": "PENENTUAN PLOT TWIST — PERSPECTIVE SHIFT",
+      "fields": [
+        "INITIAL_EXPECTATION",
+        "REVEALING_FACT_OR_CONTRADICTION",
+        "PERSPECTIVE_SHIFT",
+        "PLANNED_POSITION",
+        "IF_NO_VALID_PLOT_TWIST"
+      ]
+    },
+    {
+      "id": 14,
+      "marker": "GF-14",
+      "group_code": "D",
+      "canonical_title": "PENENTUAN FUNGSI SETIAP BAGIAN",
+      "sub_block_marker": "GF-14-PART-",
+      "fields": [
+        "PART_NAME",
+        "PART_FUNCTION",
+        "UNIQUE_CONTRIBUTION",
+        "REQUIRED_EVIDENCE_IDS"
+      ]
+    },
+    {
+      "id": 15,
+      "marker": "GF-15",
+      "group_code": "D",
+      "canonical_title": "PENYUSUNAN ALUR PEMBAHASAN — NARRATIVE BLUEPRINT",
+      "sub_block_marker": "GF-15-STORYFLOW-",
+      "fields": [
+        "BLOCK_NAME",
+        "BLOCK_FUNCTION",
+        "QUESTION_ANSWERED",
+        "CORE_FOCUS",
+        "KEY_POINTS",
+        "REQUIRED_EVIDENCE_IDS",
+        "CONNECTION_FROM_PREVIOUS",
+        "CONNECTION_TO_NEXT",
+        "CONTRIBUTION_TO_THESIS"
+      ]
+    },
+    {
+      "id": 16,
+      "marker": "GF-16",
+      "group_code": "E",
+      "canonical_title": "PERUMUSAN JUDUL",
+      "fields": [
+        "PRIMARY_TITLE",
+        "ALTERNATIVE_TITLE_01",
+        "ALTERNATIVE_TITLE_02",
+        "TITLE_PROMISE",
+        "TITLE_CLAIM_LIMIT"
+      ]
+    },
+    {
+      "id": 17,
+      "marker": "GF-17",
+      "group_code": "E",
+      "canonical_title": "PERANCANGAN HOOK",
+      "fields": [
+        "HOOK_STRATEGY",
+        "HOOK_INFORMATION",
+        "CURIOSITY_GAP",
+        "HOOK_LINK_TO_CORE_QUESTION",
+        "NO_FINAL_NARRATION"
+      ]
+    },
+    {
+      "id": 18,
+      "marker": "GF-18",
+      "group_code": "E",
+      "canonical_title": "PERANCANGAN KLIMAKS DAN PENUTUP",
+      "fields": [
+        "ARGUMENTATIVE_CLIMAX",
+        "KEY_FINDING_BEFORE_CLOSING",
+        "CONCLUSION_LINK_TO_THESIS",
+        "LOGIC_PUNCH_REINFORCEMENT",
+        "REFLECTIVE_QUESTION_OR_CALL",
+        "NO_FINAL_NARRATION"
+      ]
+    },
+    {
+      "id": 19,
+      "marker": "GF-19",
+      "group_code": "F",
+      "canonical_title": "AUDIT KONSISTENSI SUBSTANSI",
+      "fields": [
+        "FOCUS_TO_QUESTION_ALIGNMENT",
+        "QUESTION_TO_THESIS_ALIGNMENT",
+        "THESIS_TO_EVIDENCE_ALIGNMENT",
+        "THESIS_TO_LOGIC_PUNCH_ALIGNMENT",
+        "CONSISTENCY_FINDINGS"
+      ]
+    },
+    {
+      "id": 20,
+      "marker": "GF-20",
+      "group_code": "F",
+      "canonical_title": "AUDIT KELENGKAPAN ARGUMENTASI",
+      "fields": [
+        "REQUIRED_POINTS_COVERAGE",
+        "EVIDENCE_COVERAGE",
+        "MISSING_ARGUMENTS",
+        "COMPLETENESS_FINDINGS"
+      ]
+    },
+    {
+      "id": 21,
+      "marker": "GF-21",
+      "group_code": "F",
+      "canonical_title": "AUDIT POTENSI PENYIMPANGAN",
+      "fields": [
+        "OFF_TOPIC_RISKS",
+        "REPETITION_RISKS",
+        "SPECULATION_RISKS",
+        "OUT_OF_SCOPE_CHECK",
+        "DRIFT_CORRECTIONS"
+      ]
+    },
+    {
+      "id": 22,
+      "marker": "GF-22",
+      "group_code": "F",
+      "canonical_title": "AUDIT KELAYAKAN STRUKTUR",
+      "fields": [
+        "SEQUENCE_CHECK",
+        "PROPORTION_CHECK",
+        "TRANSITION_CHECK",
+        "DUPLICATION_CHECK",
+        "STRUCTURE_FINDINGS"
+      ]
+    },
+    {
+      "id": 23,
+      "marker": "GF-23",
+      "group_code": "F",
+      "canonical_title": "KEPUTUSAN KESIAPAN KERANGKA",
+      "fields": [
+        "READINESS_STATUS",
+        "READINESS_REASON",
+        "UNRESOLVED_ITEMS",
+        "USER_CONFIRMATION_REQUIRED",
+        "STAGE_2_USAGE_NOTE"
+      ]
+    }
+  ],
+  "storyflow_blocks": [
+    { "id": 1, "code": "HOOK", "name": "Hook", "default_weight": 8 },
+    { "id": 2, "code": "AKAR_MASALAH", "name": "Akar Masalah", "default_weight": 17 },
+    { "id": 3, "code": "INTI_MASALAH", "name": "Inti Masalah", "default_weight": 45 },
+    { "id": 4, "code": "PENYELESAIAN", "name": "Penyelesaian", "default_weight": 20 },
+    { "id": 5, "code": "KESIMPULAN", "name": "Kesimpulan", "default_weight": 10 }
+  ]
+}
