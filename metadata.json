@@ -1,0 +1,8 @@
+{
+  "name": "GENFLOW STUDIO FINAL",
+  "description": "Studio Penulisan Naskah YouTube Edukasi Kritis Gue–Lo (SCTF 5 Blok, Validator Deterministik, Bank Leksikal F1–F8, \u0026 Pipeline TTS ElevenLabs v4)",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

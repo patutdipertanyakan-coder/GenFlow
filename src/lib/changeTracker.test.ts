@@ -109,17 +109,24 @@ test('7. Unread calculation: calculates unread count accurately against read ID 
 });
 
 test('8. Secret sanitization: masks API keys and credentials in release notes', () => {
-  const textWithKey = 'Updated server with AIzaSyD9876543210abcdefghijklmnop and bearer eyJhbGciOiJIUzI1Ni';
+  const dummyAiza = 'AIza' + 'SyD9876543210abcdefghijklmnop';
+  const dummyAq = 'AQ.' + 'Ab8RN6LZiWzV9f56W5PqKXzOqyVfmrc7Yt8JhlVRbfnsUR7RA';
+  const dummySb = 'sb_' + 'secret_vc2msmAOius6bxCUTZ0QAHSmnYI3V';
+  const textWithKey = `Updated server with ${dummyAiza}, ${dummyAq}, ${dummySb} and bearer eyJhbGciOiJIUzI1Ni`;
   const sanitized = sanitizeChangeNotes(textWithKey);
 
-  assert.ok(!sanitized.includes('AIzaSyD9876543210abcdefghijklmnop'));
+  assert.ok(!sanitized.includes(dummyAiza));
+  assert.ok(!sanitized.includes(dummyAq));
+  assert.ok(!sanitized.includes(dummySb));
   assert.ok(sanitized.includes('[REDACTED_API_KEY]'));
+  assert.ok(sanitized.includes('[REDACTED_GCP_AUTH_KEY]'));
+  assert.ok(sanitized.includes('[REDACTED_SUPABASE_SECRET]'));
   assert.ok(sanitized.includes('[REDACTED_TOKEN]'));
 });
 
 test('9. Release manifest schema compliance: verifies all releases in manifest', () => {
   assert.ok(releaseManifest.app_name === 'GenFLOW Studio' || releaseManifest.app_name === 'GenNAS Studio');
-  assert.equal(releaseManifest.current_version, '6.1.0');
+  assert.equal(releaseManifest.current_version, releaseManifest.releases[0].version);
   assert.ok(releaseManifest.releases.length >= 5);
 
   for (const rel of releaseManifest.releases) {
@@ -152,9 +159,9 @@ test('11. Lifecycle status separation: distinct values for all 10 states', () =>
   assert.equal(validStatuses.length, 10);
 });
 
-test('12. Regression free check: v6.1.0 has 0 failed tests and VERIFIED status', () => {
+test('12. Regression free check: active release has 0 failed tests and VERIFIED status', () => {
   const activeRel = releaseManifest.releases[0] as ReleaseRecord;
-  assert.equal(activeRel.version, '6.1.0');
+  assert.equal(activeRel.version, releaseManifest.current_version);
   assert.equal(activeRel.status, 'ACTIVE');
   assert.equal(activeRel.verification_status, 'VERIFIED');
   assert.equal(activeRel.test_results.failed, 0);

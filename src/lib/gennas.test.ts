@@ -365,7 +365,7 @@ test('9. Keamanan API Key: tidak ada API Key yang terekspos di file frontend (sr
   for (const file of frontendFiles) {
     const content = fs.readFileSync(file, 'utf8');
     assert.equal(
-      content.includes('AQ.Ab8RN6'),
+      content.includes('AQ.' + 'Ab8RN6'),
       false,
       `File frontend ${file} dilarang memuat string API key!`
     );

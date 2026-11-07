@@ -376,6 +376,9 @@ export function sanitizeChangeNotes(text: string): string {
   if (!text) return '';
   return text
     .replace(/AIza[A-Za-z0-9_-]{20,}/g, '[REDACTED_API_KEY]')
+    .replace(/AQ\.[A-Za-z0-9_-]{20,}/g, '[REDACTED_GCP_AUTH_KEY]')
+    .replace(/sb_secret_[A-Za-z0-9_-]+/g, '[REDACTED_SUPABASE_SECRET]')
     .replace(/(bearer\s+)[A-Za-z0-9._-]+/gi, '$1[REDACTED_TOKEN]')
     .replace(/(password|secret|key)=([^\s&]+)/gi, '$1=[REDACTED]');
 }
+

@@ -73,7 +73,8 @@
           "HCLSE Engine & Visibility Suite: PASS",
           "Full Workflow Regression Suite: PASS (47/47)"
         ]
-      }
+      },
+      "verification_status": "VERIFIED"
     },
     {
       "release_id": "rel-6.2.2-20261105",
@@ -139,7 +140,8 @@
           "HCLSE Engine & Visibility Suite: PASS (29/29)",
           "GenNAS Pro Integration Suite: PASS"
         ]
-      }
+      },
+      "verification_status": "VERIFIED"
     },
     {
       "release_id": "rel-6.2.1-20261105",
