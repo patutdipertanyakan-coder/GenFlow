@@ -1,0 +1,29 @@
+INSTRUKSI BAKU — PEMBUATAN DOKUMEN KERANGKA NASKAH UNTUK GENFLOW
+
+Saya melampirkan file GENFLOW_FORMAT_KERANGKA_NASKAH_BAKU.docx. Gunakan file tersebut sebagai TEMPLATE OUTPUT WAJIB untuk setiap topik yang saya berikan.
+
+TUGAS:
+Buat dokumen kerangka naskah untuk topik yang saya berikan dengan mengisi template tersebut. Hasil akhir wajib berupa file DOCX yang dapat dibaca dan diekstrak oleh GENFLOW Studio PRO.
+
+ATURAN MUTLAK FORMAT:
+1. Pertahankan seluruh marker, nama field, nomor komponen GF-01 sampai GF-23, urutan A–G, dan struktur lima blok StoryFlow persis seperti template.
+2. Jangan membuat desain, susunan, judul bagian, atau format baru. Jangan mengganti label dengan sinonim.
+3. Jangan menambahkan halaman sampul, daftar isi, tabel, kolom ganda, text box, shape, diagram, header/footer, atau elemen mengambang.
+4. Gunakan satu kolom teks biasa. Setiap marker dan setiap label field harus berada pada paragraf tersendiri.
+5. TOPIC_TITLE hanya berisi judul topik. Jangan gabungkan dengan nama template, nama framework, slogan, status, atau keterangan lain.
+6. Jangan meletakkan ringkasan, kesimpulan, atau metadata sebelum marker [GENFLOW_DOCUMENT_START] atau di luar marker dokumen.
+7. Isi seluruh field yang relevan. Field yang tidak tersedia atau tidak relevan tetap dipertahankan dan diisi dengan “BELUM TERSEDIA” atau “TIDAK RELEVAN — [alasan singkat]”. Jangan menghapus field kosong.
+8. Untuk daftar sumber, bukti, kontraargumen, dan bagian pembahasan yang jumlahnya banyak, ulangi blok bernomor yang sama dengan nomor berikutnya. Jangan menggabungkan beberapa klaim atau sumber berbeda ke satu blok.
+9. Setiap klaim faktual harus ditautkan ke SOURCE_ID dan EVIDENCE_ID yang konsisten. Jika belum terverifikasi, beri status NEEDS_VERIFICATION. Jangan mengarang data, kutipan, angka, sumber, URL, atau hubungan sebab-akibat.
+10. Pertahankan perbedaan antara fakta, interpretasi, opini, dugaan, dan hipotesis.
+11. Kerangka harus berupa poin-poin perencanaan, bukan naskah narasi. Jangan menulis dialog, monolog, hook final, paragraf narasi, atau kalimat siap dibacakan.
+12. Jangan mengubah substansi topik pengguna. Ikuti batas Wajib Dibahas, Boleh Disinggung, dan Di Luar Fokus.
+13. Pertahankan lima blok StoryFlow pada GF-15. Isi tiap blok sesuai fungsi dan topik; jangan menghapus blok.
+14. Jangan mengisi komponen audit dengan “lulus/siap” secara otomatis. Putuskan berdasarkan isi kerangka dan bukti yang benar-benar tersedia.
+15. Simpan hasil sebagai DOCX yang dapat diedit. Nama file: KERANGKA_[TOPIK_RINGKAS]_GENFLOW.docx.
+
+HASIL:
+Berikan hanya dokumen DOCX final dan ringkasan singkat status kesiapan kerangka. Jangan membuat format dokumen alternatif.
+
+PENTING:
+Template ini adalah format keluaran untuk setiap topik, bukan master prompt penulisan narasi. GENFLOW MASTER PROMPT FINAL tetap mengatur kebijakan penulisan; kerangka ini hanya mengunci substansi, fakta, batas pembahasan, dan alur.

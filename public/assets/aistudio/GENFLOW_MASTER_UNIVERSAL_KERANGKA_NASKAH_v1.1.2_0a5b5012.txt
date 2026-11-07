@@ -1,0 +1,799 @@
+GENFLOW MASTER UNIVERSAL KERANGKA NASKAH
+SATU DOKUMEN KANONIS UNTUK CHATGPT, GEMINI, DAN GENFLOW STUDIO PRO
+
+IDENTITAS
+Nama: GENFLOW MASTER UNIVERSAL KERANGKA NASKAH
+Document ID: GENFLOW_MASTER_UNIVERSAL_FRAMEWORK
+Policy ID: GENFLOW_UNIVERSAL_FRAMEWORK_POLICY
+Schema ID: GF-NARRATIVE-FRAMEWORK-1.0
+Versi dokumen: 1.1.2
+Versi schema: 1.0.0
+Bahasa: Bahasa Indonesia
+Struktur: 7 kelompok A–G, 23 komponen GF-01 sampai GF-23, dan 5 blok StoryFlow
+
+STATUS DAN FUNGSI DOKUMEN
+Dokumen TXT ini menggabungkan dan menyelaraskan:
+1. Template struktur kanonis GENFLOW_FORMAT_KERANGKA_NASKAH_BAKU.txt.
+2. Aturan pembuatan keluaran INSTRUKSI_OUTPUT_KERANGKA_GENFLOW.txt.
+3. Kontrak teknis GENFLOW UNIVERSAL FRAMEWORK PROCESSING POLICY untuk integrasi backend.
+
+Dokumen ini adalah satu-satunya file referensi yang perlu dilampirkan untuk penggunaan rutin ChatGPT/Gemini dalam menyusun kerangka naskah. Ketiga file lama tersebut tidak perlu dilampirkan terpisah lagi setelah dokumen gabungan ini digunakan.
+
+PENTING — PEMISAHAN DUA MODE
+MODE 1 — PEMBUATAN KERANGKA (PENGGUNAAN RUTIN)
+Jika pengguna melampirkan dokumen ini lalu mengirim topik, pertanyaan, atau judul, langsung susun kerangka naskah lengkap dengan mengisi schema kanonis di bawah. Jangan menjalankan instruksi implementasi backend hanya karena lampiran ini disertakan.
+
+MODE 2 — IMPLEMENTASI BACKEND (SATU KALI / SAAT DIMINTA)
+Bagian "Lampiran B — Kontrak Implementasi Backend" hanya menjadi instruksi implementasi ketika pengguna secara eksplisit meminta audit atau implementasi backend GENFLOW berdasarkan lampiran tersebut. Jangan mengeksekusi atau membahas perubahan source code saat pengguna hanya memberikan topik untuk dibuatkan kerangka.
+
+CARA PAKAI MODE 1
+1. Lampirkan file TXT ini pada percakapan ChatGPT atau Gemini.
+2. Setelah itu cukup ketik topik utama, pertanyaan, atau judul yang ingin dibahas.
+3. Pesan topik berikutnya dianggap sebagai perintah menyusun kerangka naskah lengkap.
+4. Jangan meminta pengguna mengirim ulang template, instruksi output, atau daftar komponen.
+5. Jika pengguna belum memberikan topik, jangan mengisi template, membuat contoh, atau mengarang topik. Tunggu topik pengguna.
+6. Jika topik sudah cukup jelas, langsung kerjakan. Jangan membuat formulir atau meminta banyak detail tambahan yang tidak diperlukan.
+7. Jika ada informasi penting yang belum tersedia, tandai secara transparan sebagai BELUM TERSEDIA, PERLU KONFIRMASI, atau NEEDS_VERIFICATION. Jangan mengarang.
+8. Dokumen ini menghasilkan KERANGKA PERENCANAAN, bukan naskah narasi final.
+
+HIERARKI KEBIJAKAN
+1. GENFLOW MASTER PROMPT FINAL tetap menjadi otoritas tertinggi untuk kebijakan penulisan dan perilaku generasi naskah di aplikasi GENFLOW.
+2. Dokumen ini mengatur struktur kerangka, standar sumber/bukti, format keluaran, dan kontrak teknis pemrosesan kerangka. Dokumen ini tidak menggantikan atau menimpa GENFLOW MASTER PROMPT FINAL.
+3. Jika aturan di dokumen ini bertentangan dengan GENFLOW MASTER PROMPT FINAL, jangan memilih diam-diam. Tandai konflik dan ikuti otoritas tertinggi yang berlaku.
+4. Jangan mengubah substansi topik pengguna hanya demi menyesuaikan format.
+5. Semua marker, nomor komponen, nama field, dan urutan schema di bawah adalah kanonis. Jangan mengubah, menghapus, mengganti nama, atau menggabungkannya secara destruktif.
+
+ATURAN RISET, SUMBER, DAN FAKTA
+1. Untuk topik faktual, ilmiah, sosial, ekonomi, sejarah, kebijakan, atau topik yang membutuhkan data aktual, lakukan riset jika kemampuan pencarian tersedia dan relevan.
+2. Utamakan sumber primer dan tepercaya: lembaga resmi, data statistik, dokumen kebijakan, jurnal ilmiah, publikasi universitas, organisasi riset, dan media bereputasi untuk konteks peristiwa.
+3. Catat identitas sumber, penulis/lembaga, tanggal/tahun, URL/DOI/nomor dokumen, isi yang relevan, dan keterbatasannya.
+4. Jangan mengarang angka, statistik, kutipan, nama penulis, judul penelitian, URL, temuan, atau hubungan sebab-akibat.
+5. Jika pencarian tidak tersedia atau sumber belum dapat diperiksa, gunakan NEEDS_VERIFICATION atau NOT_AVAILABLE. Jangan mengklaim terverifikasi.
+6. Bedakan fakta/data, interpretasi, opini, dugaan, dan hipotesis.
+7. Setiap klaim faktual penting harus ditautkan ke SOURCE_ID dan EVIDENCE_ID yang benar.
+8. Jika sumber saling bertentangan, pertahankan dan jelaskan pertentangannya; jangan menyelesaikannya tanpa dasar.
+9. Jangan menggunakan sumber untuk mendukung klaim yang sebenarnya tidak dibahas oleh sumber tersebut.
+10. Jangan menarik kesimpulan lebih luas daripada cakupan bukti.
+
+ATURAN SUBSTANSI DAN BATAS PEMBAHASAN
+1. Ikuti pertanyaan, maksud, dan sudut pandang yang diminta pengguna.
+2. Analisis diarahkan pada substansi, perilaku, pola pikir, argumen, keputusan, kebijakan, mekanisme, institusi, atau praktik yang relevan dan dapat diuji.
+3. Hindari serangan atau generalisasi terhadap orang berdasarkan identitas kelompok. Jika topik bersinggungan dengan SARA, fokuskan kritik pada tindakan, argumen, kebijakan, perilaku, dan bukti; bukan identitas.
+4. Hormati batas Wajib Dibahas, Boleh Disinggung, dan Di Luar Fokus.
+5. Jangan memaksakan tesis, plot twist, logic punch, atau kesimpulan jika bukti tidak mendukungnya.
+6. Hindari strawman, generalisasi, cherry-picking, false dilemma, ad hominem, dan klaim kausal tanpa bukti memadai.
+7. Setiap bagian harus memberi kontribusi berbeda, tidak sekadar mengulang.
+8. Jangan menambahkan kontroversi atau pembahasan di luar fokus hanya untuk membuat topik lebih sensasional.
+
+ATURAN PENGISIAN SCHEMA
+1. Pertahankan seluruh 23 komponen GF-01 sampai GF-23, kelompok A–G, dan lima blok StoryFlow pada GF-15.
+2. Isi setiap field yang relevan dengan informasi yang benar-benar tersedia atau hasil riset yang dapat ditelusuri.
+3. Field yang tidak tersedia tetap dipertahankan dan diisi BELUM TERSEDIA, TIDAK RELEVAN — [alasan singkat], atau PERLU KONFIRMASI.
+4. Jangan menghapus field kosong, mengarang isi, atau menyamarkan asumsi sebagai fakta.
+5. Gunakan ID sumber S01, S02, S03, dan seterusnya. Satu sumber berbeda harus memiliki satu ID yang berbeda.
+6. Gunakan blok bukti GF-10 bernomor dan ID bukti EVIDENCE-01, EVIDENCE-02, dan seterusnya. CLAIM_ID seperti C-01 adalah ID klaim, bukan pengganti EVIDENCE_ID.
+7. Pastikan SOURCE_ID pada GF-10 benar-benar merujuk ke sumber pada GF-02.
+8. Pastikan REQUIRED_EVIDENCE_IDS pada GF-11, GF-14, dan GF-15 benar-benar merujuk ke bukti yang tersedia.
+9. Ulangi blok bernomor untuk sumber, bukti, kontraargumen, dan fungsi bagian yang jumlahnya lebih dari satu. Jangan menggabungkan item yang berbeda.
+10. Pertahankan perbedaan antara teks/fakta dari sumber dan interpretasi AI. Tandai interpretasi sebagai interpretasi.
+11. GF-19 sampai GF-23 harus merupakan audit nyata. Jangan mengisi status lulus/siap secara otomatis.
+12. Tentukan DOCUMENT_STATUS dan READINESS_STATUS berdasarkan hasil audit, bukan untuk menyenangkan pengguna.
+13. Jika bukti belum cukup, gunakan NEEDS_SOURCES atau status lain yang paling tepat. Jangan menyatakan READY_FOR_STAGE_2 tanpa alasan yang dapat diperiksa.
+
+ATURAN FORMAT KELUARAN — SINKRON DENGAN GENFLOW
+1. Keluaran utama adalah file DOCX yang dapat diedit dan dapat diekstrak sebagai teks biasa oleh GENFLOW Studio PRO.
+2. Gunakan satu kolom teks biasa. Setiap marker, judul komponen, dan label field berada pada paragraf tersendiri.
+3. Jangan gunakan tabel, kolom ganda, text box, shape, diagram, halaman sampul, daftar isi, header/footer, atau elemen mengambang.
+4. Jangan menambahkan judul template, slogan, ringkasan, atau metadata di luar marker dokumen. TOPIC_TITLE hanya berisi judul topik.
+5. Seluruh isi kerangka harus berada di antara [GENFLOW_DOCUMENT_START] dan [GENFLOW_DOCUMENT_END].
+6. Pertahankan Schema ID, semua marker GF-01 sampai GF-23, urutan A–G, lima blok StoryFlow, nama field, dan label persis seperti schema.
+7. Jangan menulis narasi utuh, dialog, monolog, hook final, paragraf siap dibacakan, atau naskah final. Gunakan poin perencanaan yang spesifik.
+8. Nama file keluaran: KERANGKA_[TOPIK_RINGKAS]_GENFLOW.docx.
+9. Jika platform yang digunakan tidak mampu menghasilkan DOCX yang dapat diunduh, berikan seluruh dokumen sebagai TXT UTF-8 dengan schema yang identik. Jangan mengganti struktur atau menghilangkan komponen sebagai jalan pintas. TXT adalah fallback, bukan schema yang berbeda.
+10. Berikan ringkasan singkat status kesiapan di chat di luar dokumen; jangan menaruh ringkasan itu di luar marker pada file kerangka.
+11. Jika platform mampu membuat file, berikan tautan file yang benar-benar berhasil dibuat. Jangan mengklaim file tersedia jika belum dibuat.
+12. Jangan membuat format alternatif lain kecuali pengguna memintanya.
+13. Jangan menambahkan metadata tanggal pembuatan kerangka, tanggal hari ini, atau tanggal sistem secara otomatis ke dokumen keluaran.
+
+PENCEGAHAN KONTAMINASI ANTARTOPIK
+1. Setiap topik baru menghasilkan kerangka baru berdasarkan topik dan bahan yang relevan untuk topik tersebut.
+2. Jangan membawa topik, tesis, sumber, bukti, atau isi dokumen sebelumnya kecuali pengguna secara eksplisit meminta melanjutkan atau membandingkannya.
+3. Jangan menggunakan dummy data, contoh bawaan, seed data, atau placeholder yang terlihat seperti fakta.
+4. Jangan menyatakan komponen DITEMUKAN sebelum benar-benar ada isi yang mendukung.
+5. Jika pengguna meminta revisi dokumen yang sama, pertahankan identitas dokumen dan ubah hanya bagian yang diminta, kecuali pengguna meminta pembuatan ulang.
+
+============================================================
+SCHEMA KANONIS — JANGAN UBAH ISI STRUKTUR
+============================================================
+
+[GENFLOW_DOCUMENT_START]
+
+SCHEMA_ID: GF-NARRATIVE-FRAMEWORK-1.0
+
+DOCUMENT_TYPE: NARRATIVE_FRAMEWORK
+
+TOPIC_TITLE: [JUDUL TOPIK SAJA — JANGAN TAMBAHKAN JUDUL TEMPLATE]
+
+TOPIC_SUMMARY: [RINGKASAN TOPIK 1–3 KALIMAT]
+
+DOCUMENT_STATUS: [DRAFT / READY_FOR_STAGE_2 / NEEDS_REVISION]
+
+[GENFLOW_METADATA_END]
+
+A. INPUT UTAMA
+
+[GF-01]
+
+1. TOPIK UTAMA
+
+TOPIC_STATEMENT: [Jelaskan topik spesifik yang benar-benar akan dibahas.]
+
+TOPIC_OBJECT: [Objek, fenomena, kebijakan, perilaku, peristiwa, atau persoalan yang dibahas.]
+
+TOPIC_QUESTION_IF_GIVEN: [Pertanyaan awal dari pengguna; tulis BELUM DIBERIKAN jika tidak ada.]
+
+[GF-02]
+
+2. BAHAN DAN SUMBER RUJUKAN
+
+FORMAT_NOTE: Ulangi blok SOURCE untuk setiap sumber. Jangan gabungkan beberapa sumber ke dalam satu blok jika identitas atau klaimnya berbeda.
+
+[GF-02-SOURCE-01]
+
+SOURCE_ID: S01
+
+SOURCE_TITLE: [Judul sumber]
+
+SOURCE_AUTHOR_OR_ORGANIZATION: [Penulis/lembaga]
+
+SOURCE_DATE_OR_YEAR: [Tanggal/tahun]
+
+SOURCE_URL_OR_IDENTIFIER: [URL/DOI/nama dokumen/identitas sumber]
+
+SOURCE_RELEVANT_CONTENT: [Informasi spesifik yang relevan]
+
+SOURCE_LIMITATION: [Batas data, cakupan, metode, atau keterbatasan sumber]
+
+SOURCE_STATUS: [VERIFIED / NEEDS_VERIFICATION / USER_PROVIDED / NOT_AVAILABLE]
+
+[END_GF-02-SOURCE-01]
+
+ADDITIONAL_SOURCES: [Tambahkan blok sumber bernomor 02, 03, 04, dan seterusnya dengan field yang sama.]
+
+B. PENGUNCI SUBSTANSI
+
+[GF-03]
+
+3. KUNCI FOKUS BESAR — CENTRAL FOCUS
+
+CENTRAL_FOCUS: [Satu fokus utama yang spesifik.]
+
+FOCUS_RATIONALE: [Mengapa fokus ini menjadi pusat pembahasan.]
+
+FOCUS_EXCLUSIONS: [Hal terkait yang sengaja tidak dijadikan fokus.]
+
+[GF-04]
+
+4. KUNCI BATAS PEMBAHASAN — SCOPE BOUNDARY
+
+MUST_COVER_01: [Poin wajib dibahas 1]
+
+MUST_COVER_02: [Poin wajib dibahas 2; tambahkan nomor jika diperlukan]
+
+MAY_MENTION_01: [Poin pendukung yang boleh disinggung 1]
+
+MAY_MENTION_02: [Poin pendukung yang boleh disinggung 2; tambahkan nomor jika diperlukan]
+
+OUT_OF_SCOPE_01: [Poin yang tidak boleh dimasukkan 1]
+
+OUT_OF_SCOPE_02: [Poin yang tidak boleh dimasukkan 2; tambahkan nomor jika diperlukan]
+
+[GF-05]
+
+5. KUNCI PERTANYAAN INTI — CORE QUESTION
+
+CORE_QUESTION: [Satu pertanyaan utama yang harus dijawab keseluruhan naskah.]
+
+ANSWER_REQUIREMENTS: [Unsur minimum yang harus dijawab agar pertanyaan inti benar-benar terjawab.]
+
+[GF-06]
+
+6. KUNCI KERANGKA MASALAH — PROBLEM FRAMEWORK
+
+MAIN_PROBLEM: [Masalah utama]
+
+BACKGROUND_AND_CONTEXT: [Konteks dan latar belakang]
+
+CAUSES_OR_EXPLANATORY_FACTORS: [Faktor penyebab atau faktor penjelas; jangan klaim sebab-akibat tanpa bukti]
+
+MECHANISM: [Mekanisme/proses yang menjelaskan bagaimana masalah terjadi]
+
+INVOLVED_PARTIES_OR_ELEMENTS: [Pihak atau unsur yang terlibat, jika relevan]
+
+IMPACTS_AND_CONSEQUENCES: [Dampak dan konsekuensi]
+
+CORE_CONTRADICTION_OR_GAP: [Pertentangan, kesenjangan, atau kontradiksi inti]
+
+[GF-07]
+
+7. KUNCI TESIS UTAMA — CENTRAL THESIS
+
+CENTRAL_THESIS: [Satu pernyataan argumentatif utama yang akan diuji/dijelaskan melalui bukti.]
+
+THESIS_SUPPORT_NEEDED: [Bukti atau penalaran yang diperlukan untuk mendukung/menguji tesis.]
+
+THESIS_LIMITATION: [Batas klaim; apa yang tidak boleh disimpulkan terlalu jauh.]
+
+[GF-08]
+
+8. KUNCI LOGIC PUNCH
+
+LOGIC_PUNCH: [Inti pemahaman paling kuat yang harus diperoleh audiens dari keseluruhan argumentasi.]
+
+LOGIC_PUNCH_BASIS: [Fakta/argumen yang menjadi dasar logic punch.]
+
+[GF-09]
+
+9. KUNCI TUJUAN PERUBAHAN PERSPEKTIF
+
+AUDIENCE_BEFORE: [Asumsi/pemahaman awal audiens yang hendak diuji.]
+
+AUDIENCE_AFTER: [Pemahaman yang diharapkan setelah menonton.]
+
+ASSUMPTIONS_TO_TEST: [Asumsi atau kesalahpahaman yang perlu diuji kembali.]
+
+RESPONSIBLE_NEW_PERSPECTIVE: [Perspektif baru yang dapat dipertanggungjawabkan berdasarkan bukti.]
+
+C. PENGUNCI FAKTA DAN ARGUMENTASI
+
+[GF-10]
+
+10. PEMETAAN LANDASAN FAKTA — EVIDENCE MAPPING
+
+FORMAT_NOTE: Gunakan satu blok untuk satu klaim/bukti. Ulangi blok dengan nomor berikutnya. Jangan memakai tabel.
+
+[GF-10-EVIDENCE-01]
+
+EVIDENCE_ID: EVIDENCE-01
+
+CLAIM_ID: C-01
+
+CLAIM_TO_CHECK: [Klaim spesifik yang perlu diperiksa]
+
+EVIDENCE_OR_DATA: [Fakta/data yang mendukung, membantah, atau membatasi klaim]
+
+SOURCE_ID: S01
+
+DATE_OR_PERIOD: [Tahun/periode data]
+
+EVIDENCE_STATUS: [VERIFIED / NEEDS_VERIFICATION / INTERPRETATION / OPINION / HYPOTHESIS]
+
+RELEVANCE_TO_THESIS: [Hubungan bukti dengan tesis/pertanyaan inti]
+
+LIMITATION_OR_CAVEAT: [Keterbatasan, definisi indikator, cakupan, atau catatan interpretasi]
+
+[END_GF-10-EVIDENCE-01]
+
+ADDITIONAL_EVIDENCE_BLOCKS: [Ulangi blok GF-10-EVIDENCE-02, 03, 04, dan seterusnya.]
+
+UNSUPPORTED_OR_UNRESOLVED_CLAIMS: [Daftar klaim yang belum memiliki bukti memadai; tulis TIDAK ADA jika memang tidak ada.]
+
+[GF-11]
+
+11. PEMETAAN RANTAI LOGIKA — ARGUMENT CHAIN
+
+CATATAN FORMAT: Gunakan langkah berurutan. Tambahkan langkah bila diperlukan; jangan memaksakan urutan yang tidak sesuai topik.
+
+CHAIN_STEP_01_INITIAL_CONDITION: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_02_PROBLEM: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_03_CAUSE_OR_EXPLANATORY_FACTOR: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_04_MECHANISM: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_05_EVIDENCE: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_06_IMPACT: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_07_IMPLICATION: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_08_INTERMEDIATE_OR_FINAL_CONCLUSION: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+LOGIC_GAPS: [Bagian rantai logika yang belum didukung atau masih perlu diuji.]
+
+[GF-12]
+
+12. PEMETAAN KONTRAARGUMEN DAN ALTERNATIF PENJELASAN
+
+CATATAN FORMAT: Ulangi blok untuk setiap kontraargumen atau penjelasan alternatif.
+
+[GF-12-COUNTERARGUMENT-01]
+
+COUNTERARGUMENT: [Argumen berbeda atau fakta yang berlawanan]
+
+ALTERNATIVE_EXPLANATION: [Penjelasan alternatif yang relevan]
+
+SUPPORTING_EVIDENCE_OR_SOURCE_ID: [Bukti/ID sumber yang terkait]
+
+HOW_TO_HANDLE: [Dijelaskan / dibandingkan / diuji / ditolak dengan alasan]
+
+LIMITATION: [Batas atau kelemahan kontraargumen/alternatif]
+
+[END_GF-12-COUNTERARGUMENT-01]
+
+ADDITIONAL_COUNTERARGUMENTS: [Tambahkan blok bernomor 02, 03, dan seterusnya.]
+
+[GF-13]
+
+13. PENENTUAN PLOT TWIST — PERSPECTIVE SHIFT
+
+INITIAL_EXPECTATION: [Apa yang mungkin diasumsikan audiens sebelum melihat bukti.]
+
+REVEALING_FACT_OR_CONTRADICTION: [Fakta/kontradiksi yang mengubah pemahaman; sertakan ID bukti.]
+
+PERSPECTIVE_SHIFT: [Perubahan perspektif yang sah dan didukung bukti.]
+
+PLANNED_POSITION: [Bagian kerangka tempat perubahan perspektif ditempatkan.]
+
+IF_NO_VALID_PLOT_TWIST: [Tulis TIDAK ADA jika tidak ada perubahan perspektif yang wajar; jangan dipaksakan.]
+
+D. PERANCANGAN STRUKTUR NASKAH
+
+[GF-14]
+
+14. PENENTUAN FUNGSI SETIAP BAGIAN
+
+CATATAN FORMAT: Setiap bagian harus mempunyai fungsi berbeda. Ulangi PART_FUNCTION untuk setiap bagian yang direncanakan.
+
+[GF-14-PART-01]
+
+PART_NAME: [Nama/tema bagian]
+
+PART_FUNCTION: [Fungsi argumentatif bagian]
+
+UNIQUE_CONTRIBUTION: [Kontribusi khusus yang tidak mengulang bagian lain]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang diperlukan]
+
+[END_GF-14-PART-01]
+
+ADDITIONAL_PART_FUNCTIONS: [Tambahkan blok PART-02, PART-03, dan seterusnya.]
+
+[GF-15]
+
+15. PENYUSUNAN ALUR PEMBAHASAN — NARRATIVE BLUEPRINT
+
+CATATAN FORMAT: Pertahankan kelima blok StoryFlow. Isi berdasarkan topik. Jika suatu blok membutuhkan penyesuaian, jelaskan alasannya; jangan menghapus blok.
+
+[GF-15-STORYFLOW-01-HOOK]
+
+BLOCK_NAME: HOOK
+
+BLOCK_FUNCTION: [Fungsi blok dalam alur]
+
+QUESTION_ANSWERED: [Pertanyaan yang dijawab blok]
+
+CORE_FOCUS: [Fokus inti blok]
+
+KEY_POINT_01: [Poin pembahasan 1]
+
+KEY_POINT_02: [Poin pembahasan 2; tambahkan nomor jika diperlukan]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang harus digunakan]
+
+CONNECTION_FROM_PREVIOUS: [Hubungan logis dengan blok sebelumnya]
+
+CONNECTION_TO_NEXT: [Jembatan logis menuju blok berikutnya]
+
+CONTRIBUTION_TO_THESIS: [Kontribusi blok terhadap tesis/pertanyaan inti]
+
+[END_GF-15-STORYFLOW-01]
+
+[GF-15-STORYFLOW-02-AKAR_MASALAH]
+
+BLOCK_NAME: AKAR_MASALAH
+
+BLOCK_FUNCTION: [Fungsi blok dalam alur]
+
+QUESTION_ANSWERED: [Pertanyaan yang dijawab blok]
+
+CORE_FOCUS: [Fokus inti blok]
+
+KEY_POINT_01: [Poin pembahasan 1]
+
+KEY_POINT_02: [Poin pembahasan 2; tambahkan nomor jika diperlukan]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang harus digunakan]
+
+CONNECTION_FROM_PREVIOUS: [Hubungan logis dengan blok sebelumnya]
+
+CONNECTION_TO_NEXT: [Jembatan logis menuju blok berikutnya]
+
+CONTRIBUTION_TO_THESIS: [Kontribusi blok terhadap tesis/pertanyaan inti]
+
+[END_GF-15-STORYFLOW-02]
+
+[GF-15-STORYFLOW-03-INTI_MASALAH]
+
+BLOCK_NAME: INTI_MASALAH
+
+BLOCK_FUNCTION: [Fungsi blok dalam alur]
+
+QUESTION_ANSWERED: [Pertanyaan yang dijawab blok]
+
+CORE_FOCUS: [Fokus inti blok]
+
+KEY_POINT_01: [Poin pembahasan 1]
+
+KEY_POINT_02: [Poin pembahasan 2; tambahkan nomor jika diperlukan]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang harus digunakan]
+
+CONNECTION_FROM_PREVIOUS: [Hubungan logis dengan blok sebelumnya]
+
+CONNECTION_TO_NEXT: [Jembatan logis menuju blok berikutnya]
+
+CONTRIBUTION_TO_THESIS: [Kontribusi blok terhadap tesis/pertanyaan inti]
+
+[END_GF-15-STORYFLOW-03]
+
+[GF-15-STORYFLOW-04-PENYELESAIAN]
+
+BLOCK_NAME: PENYELESAIAN
+
+BLOCK_FUNCTION: [Fungsi blok dalam alur]
+
+QUESTION_ANSWERED: [Pertanyaan yang dijawab blok]
+
+CORE_FOCUS: [Fokus inti blok]
+
+KEY_POINT_01: [Poin pembahasan 1]
+
+KEY_POINT_02: [Poin pembahasan 2; tambahkan nomor jika diperlukan]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang harus digunakan]
+
+CONNECTION_FROM_PREVIOUS: [Hubungan logis dengan blok sebelumnya]
+
+CONNECTION_TO_NEXT: [Jembatan logis menuju blok berikutnya]
+
+CONTRIBUTION_TO_THESIS: [Kontribusi blok terhadap tesis/pertanyaan inti]
+
+[END_GF-15-STORYFLOW-04]
+
+[GF-15-STORYFLOW-05-KESIMPULAN]
+
+BLOCK_NAME: KESIMPULAN
+
+BLOCK_FUNCTION: [Fungsi blok dalam alur]
+
+QUESTION_ANSWERED: [Pertanyaan yang dijawab blok]
+
+CORE_FOCUS: [Fokus inti blok]
+
+KEY_POINT_01: [Poin pembahasan 1]
+
+KEY_POINT_02: [Poin pembahasan 2; tambahkan nomor jika diperlukan]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang harus digunakan]
+
+CONNECTION_FROM_PREVIOUS: [Hubungan logis dengan blok sebelumnya]
+
+CONNECTION_TO_NEXT: [Jembatan logis menuju blok berikutnya]
+
+CONTRIBUTION_TO_THESIS: [Kontribusi blok terhadap tesis/pertanyaan inti]
+
+[END_GF-15-STORYFLOW-05]
+
+BLUEPRINT_GAPS_OR_ADJUSTMENTS: [Kekurangan/penyesuaian alur dan alasannya.]
+
+E. PERANCANGAN PEMBUKA, JUDUL, DAN PENUTUP
+
+[GF-16]
+
+16. PERUMUSAN JUDUL
+
+PRIMARY_TITLE: [Judul utama yang paling akurat mewakili isi.]
+
+ALTERNATIVE_TITLE_01: [Alternatif judul 1; opsional]
+
+ALTERNATIVE_TITLE_02: [Alternatif judul 2; opsional]
+
+TITLE_PROMISE: [Informasi/pertanyaan yang dijanjikan judul kepada audiens.]
+
+TITLE_CLAIM_LIMIT: [Batas agar judul tidak berlebihan atau menyesatkan.]
+
+[GF-17]
+
+17. PERANCANGAN HOOK
+
+HOOK_STRATEGY: [Pertanyaan kritis / kontradiksi / fakta / masalah belum terjawab / konsekuensi]
+
+HOOK_INFORMATION: [Informasi yang perlu diperkenalkan]
+
+CURIOSITY_GAP: [Hal yang membuat audiens ingin mengetahui kelanjutannya]
+
+HOOK_LINK_TO_CORE_QUESTION: [Hubungan hook dengan pertanyaan inti]
+
+NO_FINAL_NARRATION: [Rencana fungsi pembuka saja; jangan tulis paragraf narasi final.]
+
+[GF-18]
+
+18. PERANCANGAN KLIMAKS DAN PENUTUP
+
+ARGUMENTATIVE_CLIMAX: [Puncak argumentasi]
+
+KEY_FINDING_BEFORE_CLOSING: [Temuan/pemahaman yang harus dicapai sebelum penutup]
+
+CONCLUSION_LINK_TO_THESIS: [Hubungan kesimpulan dengan tesis]
+
+LOGIC_PUNCH_REINFORCEMENT: [Cara mengunci logic punch]
+
+REFLECTIVE_QUESTION_OR_CALL: [Pertanyaan reflektif/ajakan yang relevan]
+
+NO_FINAL_NARRATION: [Rencana penutup saja; jangan tulis paragraf narasi final.]
+
+F. AUDIT KERANGKA SEBELUM PENULISAN NARASI
+
+[GF-19]
+
+19. AUDIT KONSISTENSI SUBSTANSI
+
+FOCUS_TO_QUESTION_ALIGNMENT: [Konsisten / Tidak konsisten + alasan]
+
+QUESTION_TO_THESIS_ALIGNMENT: [Konsisten / Tidak konsisten + alasan]
+
+THESIS_TO_EVIDENCE_ALIGNMENT: [Konsisten / Tidak konsisten + alasan]
+
+THESIS_TO_LOGIC_PUNCH_ALIGNMENT: [Konsisten / Tidak konsisten + alasan]
+
+CONSISTENCY_FINDINGS: [Temuan dan perbaikan yang diperlukan]
+
+[GF-20]
+
+20. AUDIT KELENGKAPAN ARGUMENTASI
+
+REQUIRED_POINTS_COVERAGE: [Daftar poin wajib dan status pemenuhannya]
+
+EVIDENCE_COVERAGE: [Klaim yang sudah/belum memiliki bukti]
+
+MISSING_ARGUMENTS: [Argumen atau penjelasan yang masih kurang]
+
+COMPLETENESS_FINDINGS: [Temuan dan perbaikan yang diperlukan]
+
+[GF-21]
+
+21. AUDIT POTENSI PENYIMPANGAN
+
+OFF_TOPIC_RISKS: [Bagian yang berpotensi keluar dari fokus]
+
+REPETITION_RISKS: [Bagian yang berpotensi mengulang]
+
+SPECULATION_RISKS: [Bagian yang terlalu spekulatif]
+
+OUT_OF_SCOPE_CHECK: [Apakah ada materi yang melanggar Scope Boundary?]
+
+DRIFT_CORRECTIONS: [Perbaikan yang diperlukan]
+
+[GF-22]
+
+22. AUDIT KELAYAKAN STRUKTUR
+
+SEQUENCE_CHECK: [Urutan pembahasan masuk akal/tidak + alasan]
+
+PROPORTION_CHECK: [Kecukupan ruang untuk tiap pokok bahasan]
+
+TRANSITION_CHECK: [Hubungan antarbagian]
+
+DUPLICATION_CHECK: [Pemeriksaan pengulangan]
+
+STRUCTURE_FINDINGS: [Temuan dan perbaikan yang diperlukan]
+
+[GF-23]
+
+23. KEPUTUSAN KESIAPAN KERANGKA
+
+READINESS_STATUS: [READY_FOR_STAGE_2 / NEEDS_SOURCES / NEEDS_NARROWER_FOCUS / NEEDS_ARGUMENT_REORDER / NEEDS_CONTRADICTION_RESOLUTION]
+
+READINESS_REASON: [Alasan berdasarkan hasil audit 19–22]
+
+UNRESOLVED_ITEMS: [Hal yang belum terselesaikan; tulis TIDAK ADA jika memang tidak ada]
+
+USER_CONFIRMATION_REQUIRED: [YES / NO — jika ada isu substansial yang belum jelas, YES]
+
+STAGE_2_USAGE_NOTE: [Catatan spesifik yang wajib dipatuhi Tahap 2]
+
+G. ATURAN WAJIB PENGERJAAN
+
+[GENFLOW_PROCESSING_RULES_START]
+
+Dokumen ini adalah KERANGKA PERENCANAAN, bukan naskah narasi final.
+
+Jangan menulis paragraf narasi utuh, dialog, monolog, atau kalimat siap dibacakan narator.
+
+Pertahankan seluruh 23 komponen GF-01 sampai GF-23 dan urutan A–G.
+
+Jangan mengganti, menghapus, menggabungkan secara destruktif, atau mengubah nama marker dan label field.
+
+Jika informasi tidak tersedia, tulis BELUM TERSEDIA. Jangan mengarang atau mengisi dengan asumsi.
+
+Bedakan fakta terverifikasi, data belum terverifikasi, interpretasi, opini, dan hipotesis.
+
+Setiap klaim faktual harus mempunyai SOURCE_ID atau ditandai NEEDS_VERIFICATION.
+
+Gunakan ID sumber S01, S02, dan seterusnya secara konsisten; gunakan ID bukti EVIDENCE-01, EVIDENCE-02, dan seterusnya.
+
+Pertahankan batas Wajib Dibahas, Boleh Disinggung, dan Di Luar Fokus.
+
+Jangan memaksakan plot twist, tesis, atau logic punch yang tidak didukung bukti.
+
+Jangan memasukkan materi yang dilarang oleh Scope Boundary.
+
+Jangan menambahkan pembahasan hanya karena kontroversial atau menarik perhatian.
+
+Jangan membuat tabel, kolom ganda, kotak teks, shape, diagram teks, header/footer, daftar isi otomatis, atau halaman sampul.
+
+Gunakan satu aliran teks satu kolom. Setiap marker dan label harus berada pada paragraf tersendiri.
+
+Jangan menaruh judul template di depan TOPIC_TITLE. TOPIC_TITLE hanya berisi judul topik.
+
+Jangan mengubah urutan field. Field yang tidak relevan tetap ditampilkan dan diberi alasan.
+
+Simpan hasil akhir sebagai DOCX yang dapat diedit dan dapat diekstrak menjadi teks biasa.
+
+[GENFLOW_PROCESSING_RULES_END]
+
+[GENFLOW_DOCUMENT_END]
+
+============================================================
+LAMPIRAN B — KONTRAK IMPLEMENTASI BACKEND GENFLOW
+HANYA DIJALANKAN JIKA PENGGUNA SECARA EKSPLISIT MEMINTA IMPLEMENTASI BACKEND
+============================================================
+
+NAMA KEBIJAKAN
+Nama: GENFLOW UNIVERSAL FRAMEWORK PROCESSING POLICY
+Policy ID: GENFLOW_UNIVERSAL_FRAMEWORK_POLICY
+Schema ID: GF-NARRATIVE-FRAMEWORK-1.0
+Policy Version: 1.1.0
+Schema Version: 1.0.0
+Single Source of Truth: penyimpanan backend persisten aplikasi.
+
+B1. PENYIMPANAN DAN PERSISTENSI
+1. Tanamkan aturan, schema, marker, nama field, validator, metadata versi, dan hash policy pada penyimpanan backend persisten yang sudah digunakan aplikasi.
+2. Backend adalah single source of truth. Jangan hanya menyimpan policy pada frontend, local storage, session storage, cache browser, atau prompt sementara.
+3. Gunakan database/penyimpanan yang sudah ada; jangan membuat database atau service paralel jika mekanisme lama dapat diperluas dengan aman.
+4. Policy harus tetap aktif setelah server restart, redeploy, browser ditutup, atau pengguna login kembali.
+5. Saat startup, backend memuat dan memvalidasi policy aktif. Jika gagal dimuat, tampilkan kegagalan secara eksplisit dan jangan diam-diam memproses tanpa policy.
+6. Simpan sekurang-kurangnya policy_id, schema_id, policy_version, schema_version, active_status, created_at, updated_at, source_filename, content_hash, dan change_history.
+7. Hash dipakai untuk mendeteksi perubahan/kerusakan, bukan menggantikan validasi isi.
+8. Cache hanya boleh menjadi salinan policy backend dan harus diinvalidasi ketika policy berubah.
+9. Jangan menghapus dokumen, data, atau riwayat pengguna yang sudah ada.
+10. Sediakan backup/rollback sesuai arsitektur proyek sebelum migrasi atau perubahan persistence.
+
+B2. INTEGRASI OTOMATIS DENGAN TOMBOL UNGGAH FILE
+1. Integrasikan policy langsung ke alur upload dokumen yang sudah ada pada menu KERANGKA & SUMBER. Jangan membuat menu upload atau workflow paralel.
+2. Pengguna cukup mengunggah dokumen kerangka. Tidak boleh diminta melampirkan file instruksi TXT setiap kali.
+3. Format upload yang saat ini didukung UI adalah TXT, DOCX, dan PDF. Verifikasi dukungan parser aktual untuk setiap format; jangan mengklaim format berhasil jika parser belum mendukungnya.
+4. Ketika file diunggah, backend memeriksa ekstensi, MIME type, isi, marker, heading, label komponen, dan pola struktur untuk mengklasifikasikan dokumen.
+5. Kenali kerangka baku melalui Schema ID, marker GF-01 sampai GF-23, struktur A–G, lima blok StoryFlow, atau pola semantik yang setara.
+6. Jika dokumen merupakan kerangka lama atau format bebas, petakan berdasarkan makna ke schema kanonis tanpa menghilangkan substansi. Pertahankan sumber asli dan tandai hasil pemetaan AI.
+7. Jika file adalah bahan riset, artikel, transkrip, atau referensi biasa, klasifikasikan sebagai bahan sumber; jangan memaksakan 23 komponen kerangka.
+8. Jika klasifikasi tidak meyakinkan, minta konfirmasi melalui UI yang sudah ada.
+9. DOCX harus diekstrak dengan mempertahankan urutan paragraf, heading, daftar, dan teks tabel bila ada. PDF harus diekstrak sesuai kemampuan parser; untuk PDF hasil scan, gunakan OCR hanya jika tersedia dan laporkan kegagalan jika tidak tersedia. TXT harus mempertahankan urutan, Unicode, dan marker.
+10. Baca seluruh dokumen, bukan hanya halaman pertama atau ringkasan.
+11. Jangan mengubah angka, tanggal, nama, kutipan, URL, istilah, atau klaim saat ekstraksi.
+
+B3. KONDISI AWAL FRAMEWORK WAJIB KOSONG
+1. Ketika aplikasi dibuka dan belum ada dokumen kerangka aktif, struktur UI 23 komponen tetap terlihat tetapi seluruh nilai komponen harus kosong.
+2. Status awal: BELUM ADA DOKUMEN / MENUNGGU DOKUMEN / BELUM DIPERIKSA sesuai desain UI.
+3. Jumlah komponen terisi harus 0/23. Jangan tampilkan data contoh, dummy data, seed data, topik sebelumnya, tesis bawaan, sumber bawaan, atau konten hardcoded sebagai hasil dokumen aktif.
+4. Jangan memberi status DITEMUKAN sebelum dokumen benar-benar diunggah dan pemindaian selesai.
+5. Data statis yang hanya menjelaskan nama/definisi komponen boleh tetap tampil sebagai label schema, tetapi bukan sebagai nilai hasil ekstraksi.
+6. Jangan menghapus riwayat dokumen lama jika memang disimpan; pisahkan riwayat dari dokumen aktif. Jangan tampilkan isi dokumen lama sebagai dokumen aktif baru.
+7. Reset harus mengosongkan hasil pemetaan aktif tanpa menghapus riwayat atau data sumber permanen, kecuali pengguna secara eksplisit meminta penghapusan permanen.
+
+B4. PEMINDAIAN, PEMETAAN, DAN SINKRONISASI SETIAP UPLOAD
+1. Setelah file valid dipilih dan diunggah, mulai ekstraksi/pemindaian otomatis. Tampilkan status SEDANG DIPINDAI.
+2. Buat document_id unik dan ikat hasil ekstraksi, pemetaan, cache, serta status UI ke document_id dan content_hash file tersebut.
+3. Saat file baru diunggah, bersihkan hasil pemetaan aktif sebelumnya dari sesi kerja aktif sebelum menampilkan hasil file baru. Riwayat sebelumnya tetap terpisah dan tidak boleh tercampur.
+4. Cegah race condition: hasil scan file lama tidak boleh menimpa hasil scan file yang lebih baru.
+5. Petakan hanya informasi yang benar-benar ditemukan atau dapat ditautkan secara wajar pada dokumen. Jangan mengarang field yang tidak tersedia.
+6. Untuk komponen yang tidak ditemukan, tampilkan TIDAK DITEMUKAN DALAM DOKUMEN; untuk ambigu gunakan PERLU KONFIRMASI; untuk kegagalan ekstraksi gunakan GAGAL DIPINDAI.
+7. Bedakan teks sumber asli dengan interpretasi/pemetaan AI.
+8. Jika ada bagian yang saling bertentangan, pertahankan keduanya dan tandai konflik; jangan memilih secara diam-diam.
+9. Validasi seluruh 23 komponen, lima blok StoryFlow, SOURCE_ID, EVIDENCE_ID, batas Scope Boundary, dan referensi silang.
+10. Tahap berikutnya hanya boleh menggunakan hasil kerangka yang sudah dipindai dan dikonfirmasi sesuai workflow yang saat ini berlaku.
+
+B5. STATUS KOMPONEN DAN TOMBOL KONFIRMASI
+Gunakan status yang akurat:
+- MENUNGGU DOKUMEN: belum ada dokumen aktif.
+- SEDANG DIPINDAI: ekstraksi/pemetaan sedang berjalan.
+- DITEMUKAN: isi benar-benar ditemukan dan pemindaian selesai.
+- TIDAK DITEMUKAN: informasi tidak tersedia pada dokumen.
+- PERLU KONFIRMASI: isi ambigu atau hasil pemetaan perlu persetujuan.
+- GAGAL DIPINDAI: ekstraksi/pemindaian gagal.
+
+Tombol KONFIRMASI KERANGKA & LANJUTKAN harus tidak aktif ketika belum ada dokumen, pemindaian belum selesai, ekstraksi gagal, atau syarat minimum validasi belum terpenuhi. Jangan meloloskan kerangka kosong sebagai kerangka siap.
+
+B7. KEBIJAKAN TANGGAL PADA GENFLOW
+1. Jangan otomatis memasukkan tanggal hari ini/tanggal sistem ke dokumen kerangka, metadata dokumen, preview, hasil ekstraksi, atau komponen GF-01 sampai GF-23.
+2. Schema, mapping backend, validator, dan tampilan metadata kerangka tidak boleh menyediakan atau menampilkan field tanggal pembuatan kerangka. Jangan menggantinya dengan nama field tanggal otomatis lain.
+3. Tanggal hanya boleh muncul sebagai isi substantif jika memang terdapat di dokumen sumber yang diunggah atau secara eksplisit diminta pengguna. Pertahankan konteks dan asal tanggal tersebut.
+4. Timestamp teknis internal untuk audit/peristiwa sistem, jika memang sudah diperlukan, harus tetap terpisah dan tidak boleh disalin ke isi atau metadata kerangka yang ditampilkan kepada pengguna.
+5. Larangan ini hanya berlaku untuk tanggal pembuatan kerangka. Tanggal/tahun publikasi sumber tetap boleh dicatat pada SOURCE_DATE_OR_YEAR jika relevan untuk identifikasi dan verifikasi sumber.
+
+B8. PREVIEW, RIWAYAT, DAN AUDIT
+1. Integrasikan hasil ke UI upload/preview yang sudah ada.
+2. Tampilkan nama file, document_id, content_hash, jenis dokumen, policy version, schema version, status ekstraksi, jumlah kata hasil ekstraksi, dan status validasi.
+3. Tampilkan ringkasan dan detail A–G / 23 komponen; field kosong tetap terlihat dengan statusnya.
+4. Tampilkan peringatan komponen hilang, ambigu, konflik, sumber belum terverifikasi, atau referensi silang rusak.
+5. Izinkan koreksi pemetaan melalui mekanisme UI yang sudah ada tanpa mengubah file asli.
+6. Simpan riwayat pemetaan/koreksi secara terpisah dan dapat ditelusuri.
+7. Jangan mengklaim realtime, permanen, aktif, atau tersinkron jika belum dibuktikan dari source code dan pengujian.
+
+B8. HIERARKI DAN BATAS PERUBAHAN
+1. GENFLOW MASTER PROMPT FINAL tetap menjadi otoritas tertinggi untuk kebijakan penulisan/generasi naskah.
+2. GENFLOW UNIVERSAL FRAMEWORK PROCESSING POLICY adalah kebijakan teknis turunan untuk upload, klasifikasi, ekstraksi, pemetaan, validasi, preview, dan standardisasi dokumen kerangka.
+3. Schema GF-NARRATIVE-FRAMEWORK-1.0 di dalam dokumen ini adalah struktur kanonis. Jangan membuat salinan schema berbeda di service lain.
+4. Jika terjadi konflik kebijakan, catat dan ikuti hierarki yang benar; jangan menyelesaikan konflik diam-diam.
+5. Jangan mengubah, membaca keluar, menampilkan, menulis ulang, memindahkan, menghapus, atau mengekspos nilai 21 API Key.
+6. Jangan mengubah provider, model AI, kredensial, urutan failover, atau konfigurasi AI yang sudah ada.
+7. Jangan mengubah GENFLOW MASTER PROMPT FINAL.
+8. Jangan mengubah jumlah, urutan, kontrak, dependensi, atau perilaku Workflow Engine yang saat ini berjalan normal.
+9. Jangan mengubah repository kosakata, monitoring catatan, validator, pascaproduksi, atau fitur lain yang tidak diperlukan langsung untuk integrasi upload kerangka.
+10. Batasi perubahan pada policy storage/loader, parser, klasifikasi, schema mapping, validasi, preview, state reset, dan riwayat upload yang memang diperlukan.
+11. Gunakan komponen dan endpoint yang sudah ada jika aman; hindari duplikasi service, endpoint, atau database.
+12. Buat backup dan jalur rollback sebelum perubahan berisiko.
+
+B9. VERSIONING DAN AKTIVASI
+1. Catat policy version dan schema version untuk setiap dokumen yang diproses.
+2. Setiap perubahan policy harus memiliki versi, timestamp, ringkasan perubahan, dan hash baru.
+3. Upload dokumen baru tidak menaikkan versi policy.
+4. Validasi policy sebelum aktivasi; hindari status aktif setengah jadi.
+5. Sediakan rollback ke versi policy valid sebelumnya sesuai arsitektur aplikasi.
+
+B10. PENGUJIAN WAJIB
+Uji dan laporkan bukti aktual untuk:
+1. Tanpa upload: UI menunjukkan 0/23 komponen terisi, tidak ada konten bawaan, dan tombol konfirmasi nonaktif.
+2. Upload kerangka valid: scan otomatis berjalan dan komponen dipetakan dari dokumen tersebut.
+3. Upload dokumen kedua: hasil dokumen pertama tidak tercampur; hasil lama tidak menimpa hasil baru.
+4. Upload dokumen sumber biasa: tidak dipaksakan menjadi kerangka 23 komponen.
+5. Dokumen tidak lengkap: field hilang diberi status, bukan diisi rekaan.
+6. Dokumen ambigu/bertentangan: konflik ditampilkan.
+7. DOCX/TXT/PDF: uji setiap format yang benar-benar diklaim didukung.
+8. SOURCE_ID/EVIDENCE_ID valid dikenali dan referensi rusak terdeteksi.
+9. Dokumen panjang, Unicode, angka, URL, daftar, dan tabel lama diekstrak sesuai urutan baca.
+10. Policy tetap tersedia setelah server restart/redeploy sesuai mekanisme persistence.
+11. Upload berikutnya tidak memerlukan lampiran instruksi TXT.
+12. 21 API Key, provider/model, GENFLOW MASTER PROMPT FINAL, dan Workflow Engine tidak berubah.
+13. Build, lint, unit test, dan integration test lulus; laporkan hasil aktual, jangan mengarang.
+
+B11. LAPORAN IMPLEMENTASI
+Setelah implementasi, laporkan:
+1. File source code yang diperiksa/diubah dan alasan.
+2. Lokasi persistence policy di backend.
+3. Policy ID, schema ID, policy version, schema version, hash, dan status aktif.
+4. Cara policy dimuat saat startup dan dipanggil pada setiap upload.
+5. Cara klasifikasi membedakan kerangka dan bahan sumber.
+6. Cara parser menangani TXT, DOCX, PDF dan keterbatasan format.
+7. Cara UI dimulai dari 0/23 lalu terisi dari dokumen yang dipindai.
+8. Bukti tidak perlu upload TXT instruksi lagi.
+9. Hasil pengujian aktual.
+10. Konfirmasi eksplisit bahwa 21 API Key, provider/model, GENFLOW MASTER PROMPT FINAL, dan Workflow Engine tidak diubah.
+11. Keterbatasan atau pengujian yang belum lulus.
+
+PERINTAH IMPLEMENTASI
+Jika pengguna secara eksplisit meminta implementasi backend, audit source code aktual terlebih dahulu. Implementasikan seluruh persyaratan yang relevan secara menyeluruh, lakukan pengujian, dan tampilkan laporan berbasis bukti. Jangan berhenti pada rencana atau analisis. Jangan menyatakan selesai tanpa hasil nyata.
+
+Jika pengguna hanya memberikan topik, jalankan MODE 1 dan jangan menjalankan Lampiran B.
+
+============================================================
+AKHIR DOKUMEN KANONIS
+============================================================
+
+
+CATATAN PENGGUNAAN
+Untuk pembuatan kerangka rutin: lampirkan file ini satu kali pada percakapan, lalu ketik topik.
+Untuk integrasi backend pertama kali: lampirkan file yang sama dan minta secara eksplisit implementasi Lampiran B.
+Jangan meminta atau mewajibkan tiga file referensi lama secara terpisah. Semua aturan dan schema kanonis sudah digabung dalam dokumen ini.

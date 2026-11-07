@@ -1,0 +1,539 @@
+[GENFLOW_DOCUMENT_START]
+
+SCHEMA_ID: GF-NARRATIVE-FRAMEWORK-1.0
+
+DOCUMENT_TYPE: NARRATIVE_FRAMEWORK
+
+TOPIC_TITLE: [JUDUL TOPIK SAJA — JANGAN TAMBAHKAN JUDUL TEMPLATE]
+
+TOPIC_SUMMARY: [RINGKASAN TOPIK 1–3 KALIMAT]
+
+DOCUMENT_STATUS: [DRAFT / READY_FOR_STAGE_2 / NEEDS_REVISION]
+
+[GENFLOW_METADATA_END]
+
+A. INPUT UTAMA
+
+[GF-01]
+
+1. TOPIK UTAMA
+
+TOPIC_STATEMENT: [Jelaskan topik spesifik yang benar-benar akan dibahas.]
+
+TOPIC_OBJECT: [Objek, fenomena, kebijakan, perilaku, peristiwa, atau persoalan yang dibahas.]
+
+TOPIC_QUESTION_IF_GIVEN: [Pertanyaan awal dari pengguna; tulis BELUM DIBERIKAN jika tidak ada.]
+
+[GF-02]
+
+2. BAHAN DAN SUMBER RUJUKAN
+
+FORMAT_NOTE: Ulangi blok SOURCE untuk setiap sumber. Jangan gabungkan beberapa sumber ke dalam satu blok jika identitas atau klaimnya berbeda.
+
+[GF-02-SOURCE-01]
+
+SOURCE_ID: S01
+
+SOURCE_TITLE: [Judul sumber]
+
+SOURCE_AUTHOR_OR_ORGANIZATION: [Penulis/lembaga]
+
+SOURCE_DATE_OR_YEAR: [Tanggal/tahun]
+
+SOURCE_URL_OR_IDENTIFIER: [URL/DOI/nama dokumen/identitas sumber]
+
+SOURCE_RELEVANT_CONTENT: [Informasi spesifik yang relevan]
+
+SOURCE_LIMITATION: [Batas data, cakupan, metode, atau keterbatasan sumber]
+
+SOURCE_STATUS: [VERIFIED / NEEDS_VERIFICATION / USER_PROVIDED / NOT_AVAILABLE]
+
+[END_GF-02-SOURCE-01]
+
+ADDITIONAL_SOURCES: [Tambahkan blok sumber bernomor 02, 03, 04, dan seterusnya dengan field yang sama.]
+
+B. PENGUNCI SUBSTANSI
+
+[GF-03]
+
+3. KUNCI FOKUS BESAR — CENTRAL FOCUS
+
+CENTRAL_FOCUS: [Satu fokus utama yang spesifik.]
+
+FOCUS_RATIONALE: [Mengapa fokus ini menjadi pusat pembahasan.]
+
+FOCUS_EXCLUSIONS: [Hal terkait yang sengaja tidak dijadikan fokus.]
+
+[GF-04]
+
+4. KUNCI BATAS PEMBAHASAN — SCOPE BOUNDARY
+
+MUST_COVER_01: [Poin wajib dibahas 1]
+
+MUST_COVER_02: [Poin wajib dibahas 2; tambahkan nomor jika diperlukan]
+
+MAY_MENTION_01: [Poin pendukung yang boleh disinggung 1]
+
+MAY_MENTION_02: [Poin pendukung yang boleh disinggung 2; tambahkan nomor jika diperlukan]
+
+OUT_OF_SCOPE_01: [Poin yang tidak boleh dimasukkan 1]
+
+OUT_OF_SCOPE_02: [Poin yang tidak boleh dimasukkan 2; tambahkan nomor jika diperlukan]
+
+[GF-05]
+
+5. KUNCI PERTANYAAN INTI — CORE QUESTION
+
+CORE_QUESTION: [Satu pertanyaan utama yang harus dijawab keseluruhan naskah.]
+
+ANSWER_REQUIREMENTS: [Unsur minimum yang harus dijawab agar pertanyaan inti benar-benar terjawab.]
+
+[GF-06]
+
+6. KUNCI KERANGKA MASALAH — PROBLEM FRAMEWORK
+
+MAIN_PROBLEM: [Masalah utama]
+
+BACKGROUND_AND_CONTEXT: [Konteks dan latar belakang]
+
+CAUSES_OR_EXPLANATORY_FACTORS: [Faktor penyebab atau faktor penjelas; jangan klaim sebab-akibat tanpa bukti]
+
+MECHANISM: [Mekanisme/proses yang menjelaskan bagaimana masalah terjadi]
+
+INVOLVED_PARTIES_OR_ELEMENTS: [Pihak atau unsur yang terlibat, jika relevan]
+
+IMPACTS_AND_CONSEQUENCES: [Dampak dan konsekuensi]
+
+CORE_CONTRADICTION_OR_GAP: [Pertentangan, kesenjangan, atau kontradiksi inti]
+
+[GF-07]
+
+7. KUNCI TESIS UTAMA — CENTRAL THESIS
+
+CENTRAL_THESIS: [Satu pernyataan argumentatif utama yang akan diuji/dijelaskan melalui bukti.]
+
+THESIS_SUPPORT_NEEDED: [Bukti atau penalaran yang diperlukan untuk mendukung/menguji tesis.]
+
+THESIS_LIMITATION: [Batas klaim; apa yang tidak boleh disimpulkan terlalu jauh.]
+
+[GF-08]
+
+8. KUNCI LOGIC PUNCH
+
+LOGIC_PUNCH: [Inti pemahaman paling kuat yang harus diperoleh audiens dari keseluruhan argumentasi.]
+
+LOGIC_PUNCH_BASIS: [Fakta/argumen yang menjadi dasar logic punch.]
+
+[GF-09]
+
+9. KUNCI TUJUAN PERUBAHAN PERSPEKTIF
+
+AUDIENCE_BEFORE: [Asumsi/pemahaman awal audiens yang hendak diuji.]
+
+AUDIENCE_AFTER: [Pemahaman yang diharapkan setelah menonton.]
+
+ASSUMPTIONS_TO_TEST: [Asumsi atau kesalahpahaman yang perlu diuji kembali.]
+
+RESPONSIBLE_NEW_PERSPECTIVE: [Perspektif baru yang dapat dipertanggungjawabkan berdasarkan bukti.]
+
+C. PENGUNCI FAKTA DAN ARGUMENTASI
+
+[GF-10]
+
+10. PEMETAAN LANDASAN FAKTA — EVIDENCE MAPPING
+
+FORMAT_NOTE: Gunakan satu blok untuk satu klaim/bukti. Ulangi blok dengan nomor berikutnya. Jangan memakai tabel.
+
+[GF-10-EVIDENCE-01]
+
+EVIDENCE_ID: EVIDENCE-01
+
+CLAIM_ID: C-01
+
+CLAIM_TO_CHECK: [Klaim spesifik yang perlu diperiksa]
+
+EVIDENCE_OR_DATA: [Fakta/data yang mendukung, membantah, atau membatasi klaim]
+
+SOURCE_ID: S01
+
+DATE_OR_PERIOD: [Tahun/periode data]
+
+EVIDENCE_STATUS: [VERIFIED / NEEDS_VERIFICATION / INTERPRETATION / OPINION / HYPOTHESIS]
+
+RELEVANCE_TO_THESIS: [Hubungan bukti dengan tesis/pertanyaan inti]
+
+LIMITATION_OR_CAVEAT: [Keterbatasan, definisi indikator, cakupan, atau catatan interpretasi]
+
+[END_GF-10-EVIDENCE-01]
+
+ADDITIONAL_EVIDENCE_BLOCKS: [Ulangi blok GF-10-EVIDENCE-02, 03, 04, dan seterusnya.]
+
+UNSUPPORTED_OR_UNRESOLVED_CLAIMS: [Daftar klaim yang belum memiliki bukti memadai; tulis TIDAK ADA jika memang tidak ada.]
+
+[GF-11]
+
+11. PEMETAAN RANTAI LOGIKA — ARGUMENT CHAIN
+
+CATATAN FORMAT: Gunakan langkah berurutan. Tambahkan langkah bila diperlukan; jangan memaksakan urutan yang tidak sesuai topik.
+
+CHAIN_STEP_01_INITIAL_CONDITION: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_02_PROBLEM: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_03_CAUSE_OR_EXPLANATORY_FACTOR: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_04_MECHANISM: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_05_EVIDENCE: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_06_IMPACT: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_07_IMPLICATION: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+CHAIN_STEP_08_INTERMEDIATE_OR_FINAL_CONCLUSION: [Isi langkah ini dan cantumkan ID bukti GF-10 yang relevan.]
+
+LOGIC_GAPS: [Bagian rantai logika yang belum didukung atau masih perlu diuji.]
+
+[GF-12]
+
+12. PEMETAAN KONTRAARGUMEN DAN ALTERNATIF PENJELASAN
+
+CATATAN FORMAT: Ulangi blok untuk setiap kontraargumen atau penjelasan alternatif.
+
+[GF-12-COUNTERARGUMENT-01]
+
+COUNTERARGUMENT: [Argumen berbeda atau fakta yang berlawanan]
+
+ALTERNATIVE_EXPLANATION: [Penjelasan alternatif yang relevan]
+
+SUPPORTING_EVIDENCE_OR_SOURCE_ID: [Bukti/ID sumber yang terkait]
+
+HOW_TO_HANDLE: [Dijelaskan / dibandingkan / diuji / ditolak dengan alasan]
+
+LIMITATION: [Batas atau kelemahan kontraargumen/alternatif]
+
+[END_GF-12-COUNTERARGUMENT-01]
+
+ADDITIONAL_COUNTERARGUMENTS: [Tambahkan blok bernomor 02, 03, dan seterusnya.]
+
+[GF-13]
+
+13. PENENTUAN PLOT TWIST — PERSPECTIVE SHIFT
+
+INITIAL_EXPECTATION: [Apa yang mungkin diasumsikan audiens sebelum melihat bukti.]
+
+REVEALING_FACT_OR_CONTRADICTION: [Fakta/kontradiksi yang mengubah pemahaman; sertakan ID bukti.]
+
+PERSPECTIVE_SHIFT: [Perubahan perspektif yang sah dan didukung bukti.]
+
+PLANNED_POSITION: [Bagian kerangka tempat perubahan perspektif ditempatkan.]
+
+IF_NO_VALID_PLOT_TWIST: [Tulis TIDAK ADA jika tidak ada perubahan perspektif yang wajar; jangan dipaksakan.]
+
+D. PERANCANGAN STRUKTUR NASKAH
+
+[GF-14]
+
+14. PENENTUAN FUNGSI SETIAP BAGIAN
+
+CATATAN FORMAT: Setiap bagian harus mempunyai fungsi berbeda. Ulangi PART_FUNCTION untuk setiap bagian yang direncanakan.
+
+[GF-14-PART-01]
+
+PART_NAME: [Nama/tema bagian]
+
+PART_FUNCTION: [Fungsi argumentatif bagian]
+
+UNIQUE_CONTRIBUTION: [Kontribusi khusus yang tidak mengulang bagian lain]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang diperlukan]
+
+[END_GF-14-PART-01]
+
+ADDITIONAL_PART_FUNCTIONS: [Tambahkan blok PART-02, PART-03, dan seterusnya.]
+
+[GF-15]
+
+15. PENYUSUNAN ALUR PEMBAHASAN — NARRATIVE BLUEPRINT
+
+CATATAN FORMAT: Pertahankan kelima blok StoryFlow. Isi berdasarkan topik. Jika suatu blok membutuhkan penyesuaian, jelaskan alasannya; jangan menghapus blok.
+
+[GF-15-STORYFLOW-01-HOOK]
+
+BLOCK_NAME: HOOK
+
+BLOCK_FUNCTION: [Fungsi blok dalam alur]
+
+QUESTION_ANSWERED: [Pertanyaan yang dijawab blok]
+
+CORE_FOCUS: [Fokus inti blok]
+
+KEY_POINT_01: [Poin pembahasan 1]
+
+KEY_POINT_02: [Poin pembahasan 2; tambahkan nomor jika diperlukan]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang harus digunakan]
+
+CONNECTION_FROM_PREVIOUS: [Hubungan logis dengan blok sebelumnya]
+
+CONNECTION_TO_NEXT: [Jembatan logis menuju blok berikutnya]
+
+CONTRIBUTION_TO_THESIS: [Kontribusi blok terhadap tesis/pertanyaan inti]
+
+[END_GF-15-STORYFLOW-01]
+
+[GF-15-STORYFLOW-02-AKAR_MASALAH]
+
+BLOCK_NAME: AKAR_MASALAH
+
+BLOCK_FUNCTION: [Fungsi blok dalam alur]
+
+QUESTION_ANSWERED: [Pertanyaan yang dijawab blok]
+
+CORE_FOCUS: [Fokus inti blok]
+
+KEY_POINT_01: [Poin pembahasan 1]
+
+KEY_POINT_02: [Poin pembahasan 2; tambahkan nomor jika diperlukan]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang harus digunakan]
+
+CONNECTION_FROM_PREVIOUS: [Hubungan logis dengan blok sebelumnya]
+
+CONNECTION_TO_NEXT: [Jembatan logis menuju blok berikutnya]
+
+CONTRIBUTION_TO_THESIS: [Kontribusi blok terhadap tesis/pertanyaan inti]
+
+[END_GF-15-STORYFLOW-02]
+
+[GF-15-STORYFLOW-03-INTI_MASALAH]
+
+BLOCK_NAME: INTI_MASALAH
+
+BLOCK_FUNCTION: [Fungsi blok dalam alur]
+
+QUESTION_ANSWERED: [Pertanyaan yang dijawab blok]
+
+CORE_FOCUS: [Fokus inti blok]
+
+KEY_POINT_01: [Poin pembahasan 1]
+
+KEY_POINT_02: [Poin pembahasan 2; tambahkan nomor jika diperlukan]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang harus digunakan]
+
+CONNECTION_FROM_PREVIOUS: [Hubungan logis dengan blok sebelumnya]
+
+CONNECTION_TO_NEXT: [Jembatan logis menuju blok berikutnya]
+
+CONTRIBUTION_TO_THESIS: [Kontribusi blok terhadap tesis/pertanyaan inti]
+
+[END_GF-15-STORYFLOW-03]
+
+[GF-15-STORYFLOW-04-PENYELESAIAN]
+
+BLOCK_NAME: PENYELESAIAN
+
+BLOCK_FUNCTION: [Fungsi blok dalam alur]
+
+QUESTION_ANSWERED: [Pertanyaan yang dijawab blok]
+
+CORE_FOCUS: [Fokus inti blok]
+
+KEY_POINT_01: [Poin pembahasan 1]
+
+KEY_POINT_02: [Poin pembahasan 2; tambahkan nomor jika diperlukan]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang harus digunakan]
+
+CONNECTION_FROM_PREVIOUS: [Hubungan logis dengan blok sebelumnya]
+
+CONNECTION_TO_NEXT: [Jembatan logis menuju blok berikutnya]
+
+CONTRIBUTION_TO_THESIS: [Kontribusi blok terhadap tesis/pertanyaan inti]
+
+[END_GF-15-STORYFLOW-04]
+
+[GF-15-STORYFLOW-05-KESIMPULAN]
+
+BLOCK_NAME: KESIMPULAN
+
+BLOCK_FUNCTION: [Fungsi blok dalam alur]
+
+QUESTION_ANSWERED: [Pertanyaan yang dijawab blok]
+
+CORE_FOCUS: [Fokus inti blok]
+
+KEY_POINT_01: [Poin pembahasan 1]
+
+KEY_POINT_02: [Poin pembahasan 2; tambahkan nomor jika diperlukan]
+
+REQUIRED_EVIDENCE_IDS: [ID bukti GF-10 yang harus digunakan]
+
+CONNECTION_FROM_PREVIOUS: [Hubungan logis dengan blok sebelumnya]
+
+CONNECTION_TO_NEXT: [Jembatan logis menuju blok berikutnya]
+
+CONTRIBUTION_TO_THESIS: [Kontribusi blok terhadap tesis/pertanyaan inti]
+
+[END_GF-15-STORYFLOW-05]
+
+BLUEPRINT_GAPS_OR_ADJUSTMENTS: [Kekurangan/penyesuaian alur dan alasannya.]
+
+E. PERANCANGAN PEMBUKA, JUDUL, DAN PENUTUP
+
+[GF-16]
+
+16. PERUMUSAN JUDUL
+
+PRIMARY_TITLE: [Judul utama yang paling akurat mewakili isi.]
+
+ALTERNATIVE_TITLE_01: [Alternatif judul 1; opsional]
+
+ALTERNATIVE_TITLE_02: [Alternatif judul 2; opsional]
+
+TITLE_PROMISE: [Informasi/pertanyaan yang dijanjikan judul kepada audiens.]
+
+TITLE_CLAIM_LIMIT: [Batas agar judul tidak berlebihan atau menyesatkan.]
+
+[GF-17]
+
+17. PERANCANGAN HOOK
+
+HOOK_STRATEGY: [Pertanyaan kritis / kontradiksi / fakta / masalah belum terjawab / konsekuensi]
+
+HOOK_INFORMATION: [Informasi yang perlu diperkenalkan]
+
+CURIOSITY_GAP: [Hal yang membuat audiens ingin mengetahui kelanjutannya]
+
+HOOK_LINK_TO_CORE_QUESTION: [Hubungan hook dengan pertanyaan inti]
+
+NO_FINAL_NARRATION: [Rencana fungsi pembuka saja; jangan tulis paragraf narasi final.]
+
+[GF-18]
+
+18. PERANCANGAN KLIMAKS DAN PENUTUP
+
+ARGUMENTATIVE_CLIMAX: [Puncak argumentasi]
+
+KEY_FINDING_BEFORE_CLOSING: [Temuan/pemahaman yang harus dicapai sebelum penutup]
+
+CONCLUSION_LINK_TO_THESIS: [Hubungan kesimpulan dengan tesis]
+
+LOGIC_PUNCH_REINFORCEMENT: [Cara mengunci logic punch]
+
+REFLECTIVE_QUESTION_OR_CALL: [Pertanyaan reflektif/ajakan yang relevan]
+
+NO_FINAL_NARRATION: [Rencana penutup saja; jangan tulis paragraf narasi final.]
+
+F. AUDIT KERANGKA SEBELUM PENULISAN NARASI
+
+[GF-19]
+
+19. AUDIT KONSISTENSI SUBSTANSI
+
+FOCUS_TO_QUESTION_ALIGNMENT: [Konsisten / Tidak konsisten + alasan]
+
+QUESTION_TO_THESIS_ALIGNMENT: [Konsisten / Tidak konsisten + alasan]
+
+THESIS_TO_EVIDENCE_ALIGNMENT: [Konsisten / Tidak konsisten + alasan]
+
+THESIS_TO_LOGIC_PUNCH_ALIGNMENT: [Konsisten / Tidak konsisten + alasan]
+
+CONSISTENCY_FINDINGS: [Temuan dan perbaikan yang diperlukan]
+
+[GF-20]
+
+20. AUDIT KELENGKAPAN ARGUMENTASI
+
+REQUIRED_POINTS_COVERAGE: [Daftar poin wajib dan status pemenuhannya]
+
+EVIDENCE_COVERAGE: [Klaim yang sudah/belum memiliki bukti]
+
+MISSING_ARGUMENTS: [Argumen atau penjelasan yang masih kurang]
+
+COMPLETENESS_FINDINGS: [Temuan dan perbaikan yang diperlukan]
+
+[GF-21]
+
+21. AUDIT POTENSI PENYIMPANGAN
+
+OFF_TOPIC_RISKS: [Bagian yang berpotensi keluar dari fokus]
+
+REPETITION_RISKS: [Bagian yang berpotensi mengulang]
+
+SPECULATION_RISKS: [Bagian yang terlalu spekulatif]
+
+OUT_OF_SCOPE_CHECK: [Apakah ada materi yang melanggar Scope Boundary?]
+
+DRIFT_CORRECTIONS: [Perbaikan yang diperlukan]
+
+[GF-22]
+
+22. AUDIT KELAYAKAN STRUKTUR
+
+SEQUENCE_CHECK: [Urutan pembahasan masuk akal/tidak + alasan]
+
+PROPORTION_CHECK: [Kecukupan ruang untuk tiap pokok bahasan]
+
+TRANSITION_CHECK: [Hubungan antarbagian]
+
+DUPLICATION_CHECK: [Pemeriksaan pengulangan]
+
+STRUCTURE_FINDINGS: [Temuan dan perbaikan yang diperlukan]
+
+[GF-23]
+
+23. KEPUTUSAN KESIAPAN KERANGKA
+
+READINESS_STATUS: [READY_FOR_STAGE_2 / NEEDS_SOURCES / NEEDS_NARROWER_FOCUS / NEEDS_ARGUMENT_REORDER / NEEDS_CONTRADICTION_RESOLUTION]
+
+READINESS_REASON: [Alasan berdasarkan hasil audit 19–22]
+
+UNRESOLVED_ITEMS: [Hal yang belum terselesaikan; tulis TIDAK ADA jika memang tidak ada]
+
+USER_CONFIRMATION_REQUIRED: [YES / NO — jika ada isu substansial yang belum jelas, YES]
+
+STAGE_2_USAGE_NOTE: [Catatan spesifik yang wajib dipatuhi Tahap 2]
+
+G. ATURAN WAJIB PENGERJAAN
+
+[GENFLOW_PROCESSING_RULES_START]
+
+Dokumen ini adalah KERANGKA PERENCANAAN, bukan naskah narasi final.
+
+Jangan menulis paragraf narasi utuh, dialog, monolog, atau kalimat siap dibacakan narator.
+
+Pertahankan seluruh 23 komponen GF-01 sampai GF-23 dan urutan A–G.
+
+Jangan mengganti, menghapus, menggabungkan secara destruktif, atau mengubah nama marker dan label field.
+
+Jika informasi tidak tersedia, tulis BELUM TERSEDIA. Jangan mengarang atau mengisi dengan asumsi.
+
+Bedakan fakta terverifikasi, data belum terverifikasi, interpretasi, opini, dan hipotesis.
+
+Setiap klaim faktual harus mempunyai SOURCE_ID atau ditandai NEEDS_VERIFICATION.
+
+Gunakan ID sumber S01, S02, dan seterusnya secara konsisten; gunakan ID bukti EVIDENCE-01, EVIDENCE-02, dan seterusnya.
+
+Pertahankan batas Wajib Dibahas, Boleh Disinggung, dan Di Luar Fokus.
+
+Jangan memaksakan plot twist, tesis, atau logic punch yang tidak didukung bukti.
+
+Jangan memasukkan materi yang dilarang oleh Scope Boundary.
+
+Jangan menambahkan pembahasan hanya karena kontroversial atau menarik perhatian.
+
+Jangan membuat tabel, kolom ganda, kotak teks, shape, diagram teks, header/footer, daftar isi otomatis, atau halaman sampul.
+
+Gunakan satu aliran teks satu kolom. Setiap marker dan label harus berada pada paragraf tersendiri.
+
+Jangan menaruh judul template di depan TOPIC_TITLE. TOPIC_TITLE hanya berisi judul topik.
+
+Jangan mengubah urutan field. Field yang tidak relevan tetap ditampilkan dan diberi alasan.
+
+Simpan hasil akhir sebagai DOCX yang dapat diedit dan dapat diekstrak menjadi teks biasa.
+
+[GENFLOW_PROCESSING_RULES_END]
+
+[GENFLOW_DOCUMENT_END]

@@ -1,0 +1,518 @@
+GENFLOW
+
+MASTER FRAMEWORK
+FINAL
+
+PERENCANAAN NASKAH YOUTUBE PRESISI
+
+Standar pembacaan kerangka, penguncian substansi, pemetaan bukti,
+dan pengembangan narasi di GENFLOW Studio PRO
+
+VERSI FINAL UNTUK INTEGRASI APLIKASI
+
+1. TUJUAN DAN KEDUDUKAN DOKUMEN
+
+GENFLOW MASTER FRAMEWORK FINAL adalah standar perencanaan naskah untuk membaca dan mengunci topik, fokus, batas pembahasan, pertanyaan inti, tesis, landasan fakta, rantai argumentasi, alur pembahasan, serta kelayakan kerangka sebelum naskah dikembangkan.
+
+1.1 Pembagian otoritas
+
+GENFLOW MASTER PROMPT FINAL menjadi otoritas kebijakan penulisan, gaya bahasa, batasan, dan aturan produksi naskah.
+
+GENFLOW MASTER FRAMEWORK FINAL menjadi acuan substansi: topik, fokus, ruang lingkup, fakta, argumentasi, dan alur yang harus dibahas.
+
+Keduanya saling melengkapi dan tidak saling menggantikan. Framework tidak boleh mengubah atau menulis ulang aturan Master Prompt.
+
+Jika terdapat konflik antara isi kerangka dan kebijakan Master Prompt, sistem harus menandai konflik untuk ditinjau, bukan diam-diam memilih atau mengubahnya.
+
+1.2 Hasil yang diharapkan
+
+AI memahami apa yang dibahas dan apa yang tidak boleh dibahas.
+
+Setiap klaim penting memiliki bukti atau ditandai belum terverifikasi.
+
+Setiap bagian naskah memiliki fungsi argumentatif dan kontribusi terhadap pertanyaan inti.
+
+Tahap Generate Naskah Awal menghasilkan narasi yang setia pada kerangka, bukan narasi bebas yang mengganti arah pembahasan.
+
+Pengguna dapat memeriksa hasil pembacaan kerangka sebelum generasi naskah dijalankan.
+
+2. ATURAN PEMBACAAN KERANGKA DI APLIKASI GENFLOW
+
+2.1 Jenis masukan
+
+Jika dokumen sudah mengikuti struktur A–G dan 23 komponen, pertahankan susunan dan petakan langsung.
+
+Jika dokumen berbentuk kerangka bebas, petakan isinya ke 23 komponen berdasarkan makna tanpa mengubah substansi.
+
+Jika dokumen hanya berisi bahan sumber/referensi, jangan menganggapnya sebagai kerangka lengkap. Identifikasi informasi yang tersedia dan tandai komponen yang belum ditemukan.
+
+Jangan mengisi bagian kosong dengan asumsi, fakta rekaan, sumber rekaan, atau hubungan sebab-akibat yang tidak didukung.
+
+2.2 Ketepatan ekstraksi
+
+Pertahankan teks asli, judul, angka, nama, kutipan, tautan, tabel, dan konteks sumber sejauh dapat diekstrak.
+
+Simpan jejak asal informasi: nama file, halaman, judul bagian, atau lokasi sumber jika tersedia.
+
+Bedakan informasi eksplisit dari interpretasi sistem. Interpretasi harus diberi label dan tidak boleh ditampilkan sebagai pernyataan asli pengguna.
+
+Jika dua bagian bertentangan, tampilkan keduanya sebagai konflik. Jangan menyatukan atau menghapus salah satunya secara diam-diam.
+
+Jika informasi berulang, tandai pengulangan tanpa menghilangkan perbedaan makna atau detail penting.
+
+2.3 Status setiap komponen
+
+2.4 Preview sebelum Tahap 2
+
+Sebelum Generate Naskah Awal berjalan, aplikasi harus menampilkan hasil pembacaan kerangka di antarmuka yang sudah ada. Ini adalah pemeriksaan di dalam alur berjalan, bukan penambahan tahap baru atau perubahan urutan Workflow Engine.
+
+Tampilkan ringkasan topik, fokus besar, batas pembahasan, pertanyaan inti, tesis, logic punch, dan status kesiapan.
+
+Tampilkan seluruh kelompok A–G dan 23 komponen. Bagian kosong tetap terlihat dengan status Tidak ditemukan.
+
+Sediakan detail untuk melihat isi ekstraksi dan asal informasinya.
+
+Sediakan koreksi manual tanpa mengubah file sumber asli.
+
+Sediakan konfirmasi bahwa hasil pemetaan sudah benar sebelum Tahap 2 menggunakannya.
+
+Jika pengguna melanjutkan meskipun ada kekurangan, tampilkan peringatan dan catat kekurangan yang disetujui.
+
+3. MASTER FRAMEWORK — 23 KOMPONEN WAJIB DIPERTAHANKAN
+
+Seluruh komponen berikut adalah struktur kanonis. GENFLOW tidak boleh menghapus, menggabungkan secara destruktif, mengganti nama sehingga maknanya berubah, atau melewatkan komponen ketika membaca kerangka.
+
+A. INPUT UTAMA
+
+1. Topik utama yang harus dibahas
+
+Identifikasi topik utama secara spesifik. Jangan mengganti topik dengan isu lain yang hanya berkaitan secara umum.
+
+2. Bahan atau sumber rujukan
+
+Identifikasi dokumen, artikel, penelitian, data, video, atau sumber lain yang menjadi landasan. Catat identitas sumber dan bagian relevan jika tersedia.
+
+B. PENGUNCI SUBSTANSI
+
+3. Kunci Fokus Besar (Central Focus)
+
+Tentukan pusat gravitasi pembahasan dan aspek utama yang menjadi fokus analisis. Fokus harus spesifik, memiliki arah jelas, dan tidak mencakup seluruh persoalan terkait topik.
+
+4. Kunci Batas Pembahasan (Scope Boundary)
+
+Bagi menjadi: Wajib dibahas; Boleh disinggung; Tidak boleh dimasukkan. Kategori terakhir mencegah pembahasan menyimpang dari fokus utama.
+
+5. Kunci Pertanyaan Inti (Core Question)
+
+Rumuskan satu pertanyaan utama yang harus dijawab keseluruhan video. Setiap bagian harus berkontribusi jelas terhadap jawabannya.
+
+6. Kunci Kerangka Masalah (Problem Framework)
+
+Petakan masalah utama; konteks/latar belakang; faktor penyebab; mekanisme; pihak/unsur terkait jika relevan; dampak/konsekuensi; serta pertentangan, kesenjangan, atau kontradiksi inti. Jangan menentukan sebab-akibat tanpa dasar memadai.
+
+7. Kunci Tesis Utama (Central Thesis)
+
+Rumuskan pernyataan argumentatif yang menjadi posisi utama pembahasan dan akan diuji, dijelaskan, atau dipertahankan melalui fakta dan analisis. Bukan sekadar pengulangan topik atau opini tanpa dasar.
+
+8. Kunci Logic Punch
+
+Tentukan kesimpulan intelektual paling kuat yang diharapkan tertanam pada audiens. Logic punch harus lahir dari argumentasi, bukan dipaksakan sebelum fakta dianalisis.
+
+9. Kunci Tujuan Perubahan Perspektif
+
+Tentukan pemahaman audiens sebelum menonton; pemahaman yang diharapkan setelah menonton; asumsi/kesalahpahaman yang perlu diuji; dan perspektif baru yang dapat dipertanggungjawabkan.
+
+C. PENGUNCI FAKTA DAN ARGUMENTASI
+
+10. Pemetaan Landasan Fakta (Evidence Mapping)
+
+Identifikasi fakta, data, dokumen, penelitian, pernyataan resmi, atau bukti lain. Petakan klaim, bukti pendukung, sumber, relevansi terhadap tesis, dan keterbatasan/ketidakpastian. Pisahkan fakta terverifikasi, interpretasi, opini, dugaan, dan informasi yang belum pasti.
+
+11. Pemetaan Rantai Logika (Argument Chain)
+
+Susun urutan: kondisi awal → masalah → penyebab → mekanisme → bukti → dampak → implikasi → kesimpulan. Urutan boleh disesuaikan dengan topik, tetapi setiap kesimpulan harus memiliki landasan jelas.
+
+12. Pemetaan Kontraargumen dan Alternatif Penjelasan
+
+Identifikasi penjelasan lain, fakta berlawanan, pengecualian, atau sudut pandang berbeda yang relevan. Tentukan apakah unsur itu dijelaskan, dibandingkan, diuji, atau dikesampingkan dengan alasan memadai.
+
+13. Penentuan Plot Twist (Perspective Shift)
+
+Tentukan bagian yang berpotensi mengubah cara pandang audiens. Plot twist harus lahir dari fakta, kontradiksi, mekanisme tersembunyi, atau hubungan yang sebelumnya belum dipahami. Tentukan fungsi dan posisinya, bukan adegan atau narasinya.
+
+D. PERANCANGAN STRUKTUR NASKAH
+
+14. Penentuan Fungsi Setiap Bagian
+
+Tentukan fungsi tiap bagian: memperkenalkan masalah, memberi konteks, mengungkap fakta, menjelaskan penyebab, menguji asumsi, mengembangkan argumentasi, menunjukkan kontradiksi, menghadirkan perubahan perspektif, atau menarik kesimpulan. Setiap bagian harus berbeda dan tidak sekadar mengulang.
+
+15. Penyusunan Alur Pembahasan (Narrative Blueprint)
+
+Untuk setiap bagian tetapkan nama/tema; fungsi argumentatif; pertanyaan yang dijawab; pokok materi; fakta/bukti yang diperlukan; hubungan dengan bagian sebelumnya dan berikutnya; serta kontribusi terhadap tesis. Hasilnya peta pembahasan, bukan paragraf narasi.
+
+E. PERANCANGAN PEMBUKA, JUDUL, DAN PENUTUP
+
+16. Perumusan Judul
+
+Rumuskan berdasarkan fokus, masalah, tesis, dan logic punch. Tentukan inti informasi yang dijanjikan, sudut pandang, daya tarik/pembeda, relevansi pencarian audiens, dan batas klaim agar tidak menyesatkan. Alternatif harus mewakili isi sebenarnya.
+
+17. Perancangan Hook
+
+Tentukan strategi pembukaan: pertanyaan kritis, kontradiksi asumsi-fakta, fakta penting, persoalan belum terjawab, atau konsekuensi. Tetapkan fungsi hook, informasi yang diperkenalkan, rasa ingin tahu, dan hubungan dengan masalah utama. Jangan menulis kalimat pembuka final pada tahap perencanaan.
+
+18. Perancangan Klimaks dan Penutup
+
+Tentukan puncak argumentasi, temuan/pemahaman sebelum penutup, hubungan kesimpulan dengan tesis, cara menegaskan logic punch, dan pertanyaan reflektif/ajakan relevan. Penutup harus menjadi konsekuensi logis pembahasan.
+
+F. AUDIT KERANGKA SEBELUM PENULISAN NARASI
+
+19. Audit Konsistensi Substansi
+
+Periksa apakah fokus, pertanyaan inti, kerangka masalah, tesis, logic punch, dan tujuan video saling mendukung.
+
+20. Audit Kelengkapan Argumentasi
+
+Periksa apakah setiap pokok pembahasan memiliki fungsi, dasar bukti, dan hubungan logis yang jelas.
+
+21. Audit Potensi Penyimpangan
+
+Identifikasi bagian yang berpotensi melebar, berulang, tidak relevan, terlalu spekulatif, atau tidak berkontribusi terhadap pertanyaan inti.
+
+22. Audit Kelayakan Struktur
+
+Pastikan alur memiliki urutan masuk akal, porsi proporsional, transisi terencana, dan ruang cukup untuk menjelaskan argumentasi utama.
+
+23. Keputusan Kesiapan Kerangka
+
+Nyatakan apakah kerangka siap dikembangkan; perlu sumber/data; perlu mempersempit fokus; perlu memperbaiki urutan; atau perlu menyelesaikan kontradiksi/kelemahan logika. Jelaskan alasan dan bagian yang perlu diperbaiki.
+
+G. ATURAN WAJIB PENGERJAAN
+
+Kerjakan seluruh proses pada tingkat perencanaan dan penyusunan kerangka.
+
+Jangan menulis naskah narasi utuh, dialog, monolog, paragraf pembuka, atau kalimat yang akan langsung dibacakan narator.
+
+Jangan mengembangkan pokok kerangka menjadi uraian panjang seperti naskah final.
+
+Gunakan poin terstruktur yang menjelaskan apa yang dibahas, mengapa perlu dibahas, bukti yang diperlukan, dan hubungan antarbagian.
+
+Jangan menambahkan pembahasan hanya karena menarik, kontroversial, atau berpotensi meningkatkan jumlah penonton.
+
+Jangan mengarang fakta, sumber, kutipan, data, atau hubungan sebab-akibat.
+
+Jika sumber belum memadai, tandai kebutuhan informasi secara eksplisit.
+
+Jangan memaksakan plot twist, tesis, atau logic punch yang tidak didukung fakta.
+
+Pastikan seluruh komponen mengacu pada satu fokus utama dan satu pertanyaan inti.
+
+Jangan memulai penulisan narasi final sebelum kerangka selesai diperiksa dan dinyatakan layak.
+
+4. FORMAT HASIL PEMBACAAN KERANGKA DI GENFLOW
+
+Tampilkan hasil pembacaan dalam struktur A–G dan 23 komponen. Di bagian atas tampilkan ringkasan eksekutif; di bawahnya tampilkan detail tiap komponen dalam panel yang dapat dibuka.
+
+4.1 Status kesiapan
+
+SIAP DIKEMBANGKAN: fokus, pertanyaan inti, tesis, alur, dan kebutuhan bukti cukup jelas. Kekurangan minor tetap dicatat.
+
+PERLU SUMBER/DATA: ada klaim penting yang belum memiliki bukti memadai.
+
+PERLU MEMPERSEMPIT FOKUS: cakupan terlalu luas dan berisiko menyimpang.
+
+PERLU MEMPERBAIKI URUTAN: rantai argumentasi atau Narrative Blueprint belum runtut.
+
+PERLU MENYELESAIKAN KONTRADIKSI: ada konflik informasi, tesis, atau hubungan logis yang belum terselesaikan.
+
+Sistem tidak boleh memberi status SIAP hanya karena dokumen berhasil diunggah atau diekstrak. Status harus didasarkan pada pemeriksaan isi.
+
+5. KONTRAK PENGGUNAAN KERANGKA PADA TAHAP 2 — GENERATE NASKAH AWAL
+
+Tahap 2 wajib menggunakan hasil pembacaan kerangka yang telah dikonfirmasi sebagai acuan substansi. Preview/konfirmasi adalah pemeriksaan di dalam alur yang ada, bukan workflow baru.
+
+Gunakan Topik Utama, Central Focus, Scope Boundary, dan Core Question sebagai pengunci arah naskah.
+
+Gunakan Central Thesis sebagai posisi argumentatif yang diuji/dijelaskan melalui bukti, bukan kesimpulan yang dipaksakan.
+
+Masukkan seluruh poin Wajib Dibahas. Jangan menghilangkannya hanya karena model menganggap poin lain lebih menarik.
+
+Jangan mengembangkan Boleh Disinggung hingga mengambil alih fokus utama.
+
+Jangan memasukkan materi Tidak Boleh Dimasukkan.
+
+Ikuti Evidence Mapping dan bedakan fakta terverifikasi, interpretasi, opini, dugaan, serta informasi belum pasti.
+
+Ikuti Argument Chain dan Narrative Blueprint. Setiap bagian harus memiliki fungsi dan hubungan logis.
+
+Perlakukan kontraargumen sesuai rencana; jangan menghilangkannya demi membuat tesis terlihat lebih kuat.
+
+Gunakan plot twist hanya jika ditopang bukti atau kontradiksi dalam kerangka.
+
+Kembangkan hook, klimaks, dan penutup dari substansi yang direncanakan; jangan membuat janji judul/pembukaan yang tidak dipenuhi isi.
+
+Jangan menambahkan fakta, statistik, sumber, kutipan, tokoh, atau sebab-akibat yang tidak tersedia atau belum diverifikasi.
+
+Jika informasi penting tidak tersedia, tandai kekurangannya; jangan mengisi celah dengan rekaan.
+
+Ikuti GENFLOW MASTER PROMPT FINAL untuk gaya, bahasa, format, dan kebijakan produksi. Framework ini tidak membuat aturan gaya tandingan.
+
+Ikuti StoryFlow dan aturan workflow yang sudah berlaku. Jangan mengubah urutan atau jumlah tahap Workflow Engine.
+
+Setelah Draft V0 dibuat, setiap bagian harus dapat ditelusuri kembali ke komponen kerangka yang mendasarinya.
+
+5.1 Pemeriksaan kesetiaan naskah
+
+Cakupan: seluruh poin wajib dibahas atau diberi alasan eksplisit jika bukti tidak tersedia.
+
+Batas: tidak ada materi terlarang; materi pendukung tidak mengambil alih fokus.
+
+Argumentasi: urutan sesuai blueprint atau perubahan urutan dijelaskan secara logis.
+
+Bukti: klaim faktual penting dapat ditautkan ke sumber atau ditandai belum terverifikasi.
+
+Konsistensi: naskah menjawab Core Question dan sejalan dengan Central Thesis tanpa memaksakan kesimpulan.
+
+Keterlacakan: setiap blok/bagian naskah memiliki referensi ke poin kerangka yang digunakan.
+
+6. RANCANGAN TAMPILAN DAN INTERAKSI
+
+Hasil ekstraksi: nama dokumen, status pembacaan, jumlah halaman/bagian yang berhasil dibaca jika tersedia, dan peringatan ekstraksi.
+
+Ringkasan kerangka: topik, fokus, batas, pertanyaan inti, tesis, logic punch, dan status kesiapan.
+
+Detail A–G: tampilkan tujuh kelompok dan seluruh 23 komponen; setiap komponen dapat diperluas.
+
+Sumber dan jejak: tampilkan halaman, judul bagian, kutipan relevan, atau lokasi asal jika tersedia.
+
+Koreksi hasil baca: izinkan pengguna memperbaiki pemetaan tanpa menimpa file sumber asli.
+
+Konfirmasi: sediakan tindakan konfirmasi bahwa hasil pembacaan sesuai; Tahap 2 menggunakan versi yang dikonfirmasi.
+
+Riwayat perubahan: catat koreksi, waktu, dan versi kerangka yang digunakan untuk menghasilkan Draft V0.
+
+7. BATAS PERUBAHAN DAN PERLINDUNGAN SISTEM
+
+Jangan mengubah, mengekspos ke frontend, atau mencatat nilai 21 API Key.
+
+Jangan mengubah konfigurasi provider, model AI, failover, endpoint, maupun kredensial API.
+
+Jangan mengubah GENFLOW MASTER PROMPT FINAL atau menjadikan dokumen framework ini sebagai penggantinya.
+
+Jangan mengubah urutan, jumlah, kontrak, atau perilaku normal Workflow Engine utama 8 tahap.
+
+Jangan mengubah StoryFlow, SAP/Protected Tokens, SQNN, sistem pascaproduksi, dan validator yang tidak berkaitan langsung.
+
+Jangan membuat database kerangka paralel jika penyimpanan yang ada dapat digunakan dengan aman.
+
+Jangan menghapus atau memigrasikan data pengguna yang sudah ada.
+
+Jangan mengubah fitur lain di luar ruang lingkup integrasi kerangka.
+
+8. KRITERIA PENERIMAAN DAN PENGUJIAN
+
+Dokumen A–G dapat dibaca dan dipetakan ke seluruh 23 komponen.
+
+Dokumen kerangka bebas dapat dipetakan tanpa mengubah makna.
+
+Dokumen sumber yang bukan kerangka tidak diklaim sebagai kerangka lengkap.
+
+Bagian yang tidak ditemukan ditandai, bukan diisi dengan halusinasi.
+
+Informasi ambigu/bertentangan ditampilkan dan tidak diselesaikan diam-diam.
+
+Pengguna dapat melihat ringkasan dan detail hasil pembacaan sebelum Tahap 2.
+
+Koreksi pengguna tersimpan sebagai revisi kerangka yang dapat diidentifikasi.
+
+Tahap 2 menggunakan kerangka yang sudah dikonfirmasi.
+
+Poin Wajib Dibahas dapat ditelusuri pada Draft V0 atau dilaporkan jika tidak terpenuhi.
+
+Materi Tidak Boleh Dimasukkan tidak muncul di Draft V0.
+
+Fakta dan sumber tidak direka; ketidakpastian tetap ditandai.
+
+Workflow Engine utama dan konfigurasi API/model tidak berubah.
+
+Build, lint, dan pengujian relevan lulus; hasil dilaporkan berdasarkan output aktual.
+
+9. FORMAT LAPORAN IMPLEMENTASI
+
+File yang dibuat/diubah beserta fungsi masing-masing.
+
+Cara 23 komponen A–G dipetakan dan ditampilkan.
+
+Cara preview dan konfirmasi sebelum Tahap 2 bekerja.
+
+Cara Draft V0 ditautkan kembali ke poin kerangka.
+
+Hasil pengujian aktual dan bukti build/lint/test.
+
+Bagian yang belum dapat diterapkan atau memerlukan konfigurasi eksternal.
+
+Konfirmasi bahwa 21 API Key, konfigurasi model AI, dan Workflow Engine utama tidak diubah.
+
+10. TEMPLATE ISIAN KERANGKA UNTUK PENGGUNA
+
+Pengguna boleh mengisi seluruh komponen, mengisi sebagian, atau mengunggah dokumen kerangka yang sudah tersedia. Komponen yang belum diisi harus tetap ditandai dan tidak boleh dibuat-buat oleh AI.
+
+A. INPUT UTAMA
+
+1. Topik utama yang harus dibahas:
+........................................................................................................
+
+2. Bahan atau sumber rujukan:
+........................................................................................................
+
+B. PENGUNCI SUBSTANSI
+
+3. Kunci Fokus Besar (Central Focus):
+........................................................................................................
+
+4. Kunci Batas Pembahasan (Scope Boundary):
+   Wajib dibahas:
+   Boleh disinggung:
+   Tidak boleh dimasukkan:
+........................................................................................................
+
+5. Kunci Pertanyaan Inti (Core Question):
+........................................................................................................
+
+6. Kunci Kerangka Masalah (Problem Framework):
+   Masalah utama:
+   Konteks/latar belakang:
+   Faktor penyebab:
+   Mekanisme:
+   Pihak/unsur terkait:
+   Dampak/konsekuensi:
+   Pertentangan/kesenjangan/kontradiksi:
+........................................................................................................
+
+7. Kunci Tesis Utama (Central Thesis):
+........................................................................................................
+
+8. Kunci Logic Punch:
+........................................................................................................
+
+9. Kunci Tujuan Perubahan Perspektif:
+   Pemahaman sebelum:
+   Pemahaman setelah:
+   Asumsi yang perlu diuji:
+   Perspektif baru:
+........................................................................................................
+
+C. PENGUNCI FAKTA DAN ARGUMENTASI
+
+10. Pemetaan Landasan Fakta (Evidence Mapping):
+   Klaim:
+   Bukti:
+   Sumber:
+   Relevansi terhadap tesis:
+   Keterbatasan/ketidakpastian:
+........................................................................................................
+
+11. Pemetaan Rantai Logika (Argument Chain):
+........................................................................................................
+
+12. Pemetaan Kontraargumen dan Alternatif Penjelasan:
+........................................................................................................
+
+13. Penentuan Plot Twist (Perspective Shift):
+........................................................................................................
+
+D. PERANCANGAN STRUKTUR NASKAH
+
+14. Penentuan Fungsi Setiap Bagian:
+........................................................................................................
+
+15. Penyusunan Alur Pembahasan (Narrative Blueprint):
+   Untuk setiap bagian: tema, fungsi, pertanyaan, pokok materi, bukti, hubungan dengan bagian sebelumnya/berikutnya, kontribusi terhadap tesis.
+........................................................................................................
+
+E. PERANCANGAN PEMBUKA, JUDUL, DAN PENUTUP
+
+16. Perumusan Judul:
+........................................................................................................
+
+17. Perancangan Hook:
+........................................................................................................
+
+18. Perancangan Klimaks dan Penutup:
+........................................................................................................
+
+F. AUDIT KERANGKA SEBELUM PENULISAN NARASI
+
+19. Audit Konsistensi Substansi:
+........................................................................................................
+
+20. Audit Kelengkapan Argumentasi:
+........................................................................................................
+
+21. Audit Potensi Penyimpangan:
+........................................................................................................
+
+22. Audit Kelayakan Struktur:
+........................................................................................................
+
+23. Keputusan Kesiapan Kerangka:
+   Status:
+   Alasan dan bagian yang perlu diperbaiki:
+........................................................................................................
+
+G. ATURAN WAJIB PENGERJAAN
+
+Gunakan aturan wajib pada bagian G dokumen ini. Jangan menulis narasi final di dokumen kerangka.
+........................................................................................................
+
+PERINTAH FINAL UNTUK GENFLOW
+
+
+
+KETETAPAN UTAMA / Mempertahankan 23 komponen kerangka asli dalam 7 kelompok A–G. GENFLOW wajib membaca, memetakan, menampilkan, dan menggunakan seluruh informasi yang tersedia tanpa mengarang bagian yang tidak diberikan. Kerangka menentukan APA yang dibahas; GENFLOW MASTER PROMPT FINAL menentukan BAGAIMANA naskah ditulis.
+
+
+
+
+
+Status | Makna | Perilaku sistem
+
+Ditemukan | Informasi tercantum jelas. | Tampilkan isi dan lokasi sumber.
+
+Tidak ditemukan | Informasi tidak tersedia. | Tandai kosong; jangan mengarang.
+
+Perlu konfirmasi | Isi ambigu atau memiliki beberapa tafsir. | Tampilkan tafsir dan minta konfirmasi.
+
+Bertentangan | Ada informasi yang tidak konsisten. | Tampilkan keduanya dan letak konflik.
+
+Belum terverifikasi | Klaim/data belum didukung memadai. | Jangan nyatakan sebagai fakta terverifikasi.
+
+
+
+
+
+Panel ringkasan | Isi yang terlihat | Tujuan
+
+Identitas | Topik utama dan sumber rujukan. | Memastikan dokumen/topik benar.
+
+Pengunci substansi | Fokus, batas, pertanyaan inti, kerangka masalah, tesis, logic punch, tujuan perubahan perspektif. | Memastikan arah dan batas pembahasan.
+
+Fakta & argumentasi | Evidence Mapping, Argument Chain, kontraargumen, alternatif, plot twist. | Memastikan klaim dan logika memiliki dasar.
+
+Blueprint | Fungsi tiap bagian dan urutan Narrative Blueprint. | Memastikan alur tidak melompat atau berulang.
+
+Judul & penutup | Rancangan judul, hook, klimaks, penutup. | Memastikan pembukaan dan penutup sesuai substansi.
+
+Audit kesiapan | Hasil audit 19–23 dan status kesiapan. | Menentukan kelayakan kerangka.
+
+
+
+
+
+BATAS IMPLEMENTASI / Integrasi Master Framework hanya boleh menyentuh pembacaan dokumen kerangka, pemetaan hasil ekstraksi, preview/konfirmasi, dan penggunaan hasil pemetaan oleh Tahap 2. Jangan merekonstruksi atau mengubah engine lain yang tidak diperlukan.
+
+
+
+
+
+INSTRUKSI MUTLAK / Pertahankan 23 komponen dalam 7 kelompok A–G. Baca dokumen kerangka secara utuh, petakan informasi ke struktur kanonis, tampilkan hasil pembacaan untuk diperiksa pengguna, lalu gunakan kerangka yang telah dikonfirmasi sebagai acuan substansi Tahap 2. Jangan menulis narasi saat masih dalam mode perencanaan kerangka. Jangan mengarang informasi yang tidak tersedia. Jangan mengubah GENFLOW MASTER PROMPT FINAL, 21 API Key, konfigurasi model AI, atau Workflow Engine utama 8 tahap. Lakukan hanya perubahan yang diperlukan untuk integrasi pembacaan, pemetaan, preview, konfirmasi, dan keterlacakan kerangka.
+

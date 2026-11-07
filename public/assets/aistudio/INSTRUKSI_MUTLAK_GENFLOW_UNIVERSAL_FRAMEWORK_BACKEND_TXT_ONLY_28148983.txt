@@ -1,0 +1,158 @@
+INSTRUKSI MUTLAK — IMPLEMENTASI GENFLOW UNIVERSAL FRAMEWORK PROCESSING POLICY
+INTEGRASI BACKEND PERMANEN, PEMBACAAN OTOMATIS, DAN STANDARDISASI DOKUMEN KERANGKA
+
+KONTEKS DAN FILE ACUAN
+Saya melampirkan dua file untuk satu kali proses integrasi:
+1. GENFLOW_FORMAT_KERANGKA_NASKAH_BAKU.txt
+2. INSTRUKSI_OUTPUT_KERANGKA_GENFLOW.txt
+
+Baca kedua file TXT secara utuh. GENFLOW_FORMAT_KERANGKA_NASKAH_BAKU.txt adalah acuan struktur/template kanonis dalam format teks polos. INSTRUKSI_OUTPUT_KERANGKA_GENFLOW.txt adalah aturan pembuatan dan pemrosesan dokumen berdasarkan template tersebut. Jangan meminta saya melampirkan ulang kedua file referensi ini setiap kali saya mengunggah dokumen pada penggunaan berikutnya.
+
+TUJUAN UTAMA
+Tanamkan seluruh aturan dari INSTRUKSI_OUTPUT_KERANGKA_GENFLOW.txt ke dalam backend GENFLOW Studio PRO sebagai kebijakan pemrosesan universal yang tersimpan permanen. Setelah integrasi berhasil, setiap kali saya mengunggah dokumen kerangka naskah, GENFLOW harus otomatis mengenali, membaca, memetakan, memvalidasi, dan memprosesnya menggunakan kebijakan backend tersebut tanpa membutuhkan lampiran instruksi TXT lagi.
+
+NAMA DAN IDENTITAS KEBIJAKAN
+Nama: GENFLOW UNIVERSAL FRAMEWORK PROCESSING POLICY
+Policy ID: GENFLOW_UNIVERSAL_FRAMEWORK_POLICY
+Schema ID: GF-NARRATIVE-FRAMEWORK-1.0
+Versi awal: 1.0.0
+Sumber acuan: GENFLOW_FORMAT_KERANGKA_NASKAH_BAKU.txt dan INSTRUKSI_OUTPUT_KERANGKA_GENFLOW.txt
+
+A. KETENTUAN PENYIMPANAN BACKEND PERMANEN
+1. Simpan isi kebijakan, aturan validasi, struktur kanonis, marker, nama field, dan metadata versinya di penyimpanan backend persisten yang memang sudah digunakan aplikasi.
+2. Backend menjadi satu-satunya sumber kebenaran (single source of truth) untuk kebijakan ini. Jangan hanya menyimpan instruksi di frontend, local storage, session storage, cache browser, atau prompt sementara.
+3. Gunakan mekanisme database/penyimpanan persisten yang sudah tersedia. Jangan membuat database paralel jika penyimpanan backend yang ada dapat digunakan dengan aman.
+4. Jika sistem memakai konfigurasi berbasis source code, gunakan sebagai default/bootstrap yang terversi; status kebijakan aktif tetap harus dapat dibaca dari penyimpanan backend persisten sesuai arsitektur aplikasi.
+5. Saat aplikasi restart, server redeploy, browser ditutup, atau pengguna login kembali, kebijakan tetap tersedia dan otomatis aktif. Jangan bergantung pada memori proses sementara.
+6. Saat startup, backend harus memuat kebijakan aktif, memvalidasi integritasnya, dan menggunakan versi aktif untuk seluruh proses upload kerangka.
+7. Simpan metadata sekurang-kurangnya: policy_id, schema_id, version, active_status, created_at, updated_at, source_filename, content_hash, dan change_history.
+8. Gunakan hash untuk mendeteksi perubahan atau kerusakan isi kebijakan. Jangan menganggap hash sebagai pengganti validasi isi.
+9. Hindari duplikasi kebijakan di banyak file atau service. Jika perlu cache, cache hanya salinan dari backend dan harus memiliki mekanisme invalidasi ketika kebijakan berubah.
+10. Sediakan mekanisme pemulihan aman dari default policy terversi jika data kebijakan tidak terbaca. Jangan diam-diam menjalankan pemrosesan tanpa kebijakan atau mengklaim kebijakan aktif jika gagal dimuat.
+11. Jangan menghapus data pengguna, dokumen lama, atau riwayat yang sudah ada saat menambahkan kebijakan ini.
+
+B. PENERAPAN OTOMATIS PADA SETIAP UPLOAD
+1. Integrasikan kebijakan ke alur upload dokumen yang sudah ada. Pengguna tidak perlu mengunggah INSTRUKSI_OUTPUT_KERANGKA_GENFLOW.txt setiap kali.
+2. Ketika file diunggah, backend otomatis memeriksa tipe file, isi, struktur heading, marker, label komponen, dan karakteristik dokumen untuk menentukan jenis dokumen.
+3. Kenali dokumen kerangka berdasarkan Schema ID, marker GF-01 sampai GF-23, struktur A–G, lima blok StoryFlow, atau pola isi kerangka yang setara.
+4. Jika dokumen kerangka memakai format baku, baca langsung sesuai schema.
+5. Jika dokumen kerangka berasal dari format DOCX lama atau format bebas yang susunannya berbeda, petakan isinya ke struktur kanonis A–G dan GF-01 sampai GF-23 berdasarkan makna. Pertahankan substansi aslinya; jangan mengharuskan pengguna mengubah dokumen secara manual hanya karena tata letaknya berbeda.
+6. Jika file adalah bahan riset, artikel, transkrip, referensi, atau dokumen sumber biasa dan bukan kerangka naskah, perlakukan sebagai bahan sumber. Jangan memaksakan struktur 23 komponen pada dokumen sumber biasa.
+7. Jika klasifikasi dokumen tidak cukup meyakinkan, tampilkan jenis dokumen yang terdeteksi dan minta konfirmasi melalui alur UI yang sudah ada. Jangan salah menganggap bahan sumber sebagai kerangka.
+8. Jangan meminta lampiran instruksi TXT pada penggunaan berikutnya selama policy backend aktif dan valid.
+9. Kebijakan harus berlaku untuk semua topik, bukan hanya satu judul, kategori, tema, atau contoh dokumen tertentu.
+
+C. STRUKTUR KANONIS YANG WAJIB DIPERTAHANKAN
+1. Pertahankan 7 kelompok A–G dan seluruh 23 komponen GF-01 sampai GF-23 sesuai template:
+   A. Input Utama
+   B. Pengunci Substansi
+   C. Pengunci Fakta dan Argumentasi
+   D. Perancangan Struktur Naskah
+   E. Perancangan Pembuka, Judul, dan Penutup
+   F. Audit Kerangka Sebelum Penulisan Narasi
+   G. Aturan Wajib Pengerjaan
+2. Pertahankan kelima blok StoryFlow pada GF-15: HOOK, AKAR_MASALAH, INTI_MASALAH, PENYELESAIAN, dan KESIMPULAN.
+3. Pertahankan marker, nomor komponen, nama field, urutan, dan relasi antarfield dari template.
+4. Jangan menghapus, menggabungkan secara destruktif, mengganti nama, atau mengubah makna komponen.
+5. Untuk item berulang seperti sumber, klaim, bukti, kontraargumen, dan bagian pembahasan, dukung pengulangan blok dengan ID unik dan relasi yang konsisten.
+6. Field yang tidak tersedia tetap direpresentasikan dengan status BELUM TERSEDIA, TIDAK RELEVAN beserta alasan, PERLU KONFIRMASI, atau status validasi lain yang sesuai. Jangan menghapus field kosong dan jangan mengarang isinya.
+7. Pertahankan ID sumber S01, S02, dan seterusnya serta ID bukti yang unik. Pastikan referensi silang benar-benar mengarah ke item yang ada.
+8. Jika dokumen memakai tabel atau layout lama, parser boleh mengekstrak isi tabel berdasarkan urutan baca, tetapi hasil pemetaan internal harus tetap mengikuti schema kanonis. Untuk keluaran DOCX baku, ikuti format satu kolom tanpa tabel sebagaimana template.
+
+D. ATURAN PEMBACAAN, EKSTRAKSI, DAN VALIDASI
+1. Baca seluruh isi dokumen, bukan hanya halaman pertama, judul, ringkasan, atau heading.
+2. Dukung ekstraksi DOCX dengan mempertahankan urutan paragraf, heading, daftar, teks tabel, dan struktur yang relevan. Tangani dokumen panjang, karakter Unicode, tanda baca, nomor, serta teks campuran bahasa.
+3. Jangan mengandalkan kesamaan judul saja. Gunakan marker, label, konteks, dan isi untuk mengenali komponen.
+4. Bedakan teks asli pengguna dari hasil interpretasi atau pemetaan AI. Tandai hasil interpretasi sebagai hasil pemetaan, bukan kutipan asli.
+5. Jangan mengubah angka, tanggal, nama, kutipan, URL, istilah, atau klaim ketika mengekstrak.
+6. Deteksi informasi yang hilang, ambigu, berulang, bertentangan, atau belum terverifikasi.
+7. Jika dua bagian bertentangan, pertahankan keduanya dan tandai konflik. Jangan menyelesaikannya diam-diam.
+8. Bedakan fakta terverifikasi, data yang belum terverifikasi, interpretasi, opini, dugaan, dan hipotesis.
+9. Setiap klaim faktual harus ditautkan ke sumber/bukti yang benar atau diberi status NEEDS_VERIFICATION.
+10. Jangan mengarang fakta, statistik, kutipan, sumber, URL, nama lembaga, hubungan sebab-akibat, atau isi field yang tidak disediakan.
+11. Validasi bahwa seluruh 23 komponen telah terdeteksi atau diberi status yang jelas.
+12. Validasi bahwa lima blok StoryFlow terdeteksi atau diberi status kekurangan yang jelas.
+13. Validasi referensi silang SOURCE_ID dan EVIDENCE_ID. Tampilkan referensi yang tidak ditemukan sebagai kesalahan validasi.
+14. Validasi batas Wajib Dibahas, Boleh Disinggung, dan Di Luar Fokus agar tidak tertukar.
+15. Jangan menyatakan dokumen siap hanya karena upload dan ekstraksi berhasil.
+
+E. PREVIEW DAN PENGGUNAAN DI APLIKASI
+1. Integrasikan hasil pembacaan ke layar upload/preview yang sudah ada. Jangan membuat aplikasi atau workflow paralel.
+2. Tampilkan nama file, jenis dokumen yang terdeteksi, policy version, schema version, status ekstraksi, dan status validasi.
+3. Tampilkan ringkasan topik, fokus, batas pembahasan, pertanyaan inti, tesis, logic punch, serta status kesiapan.
+4. Sediakan tampilan detail seluruh kelompok A–G dan 23 komponen. Komponen yang kosong tetap terlihat.
+5. Tampilkan peringatan untuk komponen hilang, ambigu, konflik, sumber tidak terverifikasi, atau referensi silang yang rusak.
+6. Izinkan koreksi pemetaan melalui UI yang sudah ada tanpa mengubah file asli pengguna.
+7. Simpan hasil pemetaan dan koreksi sebagai versi/riwayat dokumen yang dapat ditelusuri.
+8. Tahap penulisan naskah hanya boleh menggunakan hasil kerangka yang telah dikonfirmasi sesuai mekanisme workflow yang saat ini berlaku.
+9. Jika kerangka belum lengkap, jangan diam-diam melengkapinya. Tampilkan status dan peringatan sesuai kondisi sebenarnya.
+10. Pastikan seluruh perubahan tetap kompatibel dengan dokumen dan data lama.
+
+F. STANDARDISASI DOKUMEN KELUARAN
+1. Jika GENFLOW memiliki fitur untuk membuat atau mengekspor DOCX kerangka, gunakan template baku sebagai satu-satunya format keluaran kerangka.
+2. DOCX keluaran harus mempertahankan Schema ID, marker GF-01 sampai GF-23, kelompok A–G, lima blok StoryFlow, nama field, dan urutan baku.
+3. Jangan menambahkan cover, daftar isi, tabel, kolom ganda, text box, shape, header/footer, atau elemen mengambang yang mengganggu ekstraksi, kecuali secara eksplisit diminta dan telah dipastikan parser mendukungnya.
+4. Setiap topik hanya mengubah isi substantif; struktur dokumen harus konsisten.
+5. Jika aplikasi tidak memiliki fitur untuk menghasilkan DOCX dan dokumen dibuat oleh Gemini eksternal, jangan mengklaim backend GENFLOW dapat mengendalikan format file sebelum file itu diunggah. Dalam kondisi tersebut, backend wajib menormalkan dan memvalidasi dokumen saat masuk; standardisasi keluaran Gemini eksternal memerlukan konfigurasi instruksi pada sisi Gemini yang menghasilkan dokumen.
+6. Jangan mengubah isi topik hanya demi menyesuaikan template.
+
+G. HIERARKI KEBIJAKAN DAN BATAS PERUBAHAN
+1. GENFLOW MASTER PROMPT FINAL tetap menjadi otoritas tertinggi untuk kebijakan penulisan dan perilaku generasi naskah.
+2. GENFLOW UNIVERSAL FRAMEWORK PROCESSING POLICY adalah kebijakan teknis turunan yang mengatur deteksi dokumen kerangka, ekstraksi, pemetaan, validasi, preview, dan standardisasi format. Kebijakan ini tidak menggantikan atau menimpa GENFLOW MASTER PROMPT FINAL.
+3. GENFLOW_FORMAT_KERANGKA_NASKAH_BAKU.txt adalah acuan struktur dokumen dalam format teks polos; INSTRUKSI_OUTPUT_KERANGKA_GENFLOW.txt adalah sumber aturan pembuatan dan pemrosesan yang harus ditanamkan ke backend.
+4. Jika terjadi konflik antara policy pemrosesan dan GENFLOW MASTER PROMPT FINAL, jangan memilih secara diam-diam. Catat konflik dan gunakan hierarki kebijakan yang benar.
+5. Jangan mengubah GENFLOW MASTER PROMPT FINAL atau isi kebijakan lain yang tidak berkaitan.
+6. Jangan mengubah, membaca keluar, menampilkan, menulis ulang, memindahkan, menghapus, atau mengekspos nilai 21 API Key.
+7. Jangan mengubah provider, konfigurasi, urutan failover, kredensial, maupun model AI yang sudah tertanam.
+8. Jangan mengubah Workflow Engine yang saat ini berjalan normal: jangan mengubah jumlah tahap, urutan, kontrak, dependensi, atau perilaku tahap yang tidak diperlukan untuk integrasi upload kerangka.
+9. Jangan mengubah StoryFlow, sistem pascaproduksi, validator, repository kosakata, monitoring catatan, atau fitur lain yang tidak secara langsung diperlukan.
+10. Jangan membuat endpoint, tabel database, service, atau sistem duplikat jika mekanisme yang ada dapat diperluas dengan aman.
+11. Batasi perubahan pada backend policy, parser dokumen, schema mapping, validasi, penyimpanan riwayat, dan integrasi UI upload/preview yang benar-benar diperlukan.
+12. Buat backup atau jalur rollback sesuai praktik proyek sebelum migrasi data atau perubahan penyimpanan.
+
+H. VERSIONING DAN LIVE UPDATE POLICY
+1. Catat versi kebijakan aktif dan schema yang digunakan setiap kali dokumen diproses.
+2. Setiap perubahan kebijakan harus memiliki versi baru, waktu perubahan, ringkasan perubahan, dan hash baru.
+3. Jangan menaikkan versi hanya karena dokumen baru diunggah. Versi berubah hanya ketika isi policy atau schema benar-benar berubah.
+4. Perubahan policy harus tervalidasi sebelum diaktifkan. Hindari perubahan setengah jadi yang menyebabkan upload gagal.
+5. Catat riwayat perubahan dan sediakan kemampuan rollback ke versi valid sebelumnya sesuai mekanisme aplikasi.
+6. Jangan menampilkan klaim live update jika backend belum benar-benar menyimpan dan menerapkan perubahan.
+
+I. KRITERIA PENGUJIAN WAJIB
+Implementasikan dan jalankan pengujian berdasarkan source code aktual. Minimal buktikan:
+1. Policy aktif tersimpan di backend dan tetap ada setelah server restart/redeploy sesuai mekanisme persistence proyek.
+2. Upload dokumen kerangka baku dikenali melalui Schema ID dan marker.
+3. Upload DOCX kerangka lama/format bebas dipetakan ke struktur A–G tanpa kehilangan substansi.
+4. Upload dokumen sumber biasa tidak dipaksakan menjadi kerangka 23 komponen.
+5. Komponen yang hilang ditandai, bukan diisi dengan rekaan.
+6. Isi ambigu atau bertentangan ditampilkan sebagai konflik.
+7. Semua 23 komponen GF-01 sampai GF-23 dan lima blok StoryFlow tervalidasi.
+8. SOURCE_ID dan EVIDENCE_ID yang valid dikenali; referensi rusak terdeteksi.
+9. Dokumen panjang, Unicode, angka, URL, daftar, dan tabel lama dapat diekstrak sesuai urutan baca.
+10. Pengguna tidak perlu melampirkan INSTRUKSI_OUTPUT_KERANGKA_GENFLOW.txt pada upload berikutnya.
+11. Perubahan policy tercatat dengan version, timestamp, hash, dan riwayat yang benar.
+12. Workflow Engine, GENFLOW MASTER PROMPT FINAL, konfigurasi 21 API Key, provider, dan model AI tidak berubah.
+13. Build, lint, unit test, dan integration test yang relevan lulus. Laporkan angka dan output aktual; jangan mengarang hasil pengujian.
+
+J. LAPORAN IMPLEMENTASI YANG WAJIB DITAMPILKAN
+Setelah pekerjaan benar-benar selesai, berikan laporan yang menyebut:
+1. File source code yang diperiksa dan diubah beserta alasan.
+2. Lokasi penyimpanan backend persisten untuk policy aktif.
+3. Policy ID, Schema ID, versi, hash, dan status aktif.
+4. Cara policy dimuat otomatis ketika server berjalan.
+5. Cara sistem mengenali dokumen kerangka dibanding dokumen sumber biasa.
+6. Cara parser menangani dokumen baku, dokumen lama, dan format bebas.
+7. Cara preview, validasi, koreksi, dan riwayat bekerja.
+8. Bukti bahwa upload berikutnya tidak memerlukan lampiran TXT.
+9. Hasil build, lint, unit test, dan integration test yang benar-benar dijalankan.
+10. Konfirmasi eksplisit bahwa 21 API Key, provider/model AI, GENFLOW MASTER PROMPT FINAL, dan Workflow Engine yang normal tidak diubah.
+11. Daftar keterbatasan yang masih ada, jika ada.
+12. Jangan menyatakan 100% berhasil, permanen, realtime, atau terverifikasi jika belum ada bukti teknis yang mendukungnya.
+
+PERINTAH PELAKSANAAN
+Lakukan satu implementasi menyeluruh berdasarkan seluruh ketentuan di atas. Periksa arsitektur dan source code aktual terlebih dahulu, gunakan komponen dan penyimpanan yang sudah ada jika memungkinkan, lalu implementasikan perubahan minimum yang diperlukan, jalankan pengujian, dan tampilkan laporan berdasarkan bukti aktual.
+
+Jangan berhenti pada penjelasan, analisis, rekomendasi, atau rencana. Jangan meminta saya mengunggah file TXT pada setiap penggunaan berikutnya. Dua file acuan yang dilampirkan pada proses implementasi ini hanya menjadi bahan satu kali untuk menanamkan kebijakan universal ke backend.
+
+HASIL AKHIR YANG DITUJU
+Setelah integrasi berhasil, saya cukup mengunggah dokumen kerangka naskah ke GENFLOW. Backend otomatis menerapkan GENFLOW UNIVERSAL FRAMEWORK PROCESSING POLICY yang tersimpan permanen, mengenali dan membaca dokumen, memetakan isi ke struktur kanonis, memvalidasi kelengkapan, menampilkan preview, serta menggunakan kerangka yang dikonfirmasi sesuai workflow yang sudah ada. Tidak ada lagi kebutuhan melampirkan INSTRUKSI_OUTPUT_KERANGKA_GENFLOW.txt setiap kali upload.
